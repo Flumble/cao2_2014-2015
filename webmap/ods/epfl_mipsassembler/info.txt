@@ -1,0 +1,31 @@
+			  Freeware / Postcardware
+
+MIPS Assembler is completely free! That is you may copy it as you want and redistribute it. Please do not upload it to a download software engine but use a link instead. MIPS Assembler is not yet open-source, that means I do not provide the source code. 
+
+Would you be interested in MIPS Assembler as an open-source software? If so, please let me know why! 
+
+What does "Postcardware" mean? I would be very glad to receive a postcard from where you live if you find this software really useful. Other user postcards are available here!
+
+Thank you in advance!
+
+Download
+
+ Full setup installation files [22.04.2004] [3.76 MB] 
+ Reference manual [22.04.2004] [700 KB] 
+ Presentation [07.11.2002] [532 KB] 
+
+ Emul (creating executables for any platform) [22.04.2004] [10 KB]
+
+ Version 2.0.12 [25.06.2004] (You should update with this all files without installation package instead) 
+
+ Previous versions
+
+Updates
+
+Please download and use the software Update Manager [2.23 MB].
+Do not forget to close MIPS Assembler, the Help file and Templates Editor before trying to install an update.
+
+Manual Update
+
+ Program + associated files [version 2.11]
+ Help file [22.04.2004] 

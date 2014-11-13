@@ -1,0 +1,3 @@
+set_location_assignment PIN_J16 -to clk
+set_location_assignment PIN_U14 -to reset
+set_location_assignment PIN_R1  -to led
