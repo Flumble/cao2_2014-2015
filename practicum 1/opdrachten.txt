@@ -1,0 +1,6 @@
+1.
+	a)	De spanning van een knop op de FPGA is 3,3V op het moment dat hij wordt ingedrukt.
+		De 	LED's gaan branden bij een lage uitgangsspanning (voor het gemak 0V)
+	b)	-
+	c)	-
+	d)
