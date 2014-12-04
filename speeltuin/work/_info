@@ -4,57 +4,187 @@ K3
 cModel Technology
 dD:\Dropbox\UT\CAO2\hexnaar7segment
 Ecounter
-w1417700687
-Z0 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
-Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z3 dC:\Users\Sander\Documents\GitHub\cao2_2014-2015\speeltuin
-8C:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/counter.vhd
-FC:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/counter.vhd
+Z0 w1417702387
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\Sander\Documents\GitHub\cao2_2014-2015\speeltuin
+Z5 8C:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/counter.vhd
+Z6 FC:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/counter.vhd
 l0
 L7
-VO9k7lj[kJ:B:GoQU?ZN0`0
-!s100 0RhVDNiFIRbbOWmCRn86_2
-Z4 OV;C;10.1d;51
+V_EW<C7AGUbJk=E;EhGm5M3
+Z7 OV;C;10.1d;51
 32
-!i10b 1
-!s108 1417700690.940000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/counter.vhd|
-!s107 C:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/counter.vhd|
-Z5 o-work work -2002 -explicit -O0
-Z6 tExplicit 1
-Edisplay
-Z7 w1417700119
-R1
-R2
-R3
-Z8 8C:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/display.vhd
-Z9 FC:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/display.vhd
-l0
-L7
-VbGXG5HGoK8<z;8^DSLC6=3
-R4
-32
-Z10 !s108 1417700314.902000
-Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/display.vhd|
-Z12 !s107 C:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/display.vhd|
-R5
-R6
-!s100 S7S>i=2Cd;7DdCB``6HT[0
+Z8 !s108 1417702429.388000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/counter.vhd|
+Z10 !s107 C:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/counter.vhd|
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+!s100 4IAeB`_BZU@i?BNNf@dUC3
 !i10b 1
 Abehaviour
 R1
 R2
-DEx4 work 7 display 0 22 bGXG5HGoK8<z;8^DSLC6=3
-l37
-L14
-V99`aUg77`G?B:A=gM6gbM1
-R4
+R3
+DEx4 work 7 counter 0 22 _EW<C7AGUbJk=E;EhGm5M3
+l19
+L16
+VTCFLECgk1_iAkN?QlL7hO3
+R7
 32
+R8
+R9
 R10
 R11
 R12
-R5
-R6
-!s100 Uh3?o8V2Jl?TSg[agAi9[2
+!s100 dHeDDiTe10TX9MnM<za2`1
+!i10b 1
+Edisplay
+Z13 w1417708286
+R1
+R2
+R3
+R4
+Z14 8C:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/display.vhd
+Z15 FC:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/display.vhd
+l0
+L8
+VendPfmIL4:93e?;B3XYQ`3
+R7
+32
+Z16 !s108 1417708387.944000
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/display.vhd|
+Z18 !s107 C:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/display.vhd|
+R11
+R12
+!s100 m0g8?@:T87>o5:PLOQ3A`2
+!i10b 1
+Abehaviour
+R1
+R2
+R3
+DEx4 work 7 display 0 22 endPfmIL4:93e?;B3XYQ`3
+l38
+L15
+V5A^EL54nQ<E@FIkHU^ERH1
+!s100 0zMK=G`V9fMVa8bFB_AQh0
+R7
+32
+R16
+R17
+R18
+R11
+R12
+!i10b 1
+Eepicknoptime
+Z19 w1417708113
+R1
+R2
+R3
+R4
+Z20 8C:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/epicknoptime.vhd
+Z21 FC:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/epicknoptime.vhd
+l0
+L7
+Vfc14;bzED0m@9hIIf9P0I0
+!s100 maz9:IMMn@25UaRX5VYXe1
+R7
+32
+!i10b 1
+Z22 !s108 1417708388.102000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/epicknoptime.vhd|
+Z24 !s107 C:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/epicknoptime.vhd|
+R11
+R12
+Astructure
+R1
+R2
+R3
+Z25 DEx4 work 12 epicknoptime 0 22 fc14;bzED0m@9hIIf9P0I0
+l44
+L15
+Z26 V6ZG_Y<ek:OoF]@BEB=bj=1
+Z27 !s100 [VUWeXbNmHjPNS00>XCYK1
+R7
+32
+!i10b 1
+R22
+R23
+R24
+R11
+R12
+Eknopcontroller
+Z28 w1417703682
+R1
+R2
+R3
+R4
+Z29 8C:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/knopcontroller.vhd
+Z30 FC:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/knopcontroller.vhd
+l0
+L7
+V[1Do_bfJE^CHdGh^W`J4Q3
+R7
+32
+Z31 !s108 1417703690.441000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/knopcontroller.vhd|
+Z33 !s107 C:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/knopcontroller.vhd|
+R11
+R12
+!s100 QNCT=M<klmC:odeZ6SiaC1
+!i10b 1
+Abehaviour
+R1
+R2
+R3
+DEx4 work 14 knopcontroller 0 22 [1Do_bfJE^CHdGh^W`J4Q3
+l18
+L15
+VBlMVN9m:NZ8Y5bPNP:5mS1
+R7
+32
+R31
+R32
+R33
+R11
+R12
+!s100 []kC7diVK`9`l:KIZ<K=F1
+!i10b 1
+Emodcounter
+Z34 w1417705488
+R1
+R2
+R3
+R4
+Z35 8C:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/modcounter.vhd
+Z36 FC:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/modcounter.vhd
+l0
+L7
+V2zVjXR6Fh?:H7DGnHlDE@1
+R7
+32
+Z37 !s108 1417705577.177000
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/modcounter.vhd|
+Z39 !s107 C:/Users/Sander/Documents/GitHub/cao2_2014-2015/speeltuin/modcounter.vhd|
+R11
+R12
+!s100 M_c6NM1mH8dmhW[i1zA8i2
+!i10b 1
+Abehaviour
+R1
+R2
+R3
+DEx4 work 10 modcounter 0 22 2zVjXR6Fh?:H7DGnHlDE@1
+l19
+L17
+VAzj;1:]HSd2PGR9SDj6hf2
+R7
+32
+R37
+R38
+R39
+R11
+R12
+!s100 hUB7cgJg4aJlndE^MiIM<2
 !i10b 1

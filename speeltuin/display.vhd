@@ -3,10 +3,11 @@
 
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
 
 ENTITY display IS
   PORT (
-    hex : IN  std_logic_vector(3 DOWNTO 0);
+    hex : IN  natural RANGE 0 TO 15;
     dig : OUT std_logic_vector(6 DOWNTO 0)
   );
 END display;
@@ -35,5 +36,5 @@ ARCHITECTURE behaviour OF display IS
   END hex2display;
 
   BEGIN
-    dig <= not(hex2display(not(hex)));
+    dig <= not(hex2display(not(std_logic_vector(to_unsigned(hex, 4)))));
 END behaviour;
