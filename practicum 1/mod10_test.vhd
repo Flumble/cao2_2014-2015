@@ -1,7 +1,3 @@
-LIBRARY IEEE;
-USE IEEE.STD_LOGIC_1164.ALL;
-USE IEEE.numeric_std.ALL;
-
 
 ENTITY display_test IS
 END display_test;
