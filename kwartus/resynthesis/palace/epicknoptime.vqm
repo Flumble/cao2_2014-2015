@@ -1,0 +1,652 @@
+// Copyright (C) 1991-2011 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II"
+// VERSION "Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition"
+
+// DATE "12/05/2014 16:18:21"
+
+module 	epicknoptime (
+	cnt_ten,
+	cnt_unit,
+	btn,
+	clk,
+	rst);
+output 	[6:0] cnt_ten;
+output 	[6:0] cnt_unit;
+input 	btn;
+input 	clk;
+input 	rst;
+wire G2_aover;
+wire G1_aoutp;
+wire G2_aEqual0_a0;
+wire G1_aonness;
+wire G1_aoutp_a0;
+wire btn_acombout;
+wire clk_acombout;
+wire G3_aoutput_a0_a_a3;
+wire rst_acombout;
+wire G3_aoutput_a0_a;
+wire G3_aoutput_a2_a_a1;
+wire G3_aoutput_a2_a;
+wire G3_aoutput_a2;
+wire G3_aoutput_a3_a;
+wire G3_aoutput_a0;
+wire G3_aoutput_a1_a;
+wire G5_aMux6_a0;
+wire G5_aMux5_a0;
+wire G5_aMux4_a0;
+wire G5_aMux3_a0;
+wire G5_aMux2_a0;
+wire G5_aMux1_a0;
+wire G5_aMux0_a0;
+wire G2_aoutput_a0_a_a3;
+wire G2_aoutput_a0_a;
+wire G2_aoutput_a2_a_a1;
+wire G2_aoutput_a2_a;
+wire G2_aoutput_a2;
+wire G2_aoutput_a3_a;
+wire G2_aoutput_a0;
+wire G2_aoutput_a1_a;
+wire G4_aMux6_a0;
+wire G4_aMux5_a0;
+wire G4_aMux4_a0;
+wire G4_aMux3_a0;
+wire G4_aMux2_a0;
+wire G4_aMux1_a0;
+wire G4_aMux0_a0;
+wire [3:0] G2_aoutput;
+wire [3:0] G3_aoutput;
+
+wire __ALT_INV__G5_aMux5_a0;
+wire __ALT_INV__G5_aMux4_a0;
+wire __ALT_INV__G5_aMux3_a0;
+wire __ALT_INV__G4_aMux5_a0;
+wire __ALT_INV__G4_aMux4_a0;
+wire __ALT_INV__G4_aMux3_a0;
+
+wire gnd;
+wire vcc;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+
+assign __ALT_INV__G5_aMux5_a0 = ~ G5_aMux5_a0;
+assign __ALT_INV__G5_aMux4_a0 = ~ G5_aMux4_a0;
+assign __ALT_INV__G5_aMux3_a0 = ~ G5_aMux3_a0;
+assign __ALT_INV__G4_aMux5_a0 = ~ G4_aMux5_a0;
+assign __ALT_INV__G4_aMux4_a0 = ~ G4_aMux4_a0;
+assign __ALT_INV__G4_aMux3_a0 = ~ G4_aMux3_a0;
+
+cycloneii_lcell_ff G2_aover_aI(
+	.clk(G1_aoutp),
+	.datain(G2_aEqual0_a0),
+	.aclr(rst_acombout),
+	.regout(G2_aover));
+
+cycloneii_lcell_ff G1_aoutp_aI(
+	.clk(clk_acombout),
+	.datain(G1_aoutp_a0),
+	.regout(G1_aoutp));
+
+cycloneii_lcell_comb G2_aEqual0_a0_I(
+	.dataa(G2_aoutput_a0_a),
+	.datab(G2_aoutput_a3_a),
+	.datac(G2_aoutput_a1_a),
+	.datad(G2_aoutput_a2_a),
+	.combout(G2_aEqual0_a0));
+defparam G2_aEqual0_a0_I.sum_lutc_input = "datac";
+defparam G2_aEqual0_a0_I.lut_mask = "0008";
+
+cycloneii_lcell_ff G1_aonness_aI(
+	.clk(clk_acombout),
+	.datain(btn_acombout),
+	.regout(G1_aonness));
+
+cycloneii_lcell_comb G1_aoutp_a0_I(
+	.dataa(G1_aonness),
+	.datad(btn_acombout),
+	.combout(G1_aoutp_a0));
+defparam G1_aoutp_a0_I.sum_lutc_input = "datac";
+defparam G1_aoutp_a0_I.lut_mask = "5500";
+
+cycloneii_io btn_aI(
+	.combout(btn_acombout),
+	.padio(btn));
+defparam btn_aI.operation_mode = "input";
+defparam btn_aI.input_register_mode = "none";
+defparam btn_aI.output_register_mode = "none";
+defparam btn_aI.oe_register_mode = "none";
+defparam btn_aI.input_async_reset = "none";
+defparam btn_aI.output_async_reset = "none";
+defparam btn_aI.oe_async_reset = "none";
+defparam btn_aI.input_sync_reset = "none";
+defparam btn_aI.output_sync_reset = "none";
+defparam btn_aI.oe_sync_reset = "none";
+defparam btn_aI.input_power_up = "low";
+defparam btn_aI.output_power_up = "low";
+defparam btn_aI.oe_power_up = "low";
+
+cycloneii_io clk_aI(
+	.combout(clk_acombout),
+	.padio(clk));
+defparam clk_aI.operation_mode = "input";
+defparam clk_aI.input_register_mode = "none";
+defparam clk_aI.output_register_mode = "none";
+defparam clk_aI.oe_register_mode = "none";
+defparam clk_aI.input_async_reset = "none";
+defparam clk_aI.output_async_reset = "none";
+defparam clk_aI.oe_async_reset = "none";
+defparam clk_aI.input_sync_reset = "none";
+defparam clk_aI.output_sync_reset = "none";
+defparam clk_aI.oe_sync_reset = "none";
+defparam clk_aI.input_power_up = "low";
+defparam clk_aI.output_power_up = "low";
+defparam clk_aI.oe_power_up = "low";
+
+cycloneii_lcell_comb G3_aoutput_a0_a_a3_I(
+	.dataa(G3_aoutput_a0_a),
+	.combout(G3_aoutput_a0_a_a3));
+defparam G3_aoutput_a0_a_a3_I.sum_lutc_input = "datac";
+defparam G3_aoutput_a0_a_a3_I.lut_mask = "5555";
+
+cycloneii_io rst_aI(
+	.combout(rst_acombout),
+	.padio(rst));
+defparam rst_aI.operation_mode = "input";
+defparam rst_aI.input_register_mode = "none";
+defparam rst_aI.output_register_mode = "none";
+defparam rst_aI.oe_register_mode = "none";
+defparam rst_aI.input_async_reset = "none";
+defparam rst_aI.output_async_reset = "none";
+defparam rst_aI.oe_async_reset = "none";
+defparam rst_aI.input_sync_reset = "none";
+defparam rst_aI.output_sync_reset = "none";
+defparam rst_aI.oe_sync_reset = "none";
+defparam rst_aI.input_power_up = "low";
+defparam rst_aI.output_power_up = "low";
+defparam rst_aI.oe_power_up = "low";
+
+cycloneii_lcell_ff G3_aoutput_a0_a_aI(
+	.clk(G2_aover),
+	.datain(G3_aoutput_a0_a_a3),
+	.aclr(rst_acombout),
+	.regout(G3_aoutput_a0_a));
+
+cycloneii_lcell_comb G3_aoutput_a2_a_a1_I(
+	.datab(G3_aoutput_a2_a),
+	.datac(G3_aoutput_a0_a),
+	.datad(G3_aoutput_a1_a),
+	.combout(G3_aoutput_a2_a_a1));
+defparam G3_aoutput_a2_a_a1_I.sum_lutc_input = "datac";
+defparam G3_aoutput_a2_a_a1_I.lut_mask = "3CCC";
+
+cycloneii_lcell_ff G3_aoutput_a2_a_aI(
+	.clk(G2_aover),
+	.datain(G3_aoutput_a2_a_a1),
+	.aclr(rst_acombout),
+	.regout(G3_aoutput_a2_a));
+
+cycloneii_lcell_comb G3_aoutput_a2_I(
+	.dataa(G3_aoutput_a3_a),
+	.datab(G3_aoutput_a1_a),
+	.datac(G3_aoutput_a2_a),
+	.datad(G3_aoutput_a0_a),
+	.combout(G3_aoutput_a2));
+defparam G3_aoutput_a2_I.sum_lutc_input = "datac";
+defparam G3_aoutput_a2_I.lut_mask = "68AA";
+
+cycloneii_lcell_ff G3_aoutput_a3_a_aI(
+	.clk(G2_aover),
+	.datain(G3_aoutput_a2),
+	.aclr(rst_acombout),
+	.regout(G3_aoutput_a3_a));
+
+cycloneii_lcell_comb G3_aoutput_a0_I(
+	.dataa(G3_aoutput_a2_a),
+	.datab(G3_aoutput_a3_a),
+	.datac(G3_aoutput_a1_a),
+	.datad(G3_aoutput_a0_a),
+	.combout(G3_aoutput_a0));
+defparam G3_aoutput_a0_I.sum_lutc_input = "datac";
+defparam G3_aoutput_a0_I.lut_mask = "0BF0";
+
+cycloneii_lcell_ff G3_aoutput_a1_a_aI(
+	.clk(G2_aover),
+	.datain(G3_aoutput_a0),
+	.aclr(rst_acombout),
+	.regout(G3_aoutput_a1_a));
+
+cycloneii_lcell_comb G5_aMux6_a0_I(
+	.dataa(G3_aoutput_a0_a),
+	.datab(G3_aoutput_a1_a),
+	.datac(G3_aoutput_a2_a),
+	.datad(G3_aoutput_a3_a),
+	.combout(G5_aMux6_a0));
+defparam G5_aMux6_a0_I.sum_lutc_input = "datac";
+defparam G5_aMux6_a0_I.lut_mask = "4814";
+
+cycloneii_lcell_comb G5_aMux5_a0_I(
+	.dataa(G3_aoutput_a0_a),
+	.datab(G3_aoutput_a1_a),
+	.datac(G3_aoutput_a2_a),
+	.datad(G3_aoutput_a3_a),
+	.combout(G5_aMux5_a0));
+defparam G5_aMux5_a0_I.sum_lutc_input = "datac";
+defparam G5_aMux5_a0_I.lut_mask = "F9E4";
+
+cycloneii_lcell_comb G5_aMux4_a0_I(
+	.dataa(G3_aoutput_a0_a),
+	.datab(G3_aoutput_a1_a),
+	.datac(G3_aoutput_a2_a),
+	.datad(G3_aoutput_a3_a),
+	.combout(G5_aMux4_a0));
+defparam G5_aMux4_a0_I.sum_lutc_input = "datac";
+defparam G5_aMux4_a0_I.lut_mask = "DFF4";
+
+cycloneii_lcell_comb G5_aMux3_a0_I(
+	.dataa(G3_aoutput_a0_a),
+	.datab(G3_aoutput_a1_a),
+	.datac(G3_aoutput_a2_a),
+	.datad(G3_aoutput_a3_a),
+	.combout(G5_aMux3_a0));
+defparam G5_aMux3_a0_I.sum_lutc_input = "datac";
+defparam G5_aMux3_a0_I.lut_mask = "B6DE";
+
+cycloneii_lcell_comb G5_aMux2_a0_I(
+	.dataa(G3_aoutput_a0_a),
+	.datab(G3_aoutput_a1_a),
+	.datac(G3_aoutput_a2_a),
+	.datad(G3_aoutput_a3_a),
+	.combout(G5_aMux2_a0));
+defparam G5_aMux2_a0_I.sum_lutc_input = "datac";
+defparam G5_aMux2_a0_I.lut_mask = "5D40";
+
+cycloneii_lcell_comb G5_aMux1_a0_I(
+	.dataa(G3_aoutput_a0_a),
+	.datab(G3_aoutput_a1_a),
+	.datac(G3_aoutput_a2_a),
+	.datad(G3_aoutput_a3_a),
+	.combout(G5_aMux1_a0));
+defparam G5_aMux1_a0_I.sum_lutc_input = "datac";
+defparam G5_aMux1_a0_I.lut_mask = "7104";
+
+cycloneii_lcell_comb G5_aMux0_a0_I(
+	.dataa(G3_aoutput_a0_a),
+	.datab(G3_aoutput_a1_a),
+	.datac(G3_aoutput_a2_a),
+	.datad(G3_aoutput_a3_a),
+	.combout(G5_aMux0_a0));
+defparam G5_aMux0_a0_I.sum_lutc_input = "datac";
+defparam G5_aMux0_a0_I.lut_mask = "C108";
+
+cycloneii_lcell_comb G2_aoutput_a0_a_a3_I(
+	.dataa(G2_aoutput_a0_a),
+	.combout(G2_aoutput_a0_a_a3));
+defparam G2_aoutput_a0_a_a3_I.sum_lutc_input = "datac";
+defparam G2_aoutput_a0_a_a3_I.lut_mask = "5555";
+
+cycloneii_lcell_ff G2_aoutput_a0_a_aI(
+	.clk(G1_aoutp),
+	.datain(G2_aoutput_a0_a_a3),
+	.aclr(rst_acombout),
+	.regout(G2_aoutput_a0_a));
+
+cycloneii_lcell_comb G2_aoutput_a2_a_a1_I(
+	.datab(G2_aoutput_a2_a),
+	.datac(G2_aoutput_a0_a),
+	.datad(G2_aoutput_a1_a),
+	.combout(G2_aoutput_a2_a_a1));
+defparam G2_aoutput_a2_a_a1_I.sum_lutc_input = "datac";
+defparam G2_aoutput_a2_a_a1_I.lut_mask = "3CCC";
+
+cycloneii_lcell_ff G2_aoutput_a2_a_aI(
+	.clk(G1_aoutp),
+	.datain(G2_aoutput_a2_a_a1),
+	.aclr(rst_acombout),
+	.regout(G2_aoutput_a2_a));
+
+cycloneii_lcell_comb G2_aoutput_a2_I(
+	.dataa(G2_aoutput_a3_a),
+	.datab(G2_aoutput_a1_a),
+	.datac(G2_aoutput_a2_a),
+	.datad(G2_aoutput_a0_a),
+	.combout(G2_aoutput_a2));
+defparam G2_aoutput_a2_I.sum_lutc_input = "datac";
+defparam G2_aoutput_a2_I.lut_mask = "68AA";
+
+cycloneii_lcell_ff G2_aoutput_a3_a_aI(
+	.clk(G1_aoutp),
+	.datain(G2_aoutput_a2),
+	.aclr(rst_acombout),
+	.regout(G2_aoutput_a3_a));
+
+cycloneii_lcell_comb G2_aoutput_a0_I(
+	.dataa(G2_aoutput_a2_a),
+	.datab(G2_aoutput_a3_a),
+	.datac(G2_aoutput_a1_a),
+	.datad(G2_aoutput_a0_a),
+	.combout(G2_aoutput_a0));
+defparam G2_aoutput_a0_I.sum_lutc_input = "datac";
+defparam G2_aoutput_a0_I.lut_mask = "0BF0";
+
+cycloneii_lcell_ff G2_aoutput_a1_a_aI(
+	.clk(G1_aoutp),
+	.datain(G2_aoutput_a0),
+	.aclr(rst_acombout),
+	.regout(G2_aoutput_a1_a));
+
+cycloneii_lcell_comb G4_aMux6_a0_I(
+	.dataa(G2_aoutput_a0_a),
+	.datab(G2_aoutput_a1_a),
+	.datac(G2_aoutput_a2_a),
+	.datad(G2_aoutput_a3_a),
+	.combout(G4_aMux6_a0));
+defparam G4_aMux6_a0_I.sum_lutc_input = "datac";
+defparam G4_aMux6_a0_I.lut_mask = "4814";
+
+cycloneii_lcell_comb G4_aMux5_a0_I(
+	.dataa(G2_aoutput_a0_a),
+	.datab(G2_aoutput_a1_a),
+	.datac(G2_aoutput_a2_a),
+	.datad(G2_aoutput_a3_a),
+	.combout(G4_aMux5_a0));
+defparam G4_aMux5_a0_I.sum_lutc_input = "datac";
+defparam G4_aMux5_a0_I.lut_mask = "F9E4";
+
+cycloneii_lcell_comb G4_aMux4_a0_I(
+	.dataa(G2_aoutput_a0_a),
+	.datab(G2_aoutput_a1_a),
+	.datac(G2_aoutput_a2_a),
+	.datad(G2_aoutput_a3_a),
+	.combout(G4_aMux4_a0));
+defparam G4_aMux4_a0_I.sum_lutc_input = "datac";
+defparam G4_aMux4_a0_I.lut_mask = "DFF4";
+
+cycloneii_lcell_comb G4_aMux3_a0_I(
+	.dataa(G2_aoutput_a0_a),
+	.datab(G2_aoutput_a1_a),
+	.datac(G2_aoutput_a2_a),
+	.datad(G2_aoutput_a3_a),
+	.combout(G4_aMux3_a0));
+defparam G4_aMux3_a0_I.sum_lutc_input = "datac";
+defparam G4_aMux3_a0_I.lut_mask = "B6DE";
+
+cycloneii_lcell_comb G4_aMux2_a0_I(
+	.dataa(G2_aoutput_a0_a),
+	.datab(G2_aoutput_a1_a),
+	.datac(G2_aoutput_a2_a),
+	.datad(G2_aoutput_a3_a),
+	.combout(G4_aMux2_a0));
+defparam G4_aMux2_a0_I.sum_lutc_input = "datac";
+defparam G4_aMux2_a0_I.lut_mask = "5D40";
+
+cycloneii_lcell_comb G4_aMux1_a0_I(
+	.dataa(G2_aoutput_a0_a),
+	.datab(G2_aoutput_a1_a),
+	.datac(G2_aoutput_a2_a),
+	.datad(G2_aoutput_a3_a),
+	.combout(G4_aMux1_a0));
+defparam G4_aMux1_a0_I.sum_lutc_input = "datac";
+defparam G4_aMux1_a0_I.lut_mask = "7104";
+
+cycloneii_lcell_comb G4_aMux0_a0_I(
+	.dataa(G2_aoutput_a0_a),
+	.datab(G2_aoutput_a1_a),
+	.datac(G2_aoutput_a2_a),
+	.datad(G2_aoutput_a3_a),
+	.combout(G4_aMux0_a0));
+defparam G4_aMux0_a0_I.sum_lutc_input = "datac";
+defparam G4_aMux0_a0_I.lut_mask = "C108";
+
+cycloneii_io cnt_ten_a0_a_aI(
+	.datain(G5_aMux6_a0),
+	.padio(cnt_ten[0]));
+defparam cnt_ten_a0_a_aI.operation_mode = "output";
+defparam cnt_ten_a0_a_aI.input_register_mode = "none";
+defparam cnt_ten_a0_a_aI.output_register_mode = "none";
+defparam cnt_ten_a0_a_aI.oe_register_mode = "none";
+defparam cnt_ten_a0_a_aI.input_async_reset = "none";
+defparam cnt_ten_a0_a_aI.output_async_reset = "none";
+defparam cnt_ten_a0_a_aI.oe_async_reset = "none";
+defparam cnt_ten_a0_a_aI.input_sync_reset = "none";
+defparam cnt_ten_a0_a_aI.output_sync_reset = "none";
+defparam cnt_ten_a0_a_aI.oe_sync_reset = "none";
+defparam cnt_ten_a0_a_aI.input_power_up = "low";
+defparam cnt_ten_a0_a_aI.output_power_up = "low";
+defparam cnt_ten_a0_a_aI.oe_power_up = "low";
+
+cycloneii_io cnt_ten_a1_a_aI(
+	.datain(__ALT_INV__G5_aMux5_a0),
+	.padio(cnt_ten[1]));
+defparam cnt_ten_a1_a_aI.operation_mode = "output";
+defparam cnt_ten_a1_a_aI.input_register_mode = "none";
+defparam cnt_ten_a1_a_aI.output_register_mode = "none";
+defparam cnt_ten_a1_a_aI.oe_register_mode = "none";
+defparam cnt_ten_a1_a_aI.input_async_reset = "none";
+defparam cnt_ten_a1_a_aI.output_async_reset = "none";
+defparam cnt_ten_a1_a_aI.oe_async_reset = "none";
+defparam cnt_ten_a1_a_aI.input_sync_reset = "none";
+defparam cnt_ten_a1_a_aI.output_sync_reset = "none";
+defparam cnt_ten_a1_a_aI.oe_sync_reset = "none";
+defparam cnt_ten_a1_a_aI.input_power_up = "low";
+defparam cnt_ten_a1_a_aI.output_power_up = "low";
+defparam cnt_ten_a1_a_aI.oe_power_up = "low";
+
+cycloneii_io cnt_ten_a2_a_aI(
+	.datain(__ALT_INV__G5_aMux4_a0),
+	.padio(cnt_ten[2]));
+defparam cnt_ten_a2_a_aI.operation_mode = "output";
+defparam cnt_ten_a2_a_aI.input_register_mode = "none";
+defparam cnt_ten_a2_a_aI.output_register_mode = "none";
+defparam cnt_ten_a2_a_aI.oe_register_mode = "none";
+defparam cnt_ten_a2_a_aI.input_async_reset = "none";
+defparam cnt_ten_a2_a_aI.output_async_reset = "none";
+defparam cnt_ten_a2_a_aI.oe_async_reset = "none";
+defparam cnt_ten_a2_a_aI.input_sync_reset = "none";
+defparam cnt_ten_a2_a_aI.output_sync_reset = "none";
+defparam cnt_ten_a2_a_aI.oe_sync_reset = "none";
+defparam cnt_ten_a2_a_aI.input_power_up = "low";
+defparam cnt_ten_a2_a_aI.output_power_up = "low";
+defparam cnt_ten_a2_a_aI.oe_power_up = "low";
+
+cycloneii_io cnt_ten_a3_a_aI(
+	.datain(__ALT_INV__G5_aMux3_a0),
+	.padio(cnt_ten[3]));
+defparam cnt_ten_a3_a_aI.operation_mode = "output";
+defparam cnt_ten_a3_a_aI.input_register_mode = "none";
+defparam cnt_ten_a3_a_aI.output_register_mode = "none";
+defparam cnt_ten_a3_a_aI.oe_register_mode = "none";
+defparam cnt_ten_a3_a_aI.input_async_reset = "none";
+defparam cnt_ten_a3_a_aI.output_async_reset = "none";
+defparam cnt_ten_a3_a_aI.oe_async_reset = "none";
+defparam cnt_ten_a3_a_aI.input_sync_reset = "none";
+defparam cnt_ten_a3_a_aI.output_sync_reset = "none";
+defparam cnt_ten_a3_a_aI.oe_sync_reset = "none";
+defparam cnt_ten_a3_a_aI.input_power_up = "low";
+defparam cnt_ten_a3_a_aI.output_power_up = "low";
+defparam cnt_ten_a3_a_aI.oe_power_up = "low";
+
+cycloneii_io cnt_ten_a4_a_aI(
+	.datain(G5_aMux2_a0),
+	.padio(cnt_ten[4]));
+defparam cnt_ten_a4_a_aI.operation_mode = "output";
+defparam cnt_ten_a4_a_aI.input_register_mode = "none";
+defparam cnt_ten_a4_a_aI.output_register_mode = "none";
+defparam cnt_ten_a4_a_aI.oe_register_mode = "none";
+defparam cnt_ten_a4_a_aI.input_async_reset = "none";
+defparam cnt_ten_a4_a_aI.output_async_reset = "none";
+defparam cnt_ten_a4_a_aI.oe_async_reset = "none";
+defparam cnt_ten_a4_a_aI.input_sync_reset = "none";
+defparam cnt_ten_a4_a_aI.output_sync_reset = "none";
+defparam cnt_ten_a4_a_aI.oe_sync_reset = "none";
+defparam cnt_ten_a4_a_aI.input_power_up = "low";
+defparam cnt_ten_a4_a_aI.output_power_up = "low";
+defparam cnt_ten_a4_a_aI.oe_power_up = "low";
+
+cycloneii_io cnt_ten_a5_a_aI(
+	.datain(G5_aMux1_a0),
+	.padio(cnt_ten[5]));
+defparam cnt_ten_a5_a_aI.operation_mode = "output";
+defparam cnt_ten_a5_a_aI.input_register_mode = "none";
+defparam cnt_ten_a5_a_aI.output_register_mode = "none";
+defparam cnt_ten_a5_a_aI.oe_register_mode = "none";
+defparam cnt_ten_a5_a_aI.input_async_reset = "none";
+defparam cnt_ten_a5_a_aI.output_async_reset = "none";
+defparam cnt_ten_a5_a_aI.oe_async_reset = "none";
+defparam cnt_ten_a5_a_aI.input_sync_reset = "none";
+defparam cnt_ten_a5_a_aI.output_sync_reset = "none";
+defparam cnt_ten_a5_a_aI.oe_sync_reset = "none";
+defparam cnt_ten_a5_a_aI.input_power_up = "low";
+defparam cnt_ten_a5_a_aI.output_power_up = "low";
+defparam cnt_ten_a5_a_aI.oe_power_up = "low";
+
+cycloneii_io cnt_ten_a6_a_aI(
+	.datain(G5_aMux0_a0),
+	.padio(cnt_ten[6]));
+defparam cnt_ten_a6_a_aI.operation_mode = "output";
+defparam cnt_ten_a6_a_aI.input_register_mode = "none";
+defparam cnt_ten_a6_a_aI.output_register_mode = "none";
+defparam cnt_ten_a6_a_aI.oe_register_mode = "none";
+defparam cnt_ten_a6_a_aI.input_async_reset = "none";
+defparam cnt_ten_a6_a_aI.output_async_reset = "none";
+defparam cnt_ten_a6_a_aI.oe_async_reset = "none";
+defparam cnt_ten_a6_a_aI.input_sync_reset = "none";
+defparam cnt_ten_a6_a_aI.output_sync_reset = "none";
+defparam cnt_ten_a6_a_aI.oe_sync_reset = "none";
+defparam cnt_ten_a6_a_aI.input_power_up = "low";
+defparam cnt_ten_a6_a_aI.output_power_up = "low";
+defparam cnt_ten_a6_a_aI.oe_power_up = "low";
+
+cycloneii_io cnt_unit_a0_a_aI(
+	.datain(G4_aMux6_a0),
+	.padio(cnt_unit[0]));
+defparam cnt_unit_a0_a_aI.operation_mode = "output";
+defparam cnt_unit_a0_a_aI.input_register_mode = "none";
+defparam cnt_unit_a0_a_aI.output_register_mode = "none";
+defparam cnt_unit_a0_a_aI.oe_register_mode = "none";
+defparam cnt_unit_a0_a_aI.input_async_reset = "none";
+defparam cnt_unit_a0_a_aI.output_async_reset = "none";
+defparam cnt_unit_a0_a_aI.oe_async_reset = "none";
+defparam cnt_unit_a0_a_aI.input_sync_reset = "none";
+defparam cnt_unit_a0_a_aI.output_sync_reset = "none";
+defparam cnt_unit_a0_a_aI.oe_sync_reset = "none";
+defparam cnt_unit_a0_a_aI.input_power_up = "low";
+defparam cnt_unit_a0_a_aI.output_power_up = "low";
+defparam cnt_unit_a0_a_aI.oe_power_up = "low";
+
+cycloneii_io cnt_unit_a1_a_aI(
+	.datain(__ALT_INV__G4_aMux5_a0),
+	.padio(cnt_unit[1]));
+defparam cnt_unit_a1_a_aI.operation_mode = "output";
+defparam cnt_unit_a1_a_aI.input_register_mode = "none";
+defparam cnt_unit_a1_a_aI.output_register_mode = "none";
+defparam cnt_unit_a1_a_aI.oe_register_mode = "none";
+defparam cnt_unit_a1_a_aI.input_async_reset = "none";
+defparam cnt_unit_a1_a_aI.output_async_reset = "none";
+defparam cnt_unit_a1_a_aI.oe_async_reset = "none";
+defparam cnt_unit_a1_a_aI.input_sync_reset = "none";
+defparam cnt_unit_a1_a_aI.output_sync_reset = "none";
+defparam cnt_unit_a1_a_aI.oe_sync_reset = "none";
+defparam cnt_unit_a1_a_aI.input_power_up = "low";
+defparam cnt_unit_a1_a_aI.output_power_up = "low";
+defparam cnt_unit_a1_a_aI.oe_power_up = "low";
+
+cycloneii_io cnt_unit_a2_a_aI(
+	.datain(__ALT_INV__G4_aMux4_a0),
+	.padio(cnt_unit[2]));
+defparam cnt_unit_a2_a_aI.operation_mode = "output";
+defparam cnt_unit_a2_a_aI.input_register_mode = "none";
+defparam cnt_unit_a2_a_aI.output_register_mode = "none";
+defparam cnt_unit_a2_a_aI.oe_register_mode = "none";
+defparam cnt_unit_a2_a_aI.input_async_reset = "none";
+defparam cnt_unit_a2_a_aI.output_async_reset = "none";
+defparam cnt_unit_a2_a_aI.oe_async_reset = "none";
+defparam cnt_unit_a2_a_aI.input_sync_reset = "none";
+defparam cnt_unit_a2_a_aI.output_sync_reset = "none";
+defparam cnt_unit_a2_a_aI.oe_sync_reset = "none";
+defparam cnt_unit_a2_a_aI.input_power_up = "low";
+defparam cnt_unit_a2_a_aI.output_power_up = "low";
+defparam cnt_unit_a2_a_aI.oe_power_up = "low";
+
+cycloneii_io cnt_unit_a3_a_aI(
+	.datain(__ALT_INV__G4_aMux3_a0),
+	.padio(cnt_unit[3]));
+defparam cnt_unit_a3_a_aI.operation_mode = "output";
+defparam cnt_unit_a3_a_aI.input_register_mode = "none";
+defparam cnt_unit_a3_a_aI.output_register_mode = "none";
+defparam cnt_unit_a3_a_aI.oe_register_mode = "none";
+defparam cnt_unit_a3_a_aI.input_async_reset = "none";
+defparam cnt_unit_a3_a_aI.output_async_reset = "none";
+defparam cnt_unit_a3_a_aI.oe_async_reset = "none";
+defparam cnt_unit_a3_a_aI.input_sync_reset = "none";
+defparam cnt_unit_a3_a_aI.output_sync_reset = "none";
+defparam cnt_unit_a3_a_aI.oe_sync_reset = "none";
+defparam cnt_unit_a3_a_aI.input_power_up = "low";
+defparam cnt_unit_a3_a_aI.output_power_up = "low";
+defparam cnt_unit_a3_a_aI.oe_power_up = "low";
+
+cycloneii_io cnt_unit_a4_a_aI(
+	.datain(G4_aMux2_a0),
+	.padio(cnt_unit[4]));
+defparam cnt_unit_a4_a_aI.operation_mode = "output";
+defparam cnt_unit_a4_a_aI.input_register_mode = "none";
+defparam cnt_unit_a4_a_aI.output_register_mode = "none";
+defparam cnt_unit_a4_a_aI.oe_register_mode = "none";
+defparam cnt_unit_a4_a_aI.input_async_reset = "none";
+defparam cnt_unit_a4_a_aI.output_async_reset = "none";
+defparam cnt_unit_a4_a_aI.oe_async_reset = "none";
+defparam cnt_unit_a4_a_aI.input_sync_reset = "none";
+defparam cnt_unit_a4_a_aI.output_sync_reset = "none";
+defparam cnt_unit_a4_a_aI.oe_sync_reset = "none";
+defparam cnt_unit_a4_a_aI.input_power_up = "low";
+defparam cnt_unit_a4_a_aI.output_power_up = "low";
+defparam cnt_unit_a4_a_aI.oe_power_up = "low";
+
+cycloneii_io cnt_unit_a5_a_aI(
+	.datain(G4_aMux1_a0),
+	.padio(cnt_unit[5]));
+defparam cnt_unit_a5_a_aI.operation_mode = "output";
+defparam cnt_unit_a5_a_aI.input_register_mode = "none";
+defparam cnt_unit_a5_a_aI.output_register_mode = "none";
+defparam cnt_unit_a5_a_aI.oe_register_mode = "none";
+defparam cnt_unit_a5_a_aI.input_async_reset = "none";
+defparam cnt_unit_a5_a_aI.output_async_reset = "none";
+defparam cnt_unit_a5_a_aI.oe_async_reset = "none";
+defparam cnt_unit_a5_a_aI.input_sync_reset = "none";
+defparam cnt_unit_a5_a_aI.output_sync_reset = "none";
+defparam cnt_unit_a5_a_aI.oe_sync_reset = "none";
+defparam cnt_unit_a5_a_aI.input_power_up = "low";
+defparam cnt_unit_a5_a_aI.output_power_up = "low";
+defparam cnt_unit_a5_a_aI.oe_power_up = "low";
+
+cycloneii_io cnt_unit_a6_a_aI(
+	.datain(G4_aMux0_a0),
+	.padio(cnt_unit[6]));
+defparam cnt_unit_a6_a_aI.operation_mode = "output";
+defparam cnt_unit_a6_a_aI.input_register_mode = "none";
+defparam cnt_unit_a6_a_aI.output_register_mode = "none";
+defparam cnt_unit_a6_a_aI.oe_register_mode = "none";
+defparam cnt_unit_a6_a_aI.input_async_reset = "none";
+defparam cnt_unit_a6_a_aI.output_async_reset = "none";
+defparam cnt_unit_a6_a_aI.oe_async_reset = "none";
+defparam cnt_unit_a6_a_aI.input_sync_reset = "none";
+defparam cnt_unit_a6_a_aI.output_sync_reset = "none";
+defparam cnt_unit_a6_a_aI.oe_sync_reset = "none";
+defparam cnt_unit_a6_a_aI.input_power_up = "low";
+defparam cnt_unit_a6_a_aI.output_power_up = "low";
+defparam cnt_unit_a6_a_aI.oe_power_up = "low";
+
+endmodule

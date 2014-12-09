@@ -1,0 +1,10 @@
+Info: Using NativeLink to launch synthesis Tool
+Synthesis tool <None> is not supported by NativeLink
+Error: NativeLink flow failed to complete synthesis
+
+================The following information is provided to Debug NativeLink Script=================
+Nativelink TCL script failed with errorCode:  POSIX ENOENT {no such file or directory}
+Nativelink TCL script failed with errorInfo:  couldn't open "P:/quartus11/quartus/bin/tclIndex": no such file or directory
+    while executing
+"open [file join $dir tclIndex]"
+PATH Environment Variable is set to :  p:\quartus11\quartus\bin\;p:\quartus11\quartus\bin\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\GPU Toolkit\bin;C:\Program Files\NVIDIA Corporation\GPU Toolkit\libnvvp;C:\Program Files\NVIDIA Corporation\GPU Toolkit\include;C:\Program Files (x86)\Haskell\bin;P:\Haskell Platform\2013.2.0.0\lib\extralibs\bin;P:\Haskell Platform\2013.2.0.0\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;P:\Java\jdk1.6.0_27\bin;P:\MinGW\bin;P:\MinGW\include;P:\MKVtoolnix;P:\Python;P:\CPP\boost;P:\MinGW\lib\gcc\mingw32\4.5.2\include;P:\Haskell Platform\2013.2.0.0\mingw\bin;Z:\MATLAB\R2014a\runtime\win64;Z:\MATLAB\R2014a\bin;P:\LLVM\bin;P:\nodejs\;P:\miktex\miktex\bin\;C:\Users\Frank\AppData\Roaming\cabal\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;P:\Java\jdk1.6.0_27\bin;P:\MinGW\bin;P:\MKVtoolnix;P:\Python;C:\Program Files\TortoiseSVN\bin;P:\CPP\boost;D:\temp;P:\modelsim\modelsim_ase\win32aloem;C:\Users\Frank\AppData\Roaming\npm

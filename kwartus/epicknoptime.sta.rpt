@@ -1,0 +1,969 @@
+TimeQuest Timing Analyzer report for epicknoptime
+Fri Dec 05 17:18:10 2014
+Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow Model Fmax Summary
+  7. Slow Model Setup Summary
+  8. Slow Model Hold Summary
+  9. Slow Model Recovery Summary
+ 10. Slow Model Removal Summary
+ 11. Slow Model Minimum Pulse Width Summary
+ 12. Slow Model Setup: 'knopcontroller:G1|outp'
+ 13. Slow Model Setup: 'modcounter:G2|over'
+ 14. Slow Model Setup: 'clk'
+ 15. Slow Model Hold: 'knopcontroller:G1|outp'
+ 16. Slow Model Hold: 'modcounter:G2|over'
+ 17. Slow Model Hold: 'clk'
+ 18. Slow Model Minimum Pulse Width: 'clk'
+ 19. Slow Model Minimum Pulse Width: 'knopcontroller:G1|outp'
+ 20. Slow Model Minimum Pulse Width: 'modcounter:G2|over'
+ 21. Setup Times
+ 22. Hold Times
+ 23. Clock to Output Times
+ 24. Minimum Clock to Output Times
+ 25. Fast Model Setup Summary
+ 26. Fast Model Hold Summary
+ 27. Fast Model Recovery Summary
+ 28. Fast Model Removal Summary
+ 29. Fast Model Minimum Pulse Width Summary
+ 30. Fast Model Setup: 'knopcontroller:G1|outp'
+ 31. Fast Model Setup: 'modcounter:G2|over'
+ 32. Fast Model Setup: 'clk'
+ 33. Fast Model Hold: 'knopcontroller:G1|outp'
+ 34. Fast Model Hold: 'modcounter:G2|over'
+ 35. Fast Model Hold: 'clk'
+ 36. Fast Model Minimum Pulse Width: 'clk'
+ 37. Fast Model Minimum Pulse Width: 'knopcontroller:G1|outp'
+ 38. Fast Model Minimum Pulse Width: 'modcounter:G2|over'
+ 39. Setup Times
+ 40. Hold Times
+ 41. Clock to Output Times
+ 42. Minimum Clock to Output Times
+ 43. Multicorner Timing Analysis Summary
+ 44. Setup Times
+ 45. Hold Times
+ 46. Clock to Output Times
+ 47. Minimum Clock to Output Times
+ 48. Setup Transfers
+ 49. Hold Transfers
+ 50. Report TCCS
+ 51. Report RSKM
+ 52. Unconstrained Paths
+ 53. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                    ;
++--------------------+-----------------------------------------------------------------+
+; Quartus II Version ; Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; epicknoptime                                                    ;
+; Device Family      ; Cyclone II                                                      ;
+; Device Name        ; EP2C20F484C7                                                    ;
+; Timing Models      ; Final                                                           ;
+; Delay Model        ; Combined                                                        ;
+; Rise/Fall Delays   ; Unavailable                                                     ;
++--------------------+-----------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------+
+; SDC File List                                        ;
++------------------+--------+--------------------------+
+; SDC File Path    ; Status ; Read at                  ;
++------------------+--------+--------------------------+
+; epicknoptime.sdc ; OK     ; Fri Dec 05 17:18:09 2014 ;
++------------------+--------+--------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                         ;
++------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------+
+; Clock Name             ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                    ;
++------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------+
+; clk                    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                    ;
+; knopcontroller:G1|outp ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { knopcontroller:G1|outp } ;
+; modcounter:G2|over     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { modcounter:G2|over }     ;
++------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                                ;
++-------------+-----------------+------------------------+---------------------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name             ; Note                                                          ;
++-------------+-----------------+------------------------+---------------------------------------------------------------+
+; 687.76 MHz  ; 450.05 MHz      ; knopcontroller:G1|outp ; limit due to high minimum pulse width violation (tch)         ;
+; 774.59 MHz  ; 450.05 MHz      ; modcounter:G2|over     ; limit due to high minimum pulse width violation (tch)         ;
+; 1158.75 MHz ; 380.08 MHz      ; clk                    ; limit due to minimum period restriction (max I/O toggle rate) ;
++-------------+-----------------+------------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------------------------+
+; Slow Model Setup Summary                        ;
++------------------------+--------+---------------+
+; Clock                  ; Slack  ; End Point TNS ;
++------------------------+--------+---------------+
+; knopcontroller:G1|outp ; -0.454 ; -1.312        ;
+; modcounter:G2|over     ; -0.291 ; -0.813        ;
+; clk                    ; 0.137  ; 0.000         ;
++------------------------+--------+---------------+
+
+
++------------------------------------------------+
+; Slow Model Hold Summary                        ;
++------------------------+-------+---------------+
+; Clock                  ; Slack ; End Point TNS ;
++------------------------+-------+---------------+
+; knopcontroller:G1|outp ; 0.445 ; 0.000         ;
+; modcounter:G2|over     ; 0.445 ; 0.000         ;
+; clk                    ; 0.615 ; 0.000         ;
++------------------------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary          ;
++------------------------+--------+---------------+
+; Clock                  ; Slack  ; End Point TNS ;
++------------------------+--------+---------------+
+; clk                    ; -1.631 ; -4.075        ;
+; knopcontroller:G1|outp ; -0.611 ; -6.110        ;
+; modcounter:G2|over     ; -0.611 ; -4.888        ;
++------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'knopcontroller:G1|outp'                                                                                                            ;
++--------+-------------------------+-------------------------+------------------------+------------------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock           ; Latch Clock            ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+------------------------+------------------------+--------------+------------+------------+
+; -0.454 ; modcounter:G2|output[0] ; modcounter:G2|output[3] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 1.492      ;
+; -0.301 ; modcounter:G2|output[1] ; modcounter:G2|output[3] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 1.339      ;
+; -0.299 ; modcounter:G2|output[0] ; modcounter:G2|output[2] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 1.337      ;
+; -0.295 ; modcounter:G2|output[0] ; modcounter:G2|output[1] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 1.333      ;
+; -0.264 ; modcounter:G2|output[0] ; modcounter:G2|over      ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 1.302      ;
+; -0.219 ; modcounter:G2|output[3] ; modcounter:G2|output[1] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 1.257      ;
+; -0.135 ; modcounter:G2|output[2] ; modcounter:G2|over      ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 1.173      ;
+; -0.107 ; modcounter:G2|output[1] ; modcounter:G2|output[2] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 1.145      ;
+; -0.106 ; modcounter:G2|output[3] ; modcounter:G2|over      ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 1.144      ;
+; -0.062 ; modcounter:G2|output[1] ; modcounter:G2|over      ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 1.100      ;
+; 0.113  ; modcounter:G2|output[2] ; modcounter:G2|output[3] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.925      ;
+; 0.116  ; modcounter:G2|output[2] ; modcounter:G2|output[1] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.922      ;
+; 0.307  ; modcounter:G2|output[0] ; modcounter:G2|output[0] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.731      ;
+; 0.307  ; modcounter:G2|output[3] ; modcounter:G2|output[3] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.731      ;
+; 0.307  ; modcounter:G2|output[2] ; modcounter:G2|output[2] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.731      ;
+; 0.307  ; modcounter:G2|output[1] ; modcounter:G2|output[1] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.731      ;
++--------+-------------------------+-------------------------+------------------------+------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'modcounter:G2|over'                                                                                                        ;
++--------+-------------------------+-------------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+--------------------+--------------------+--------------+------------+------------+
+; -0.291 ; modcounter:G3|output[2] ; modcounter:G3|output[3] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 1.329      ;
+; -0.285 ; modcounter:G3|output[2] ; modcounter:G3|output[1] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 1.323      ;
+; -0.237 ; modcounter:G3|output[0] ; modcounter:G3|output[2] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 1.275      ;
+; -0.226 ; modcounter:G3|output[1] ; modcounter:G3|output[3] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 1.264      ;
+; -0.223 ; modcounter:G3|output[3] ; modcounter:G3|output[1] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 1.261      ;
+; 0.111  ; modcounter:G3|output[0] ; modcounter:G3|output[1] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 0.927      ;
+; 0.115  ; modcounter:G3|output[0] ; modcounter:G3|output[3] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 0.923      ;
+; 0.125  ; modcounter:G3|output[1] ; modcounter:G3|output[2] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 0.913      ;
+; 0.307  ; modcounter:G3|output[0] ; modcounter:G3|output[0] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 0.731      ;
+; 0.307  ; modcounter:G3|output[3] ; modcounter:G3|output[3] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 0.731      ;
+; 0.307  ; modcounter:G3|output[1] ; modcounter:G3|output[1] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 0.731      ;
+; 0.307  ; modcounter:G3|output[2] ; modcounter:G3|output[2] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 0.731      ;
++--------+-------------------------+-------------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                         ;
++-------+--------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; 0.137 ; knopcontroller:G1|onness ; knopcontroller:G1|outp ; clk          ; clk         ; 1.000        ; 0.000      ; 0.901      ;
++-------+--------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'knopcontroller:G1|outp'                                                                                                            ;
++-------+-------------------------+-------------------------+------------------------+------------------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock           ; Latch Clock            ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+------------------------+------------------------+--------------+------------+------------+
+; 0.445 ; modcounter:G2|output[0] ; modcounter:G2|output[0] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; modcounter:G2|output[2] ; modcounter:G2|output[2] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; modcounter:G2|output[1] ; modcounter:G2|output[1] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; modcounter:G2|output[3] ; modcounter:G2|output[3] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.731      ;
+; 0.636 ; modcounter:G2|output[2] ; modcounter:G2|output[1] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.922      ;
+; 0.639 ; modcounter:G2|output[2] ; modcounter:G2|output[3] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.925      ;
+; 0.814 ; modcounter:G2|output[1] ; modcounter:G2|over      ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 1.100      ;
+; 0.858 ; modcounter:G2|output[3] ; modcounter:G2|over      ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 1.144      ;
+; 0.859 ; modcounter:G2|output[1] ; modcounter:G2|output[2] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 1.145      ;
+; 0.887 ; modcounter:G2|output[2] ; modcounter:G2|over      ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 1.173      ;
+; 0.971 ; modcounter:G2|output[3] ; modcounter:G2|output[1] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 1.257      ;
+; 1.016 ; modcounter:G2|output[0] ; modcounter:G2|over      ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 1.302      ;
+; 1.047 ; modcounter:G2|output[0] ; modcounter:G2|output[1] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 1.333      ;
+; 1.051 ; modcounter:G2|output[0] ; modcounter:G2|output[2] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 1.337      ;
+; 1.053 ; modcounter:G2|output[1] ; modcounter:G2|output[3] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 1.339      ;
+; 1.206 ; modcounter:G2|output[0] ; modcounter:G2|output[3] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 1.492      ;
++-------+-------------------------+-------------------------+------------------------+------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'modcounter:G2|over'                                                                                                        ;
++-------+-------------------------+-------------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+--------------------+--------------------+--------------+------------+------------+
+; 0.445 ; modcounter:G3|output[0] ; modcounter:G3|output[0] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; modcounter:G3|output[1] ; modcounter:G3|output[1] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; modcounter:G3|output[2] ; modcounter:G3|output[2] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; modcounter:G3|output[3] ; modcounter:G3|output[3] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 0.731      ;
+; 0.627 ; modcounter:G3|output[1] ; modcounter:G3|output[2] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 0.913      ;
+; 0.637 ; modcounter:G3|output[0] ; modcounter:G3|output[3] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 0.923      ;
+; 0.641 ; modcounter:G3|output[0] ; modcounter:G3|output[1] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 0.927      ;
+; 0.975 ; modcounter:G3|output[3] ; modcounter:G3|output[1] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 1.261      ;
+; 0.978 ; modcounter:G3|output[1] ; modcounter:G3|output[3] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 1.264      ;
+; 0.989 ; modcounter:G3|output[0] ; modcounter:G3|output[2] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 1.275      ;
+; 1.037 ; modcounter:G3|output[2] ; modcounter:G3|output[1] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 1.323      ;
+; 1.043 ; modcounter:G3|output[2] ; modcounter:G3|output[3] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 1.329      ;
++-------+-------------------------+-------------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                          ;
++-------+--------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; 0.615 ; knopcontroller:G1|onness ; knopcontroller:G1|outp ; clk          ; clk         ; 0.000        ; 0.000      ; 0.901      ;
++-------+--------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                     ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                   ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clk   ; Rise       ; clk                      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; knopcontroller:G1|onness ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; knopcontroller:G1|onness ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; knopcontroller:G1|outp   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; knopcontroller:G1|outp   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; G1|onness|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; G1|onness|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; G1|outp|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; G1|outp|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk       ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'knopcontroller:G1|outp'                                                                   ;
++--------+--------------+----------------+------------------+------------------------+------------+--------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                  ; Clock Edge ; Target                   ;
++--------+--------------+----------------+------------------+------------------------+------------+--------------------------+
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; modcounter:G2|output[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; modcounter:G2|output[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; modcounter:G2|output[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; modcounter:G2|output[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; modcounter:G2|output[2]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; modcounter:G2|output[2]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; modcounter:G2|output[3]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; modcounter:G2|output[3]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; modcounter:G2|over       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; modcounter:G2|over       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; G1|outp|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; G1|outp|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; G1|outp~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; G1|outp~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; G1|outp~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; G1|outp~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; G2|output[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; G2|output[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; G2|output[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; G2|output[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; G2|output[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; G2|output[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; G2|output[3]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; G2|output[3]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; G2|over|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; G2|over|clk              ;
++--------+--------------+----------------+------------------+------------------------+------------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'modcounter:G2|over'                                                                   ;
++--------+--------------+----------------+------------------+--------------------+------------+--------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock              ; Clock Edge ; Target                   ;
++--------+--------------+----------------+------------------+--------------------+------------+--------------------------+
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; modcounter:G2|over ; Rise       ; modcounter:G3|output[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; modcounter:G3|output[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; modcounter:G2|over ; Rise       ; modcounter:G3|output[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; modcounter:G3|output[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; modcounter:G2|over ; Rise       ; modcounter:G3|output[2]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; modcounter:G3|output[2]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; modcounter:G2|over ; Rise       ; modcounter:G3|output[3]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; modcounter:G3|output[3]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; modcounter:G2|over ; Rise       ; G2|over|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; G2|over|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; modcounter:G2|over ; Rise       ; G2|over~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; G2|over~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; modcounter:G2|over ; Rise       ; G2|over~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; G2|over~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; modcounter:G2|over ; Rise       ; G3|output[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; G3|output[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; modcounter:G2|over ; Rise       ; G3|output[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; G3|output[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; modcounter:G2|over ; Rise       ; G3|output[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; G3|output[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; modcounter:G2|over ; Rise       ; G3|output[3]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; G3|output[3]|clk         ;
++--------+--------------+----------------+------------------+--------------------+------------+--------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; btn       ; clk        ; 4.808 ; 4.808 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; btn       ; clk        ; -4.557 ; -4.557 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                       ;
++--------------+------------------------+-------+-------+------------+------------------------+
+; Data Port    ; Clock Port             ; Rise  ; Fall  ; Clock Edge ; Clock Reference        ;
++--------------+------------------------+-------+-------+------------+------------------------+
+; cnt_unit[*]  ; knopcontroller:G1|outp ; 8.533 ; 8.533 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[0] ; knopcontroller:G1|outp ; 8.373 ; 8.373 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[1] ; knopcontroller:G1|outp ; 8.493 ; 8.493 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[2] ; knopcontroller:G1|outp ; 8.179 ; 8.179 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[3] ; knopcontroller:G1|outp ; 8.149 ; 8.149 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[4] ; knopcontroller:G1|outp ; 8.416 ; 8.416 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[5] ; knopcontroller:G1|outp ; 8.533 ; 8.533 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[6] ; knopcontroller:G1|outp ; 8.529 ; 8.529 ; Rise       ; knopcontroller:G1|outp ;
+; cnt_ten[*]   ; modcounter:G2|over     ; 8.330 ; 8.330 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[0]  ; modcounter:G2|over     ; 8.297 ; 8.297 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[1]  ; modcounter:G2|over     ; 8.185 ; 8.185 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[2]  ; modcounter:G2|over     ; 7.946 ; 7.946 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[3]  ; modcounter:G2|over     ; 7.964 ; 7.964 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[4]  ; modcounter:G2|over     ; 7.966 ; 7.966 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[5]  ; modcounter:G2|over     ; 8.330 ; 8.330 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[6]  ; modcounter:G2|over     ; 8.325 ; 8.325 ; Rise       ; modcounter:G2|over     ;
++--------------+------------------------+-------+-------+------------+------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                               ;
++--------------+------------------------+-------+-------+------------+------------------------+
+; Data Port    ; Clock Port             ; Rise  ; Fall  ; Clock Edge ; Clock Reference        ;
++--------------+------------------------+-------+-------+------------+------------------------+
+; cnt_unit[*]  ; knopcontroller:G1|outp ; 7.419 ; 7.419 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[0] ; knopcontroller:G1|outp ; 7.612 ; 7.612 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[1] ; knopcontroller:G1|outp ; 7.729 ; 7.729 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[2] ; knopcontroller:G1|outp ; 7.419 ; 7.419 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[3] ; knopcontroller:G1|outp ; 7.421 ; 7.421 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[4] ; knopcontroller:G1|outp ; 7.649 ; 7.649 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[5] ; knopcontroller:G1|outp ; 7.764 ; 7.764 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[6] ; knopcontroller:G1|outp ; 7.762 ; 7.762 ; Rise       ; knopcontroller:G1|outp ;
+; cnt_ten[*]   ; modcounter:G2|over     ; 7.260 ; 7.260 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[0]  ; modcounter:G2|over     ; 7.641 ; 7.641 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[1]  ; modcounter:G2|over     ; 7.500 ; 7.500 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[2]  ; modcounter:G2|over     ; 7.260 ; 7.260 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[3]  ; modcounter:G2|over     ; 7.281 ; 7.281 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[4]  ; modcounter:G2|over     ; 7.283 ; 7.283 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[5]  ; modcounter:G2|over     ; 7.641 ; 7.641 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[6]  ; modcounter:G2|over     ; 7.645 ; 7.645 ; Rise       ; modcounter:G2|over     ;
++--------------+------------------------+-------+-------+------------+------------------------+
+
+
++------------------------------------------------+
+; Fast Model Setup Summary                       ;
++------------------------+-------+---------------+
+; Clock                  ; Slack ; End Point TNS ;
++------------------------+-------+---------------+
+; knopcontroller:G1|outp ; 0.439 ; 0.000         ;
+; modcounter:G2|over     ; 0.492 ; 0.000         ;
+; clk                    ; 0.641 ; 0.000         ;
++------------------------+-------+---------------+
+
+
++------------------------------------------------+
+; Fast Model Hold Summary                        ;
++------------------------+-------+---------------+
+; Clock                  ; Slack ; End Point TNS ;
++------------------------+-------+---------------+
+; knopcontroller:G1|outp ; 0.215 ; 0.000         ;
+; modcounter:G2|over     ; 0.215 ; 0.000         ;
+; clk                    ; 0.239 ; 0.000         ;
++------------------------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary          ;
++------------------------+--------+---------------+
+; Clock                  ; Slack  ; End Point TNS ;
++------------------------+--------+---------------+
+; clk                    ; -1.380 ; -3.380        ;
+; knopcontroller:G1|outp ; -0.500 ; -5.000        ;
+; modcounter:G2|over     ; -0.500 ; -4.000        ;
++------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'knopcontroller:G1|outp'                                                                                                           ;
++-------+-------------------------+-------------------------+------------------------+------------------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock           ; Latch Clock            ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+------------------------+------------------------+--------------+------------+------------+
+; 0.439 ; modcounter:G2|output[0] ; modcounter:G2|output[3] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.593      ;
+; 0.481 ; modcounter:G2|output[0] ; modcounter:G2|over      ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.551      ;
+; 0.488 ; modcounter:G2|output[1] ; modcounter:G2|output[3] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.544      ;
+; 0.492 ; modcounter:G2|output[0] ; modcounter:G2|output[2] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.540      ;
+; 0.493 ; modcounter:G2|output[0] ; modcounter:G2|output[1] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.539      ;
+; 0.511 ; modcounter:G2|output[2] ; modcounter:G2|over      ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.521      ;
+; 0.519 ; modcounter:G2|output[3] ; modcounter:G2|output[1] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.513      ;
+; 0.556 ; modcounter:G2|output[3] ; modcounter:G2|over      ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.476      ;
+; 0.557 ; modcounter:G2|output[1] ; modcounter:G2|output[2] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.475      ;
+; 0.568 ; modcounter:G2|output[1] ; modcounter:G2|over      ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.464      ;
+; 0.631 ; modcounter:G2|output[2] ; modcounter:G2|output[3] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.401      ;
+; 0.633 ; modcounter:G2|output[2] ; modcounter:G2|output[1] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.399      ;
+; 0.665 ; modcounter:G2|output[0] ; modcounter:G2|output[0] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; modcounter:G2|output[3] ; modcounter:G2|output[3] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; modcounter:G2|output[2] ; modcounter:G2|output[2] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; modcounter:G2|output[1] ; modcounter:G2|output[1] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 1.000        ; 0.000      ; 0.367      ;
++-------+-------------------------+-------------------------+------------------------+------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'modcounter:G2|over'                                                                                                       ;
++-------+-------------------------+-------------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+--------------------+--------------------+--------------+------------+------------+
+; 0.492 ; modcounter:G3|output[2] ; modcounter:G3|output[3] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 0.540      ;
+; 0.498 ; modcounter:G3|output[2] ; modcounter:G3|output[1] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 0.534      ;
+; 0.511 ; modcounter:G3|output[0] ; modcounter:G3|output[2] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 0.521      ;
+; 0.515 ; modcounter:G3|output[1] ; modcounter:G3|output[3] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 0.517      ;
+; 0.520 ; modcounter:G3|output[3] ; modcounter:G3|output[1] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 0.512      ;
+; 0.629 ; modcounter:G3|output[0] ; modcounter:G3|output[1] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 0.403      ;
+; 0.632 ; modcounter:G3|output[0] ; modcounter:G3|output[3] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 0.400      ;
+; 0.638 ; modcounter:G3|output[1] ; modcounter:G3|output[2] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 0.394      ;
+; 0.665 ; modcounter:G3|output[0] ; modcounter:G3|output[0] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; modcounter:G3|output[3] ; modcounter:G3|output[3] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; modcounter:G3|output[1] ; modcounter:G3|output[1] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; modcounter:G3|output[2] ; modcounter:G3|output[2] ; modcounter:G2|over ; modcounter:G2|over ; 1.000        ; 0.000      ; 0.367      ;
++-------+-------------------------+-------------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                         ;
++-------+--------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; 0.641 ; knopcontroller:G1|onness ; knopcontroller:G1|outp ; clk          ; clk         ; 1.000        ; 0.000      ; 0.391      ;
++-------+--------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'knopcontroller:G1|outp'                                                                                                            ;
++-------+-------------------------+-------------------------+------------------------+------------------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock           ; Latch Clock            ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+------------------------+------------------------+--------------+------------+------------+
+; 0.215 ; modcounter:G2|output[0] ; modcounter:G2|output[0] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; modcounter:G2|output[2] ; modcounter:G2|output[2] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; modcounter:G2|output[1] ; modcounter:G2|output[1] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; modcounter:G2|output[3] ; modcounter:G2|output[3] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.367      ;
+; 0.247 ; modcounter:G2|output[2] ; modcounter:G2|output[1] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.399      ;
+; 0.249 ; modcounter:G2|output[2] ; modcounter:G2|output[3] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.401      ;
+; 0.312 ; modcounter:G2|output[1] ; modcounter:G2|over      ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.464      ;
+; 0.323 ; modcounter:G2|output[1] ; modcounter:G2|output[2] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.475      ;
+; 0.324 ; modcounter:G2|output[3] ; modcounter:G2|over      ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.476      ;
+; 0.361 ; modcounter:G2|output[3] ; modcounter:G2|output[1] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.513      ;
+; 0.369 ; modcounter:G2|output[2] ; modcounter:G2|over      ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.521      ;
+; 0.387 ; modcounter:G2|output[0] ; modcounter:G2|output[1] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.539      ;
+; 0.388 ; modcounter:G2|output[0] ; modcounter:G2|output[2] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.540      ;
+; 0.392 ; modcounter:G2|output[1] ; modcounter:G2|output[3] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.544      ;
+; 0.399 ; modcounter:G2|output[0] ; modcounter:G2|over      ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.551      ;
+; 0.441 ; modcounter:G2|output[0] ; modcounter:G2|output[3] ; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 0.000        ; 0.000      ; 0.593      ;
++-------+-------------------------+-------------------------+------------------------+------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'modcounter:G2|over'                                                                                                        ;
++-------+-------------------------+-------------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+--------------------+--------------------+--------------+------------+------------+
+; 0.215 ; modcounter:G3|output[0] ; modcounter:G3|output[0] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; modcounter:G3|output[1] ; modcounter:G3|output[1] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; modcounter:G3|output[2] ; modcounter:G3|output[2] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; modcounter:G3|output[3] ; modcounter:G3|output[3] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 0.367      ;
+; 0.242 ; modcounter:G3|output[1] ; modcounter:G3|output[2] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 0.394      ;
+; 0.248 ; modcounter:G3|output[0] ; modcounter:G3|output[3] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 0.400      ;
+; 0.251 ; modcounter:G3|output[0] ; modcounter:G3|output[1] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 0.403      ;
+; 0.360 ; modcounter:G3|output[3] ; modcounter:G3|output[1] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 0.512      ;
+; 0.365 ; modcounter:G3|output[1] ; modcounter:G3|output[3] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 0.517      ;
+; 0.369 ; modcounter:G3|output[0] ; modcounter:G3|output[2] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 0.521      ;
+; 0.382 ; modcounter:G3|output[2] ; modcounter:G3|output[1] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 0.534      ;
+; 0.388 ; modcounter:G3|output[2] ; modcounter:G3|output[3] ; modcounter:G2|over ; modcounter:G2|over ; 0.000        ; 0.000      ; 0.540      ;
++-------+-------------------------+-------------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                          ;
++-------+--------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; 0.239 ; knopcontroller:G1|onness ; knopcontroller:G1|outp ; clk          ; clk         ; 0.000        ; 0.000      ; 0.391      ;
++-------+--------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                     ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                   ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; knopcontroller:G1|onness ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; knopcontroller:G1|onness ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; knopcontroller:G1|outp   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; knopcontroller:G1|outp   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; G1|onness|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; G1|onness|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; G1|outp|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; G1|outp|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk       ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'knopcontroller:G1|outp'                                                                   ;
++--------+--------------+----------------+------------------+------------------------+------------+--------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                  ; Clock Edge ; Target                   ;
++--------+--------------+----------------+------------------+------------------------+------------+--------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; modcounter:G2|output[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; modcounter:G2|output[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; modcounter:G2|output[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; modcounter:G2|output[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; modcounter:G2|output[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; modcounter:G2|output[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; modcounter:G2|output[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; modcounter:G2|output[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; modcounter:G2|over       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; modcounter:G2|over       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; G1|outp|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; G1|outp|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; G1|outp~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; G1|outp~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; G1|outp~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; G1|outp~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; G2|output[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; G2|output[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; G2|output[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; G2|output[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; G2|output[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; G2|output[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; G2|output[3]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; G2|output[3]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; knopcontroller:G1|outp ; Rise       ; G2|over|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; knopcontroller:G1|outp ; Rise       ; G2|over|clk              ;
++--------+--------------+----------------+------------------+------------------------+------------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'modcounter:G2|over'                                                                   ;
++--------+--------------+----------------+------------------+--------------------+------------+--------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock              ; Clock Edge ; Target                   ;
++--------+--------------+----------------+------------------+--------------------+------------+--------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; modcounter:G2|over ; Rise       ; modcounter:G3|output[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; modcounter:G3|output[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; modcounter:G2|over ; Rise       ; modcounter:G3|output[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; modcounter:G3|output[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; modcounter:G2|over ; Rise       ; modcounter:G3|output[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; modcounter:G3|output[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; modcounter:G2|over ; Rise       ; modcounter:G3|output[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; modcounter:G3|output[3]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; modcounter:G2|over ; Rise       ; G2|over|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; G2|over|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; modcounter:G2|over ; Rise       ; G2|over~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; G2|over~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; modcounter:G2|over ; Rise       ; G2|over~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; G2|over~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; modcounter:G2|over ; Rise       ; G3|output[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; G3|output[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; modcounter:G2|over ; Rise       ; G3|output[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; G3|output[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; modcounter:G2|over ; Rise       ; G3|output[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; G3|output[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; modcounter:G2|over ; Rise       ; G3|output[3]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; modcounter:G2|over ; Rise       ; G3|output[3]|clk         ;
++--------+--------------+----------------+------------------+--------------------+------------+--------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; btn       ; clk        ; 2.172 ; 2.172 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; btn       ; clk        ; -2.047 ; -2.047 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                       ;
++--------------+------------------------+-------+-------+------------+------------------------+
+; Data Port    ; Clock Port             ; Rise  ; Fall  ; Clock Edge ; Clock Reference        ;
++--------------+------------------------+-------+-------+------------+------------------------+
+; cnt_unit[*]  ; knopcontroller:G1|outp ; 4.213 ; 4.213 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[0] ; knopcontroller:G1|outp ; 4.127 ; 4.127 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[1] ; knopcontroller:G1|outp ; 4.188 ; 4.188 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[2] ; knopcontroller:G1|outp ; 4.073 ; 4.073 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[3] ; knopcontroller:G1|outp ; 4.076 ; 4.076 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[4] ; knopcontroller:G1|outp ; 4.163 ; 4.163 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[5] ; knopcontroller:G1|outp ; 4.213 ; 4.213 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[6] ; knopcontroller:G1|outp ; 4.210 ; 4.210 ; Rise       ; knopcontroller:G1|outp ;
+; cnt_ten[*]   ; modcounter:G2|over     ; 4.199 ; 4.199 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[0]  ; modcounter:G2|over     ; 4.199 ; 4.199 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[1]  ; modcounter:G2|over     ; 4.112 ; 4.112 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[2]  ; modcounter:G2|over     ; 4.032 ; 4.032 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[3]  ; modcounter:G2|over     ; 4.050 ; 4.050 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[4]  ; modcounter:G2|over     ; 4.049 ; 4.049 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[5]  ; modcounter:G2|over     ; 4.198 ; 4.198 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[6]  ; modcounter:G2|over     ; 4.193 ; 4.193 ; Rise       ; modcounter:G2|over     ;
++--------------+------------------------+-------+-------+------------+------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                               ;
++--------------+------------------------+-------+-------+------------+------------------------+
+; Data Port    ; Clock Port             ; Rise  ; Fall  ; Clock Edge ; Clock Reference        ;
++--------------+------------------------+-------+-------+------------+------------------------+
+; cnt_unit[*]  ; knopcontroller:G1|outp ; 3.792 ; 3.792 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[0] ; knopcontroller:G1|outp ; 3.841 ; 3.841 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[1] ; knopcontroller:G1|outp ; 3.906 ; 3.906 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[2] ; knopcontroller:G1|outp ; 3.792 ; 3.792 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[3] ; knopcontroller:G1|outp ; 3.795 ; 3.795 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[4] ; knopcontroller:G1|outp ; 3.874 ; 3.874 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[5] ; knopcontroller:G1|outp ; 3.925 ; 3.925 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[6] ; knopcontroller:G1|outp ; 3.924 ; 3.924 ; Rise       ; knopcontroller:G1|outp ;
+; cnt_ten[*]   ; modcounter:G2|over     ; 3.807 ; 3.807 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[0]  ; modcounter:G2|over     ; 3.975 ; 3.975 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[1]  ; modcounter:G2|over     ; 3.889 ; 3.889 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[2]  ; modcounter:G2|over     ; 3.807 ; 3.807 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[3]  ; modcounter:G2|over     ; 3.823 ; 3.823 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[4]  ; modcounter:G2|over     ; 3.830 ; 3.830 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[5]  ; modcounter:G2|over     ; 3.974 ; 3.974 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[6]  ; modcounter:G2|over     ; 3.977 ; 3.977 ; Rise       ; modcounter:G2|over     ;
++--------------+------------------------+-------+-------+------------+------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                 ;
++-------------------------+--------+-------+----------+---------+---------------------+
+; Clock                   ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++-------------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack        ; -0.454 ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+;  clk                    ; 0.137  ; 0.239 ; N/A      ; N/A     ; -1.631              ;
+;  knopcontroller:G1|outp ; -0.454 ; 0.215 ; N/A      ; N/A     ; -0.611              ;
+;  modcounter:G2|over     ; -0.291 ; 0.215 ; N/A      ; N/A     ; -0.611              ;
+; Design-wide TNS         ; -2.125 ; 0.0   ; 0.0      ; 0.0     ; -15.073             ;
+;  clk                    ; 0.000  ; 0.000 ; N/A      ; N/A     ; -4.075              ;
+;  knopcontroller:G1|outp ; -1.312 ; 0.000 ; N/A      ; N/A     ; -6.110              ;
+;  modcounter:G2|over     ; -0.813 ; 0.000 ; N/A      ; N/A     ; -4.888              ;
++-------------------------+--------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; btn       ; clk        ; 4.808 ; 4.808 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; btn       ; clk        ; -2.047 ; -2.047 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                       ;
++--------------+------------------------+-------+-------+------------+------------------------+
+; Data Port    ; Clock Port             ; Rise  ; Fall  ; Clock Edge ; Clock Reference        ;
++--------------+------------------------+-------+-------+------------+------------------------+
+; cnt_unit[*]  ; knopcontroller:G1|outp ; 8.533 ; 8.533 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[0] ; knopcontroller:G1|outp ; 8.373 ; 8.373 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[1] ; knopcontroller:G1|outp ; 8.493 ; 8.493 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[2] ; knopcontroller:G1|outp ; 8.179 ; 8.179 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[3] ; knopcontroller:G1|outp ; 8.149 ; 8.149 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[4] ; knopcontroller:G1|outp ; 8.416 ; 8.416 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[5] ; knopcontroller:G1|outp ; 8.533 ; 8.533 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[6] ; knopcontroller:G1|outp ; 8.529 ; 8.529 ; Rise       ; knopcontroller:G1|outp ;
+; cnt_ten[*]   ; modcounter:G2|over     ; 8.330 ; 8.330 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[0]  ; modcounter:G2|over     ; 8.297 ; 8.297 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[1]  ; modcounter:G2|over     ; 8.185 ; 8.185 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[2]  ; modcounter:G2|over     ; 7.946 ; 7.946 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[3]  ; modcounter:G2|over     ; 7.964 ; 7.964 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[4]  ; modcounter:G2|over     ; 7.966 ; 7.966 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[5]  ; modcounter:G2|over     ; 8.330 ; 8.330 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[6]  ; modcounter:G2|over     ; 8.325 ; 8.325 ; Rise       ; modcounter:G2|over     ;
++--------------+------------------------+-------+-------+------------+------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                               ;
++--------------+------------------------+-------+-------+------------+------------------------+
+; Data Port    ; Clock Port             ; Rise  ; Fall  ; Clock Edge ; Clock Reference        ;
++--------------+------------------------+-------+-------+------------+------------------------+
+; cnt_unit[*]  ; knopcontroller:G1|outp ; 3.792 ; 3.792 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[0] ; knopcontroller:G1|outp ; 3.841 ; 3.841 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[1] ; knopcontroller:G1|outp ; 3.906 ; 3.906 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[2] ; knopcontroller:G1|outp ; 3.792 ; 3.792 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[3] ; knopcontroller:G1|outp ; 3.795 ; 3.795 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[4] ; knopcontroller:G1|outp ; 3.874 ; 3.874 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[5] ; knopcontroller:G1|outp ; 3.925 ; 3.925 ; Rise       ; knopcontroller:G1|outp ;
+;  cnt_unit[6] ; knopcontroller:G1|outp ; 3.924 ; 3.924 ; Rise       ; knopcontroller:G1|outp ;
+; cnt_ten[*]   ; modcounter:G2|over     ; 3.807 ; 3.807 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[0]  ; modcounter:G2|over     ; 3.975 ; 3.975 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[1]  ; modcounter:G2|over     ; 3.889 ; 3.889 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[2]  ; modcounter:G2|over     ; 3.807 ; 3.807 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[3]  ; modcounter:G2|over     ; 3.823 ; 3.823 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[4]  ; modcounter:G2|over     ; 3.830 ; 3.830 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[5]  ; modcounter:G2|over     ; 3.974 ; 3.974 ; Rise       ; modcounter:G2|over     ;
+;  cnt_ten[6]  ; modcounter:G2|over     ; 3.977 ; 3.977 ; Rise       ; modcounter:G2|over     ;
++--------------+------------------------+-------+-------+------------+------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                             ;
++------------------------+------------------------+----------+----------+----------+----------+
+; From Clock             ; To Clock               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------+------------------------+----------+----------+----------+----------+
+; clk                    ; clk                    ; 1        ; 0        ; 0        ; 0        ;
+; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 16       ; 0        ; 0        ; 0        ;
+; modcounter:G2|over     ; modcounter:G2|over     ; 12       ; 0        ; 0        ; 0        ;
++------------------------+------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                              ;
++------------------------+------------------------+----------+----------+----------+----------+
+; From Clock             ; To Clock               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------+------------------------+----------+----------+----------+----------+
+; clk                    ; clk                    ; 1        ; 0        ; 0        ; 0        ;
+; knopcontroller:G1|outp ; knopcontroller:G1|outp ; 16       ; 0        ; 0        ; 0        ;
+; modcounter:G2|over     ; modcounter:G2|over     ; 12       ; 0        ; 0        ; 0        ;
++------------------------+------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 11    ; 11   ;
+; Unconstrained Output Ports      ; 14    ; 14   ;
+; Unconstrained Output Port Paths ; 56    ; 56   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Dec 05 17:18:09 2014
+Info: Command: quartus_sta epicknoptime -c epicknoptime
+Info: qsta_default_script.tcl version: #1
+Warning: Parallel compilation is not licensed and has been disabled
+Info: Low junction temperature is 0 degrees C
+Info: High junction temperature is 85 degrees C
+Info: Reading SDC File: 'epicknoptime.sdc'
+Info: No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: Deriving Clocks
+    Info: create_clock -period 1.000 -name modcounter:G2|over modcounter:G2|over
+    Info: create_clock -period 1.000 -name knopcontroller:G1|outp knopcontroller:G1|outp
+    Info: create_clock -period 1.000 -name clk clk
+Info: Analyzing Slow Model
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -0.454
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.454        -1.312 knopcontroller:G1|outp 
+    Info:    -0.291        -0.813 modcounter:G2|over 
+    Info:     0.137         0.000 clk 
+Info: Worst-case hold slack is 0.445
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.445         0.000 knopcontroller:G1|outp 
+    Info:     0.445         0.000 modcounter:G2|over 
+    Info:     0.615         0.000 clk 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -1.631
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.631        -4.075 clk 
+    Info:    -0.611        -6.110 knopcontroller:G1|outp 
+    Info:    -0.611        -4.888 modcounter:G2|over 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info: Started post-fitting delay annotation
+Warning: Found 14 output pins without output pin load capacitance assignment
+    Info: Pin "cnt_ten[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "cnt_ten[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "cnt_ten[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "cnt_ten[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "cnt_ten[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "cnt_ten[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "cnt_ten[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "cnt_unit[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "cnt_unit[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "cnt_unit[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "cnt_unit[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "cnt_unit[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "cnt_unit[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "cnt_unit[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Info: Delay annotation completed successfully
+Info: Worst-case setup slack is 0.439
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.439         0.000 knopcontroller:G1|outp 
+    Info:     0.492         0.000 modcounter:G2|over 
+    Info:     0.641         0.000 clk 
+Info: Worst-case hold slack is 0.215
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.215         0.000 knopcontroller:G1|outp 
+    Info:     0.215         0.000 modcounter:G2|over 
+    Info:     0.239         0.000 clk 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Critical Warning: Timing requirements not met
+Info: Worst-case minimum pulse width slack is -1.380
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.380        -3.380 clk 
+    Info:    -0.500        -5.000 knopcontroller:G1|outp 
+    Info:    -0.500        -4.000 modcounter:G2|over 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 254 megabytes
+    Info: Processing ended: Fri Dec 05 17:18:10 2014
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

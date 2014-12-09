@@ -44,9 +44,9 @@ ARCHITECTURE structure OF epicknoptime IS
   SIGNAL unit1, unit10 : natural;
 
   BEGIN
-    G1: knopcontroller PORT MAP(btn, clk, plus);
-    G2: modcounter     PORT MAP(plus, rst, unit1, overflow);
-    G3: modcounter     PORT MAP(overflow, rst, unit10, open);
+    G1: knopcontroller PORT MAP(not(btn), clk, plus);
+    G2: modcounter     PORT MAP(plus, not(rst), unit1, overflow);
+    G3: modcounter     PORT MAP(overflow, not(rst), unit10, open);
     G4: display        PORT MAP(std_logic_vector(to_unsigned(unit1, 4)), cnt_unit);
     G5: display        PORT MAP(std_logic_vector(to_unsigned(unit10, 4)), cnt_ten);
 END structure;

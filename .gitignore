@@ -4,3 +4,5 @@ practicum 1/quartus/db/
 practicum 1/quartus/incremental_db/
 *.bak
 practicum 1/quartus/simulation/
+kwartus/db/
+kwartus/incremental_db/

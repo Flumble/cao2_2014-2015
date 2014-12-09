@@ -36,5 +36,5 @@ ARCHITECTURE behaviour OF display IS
   END hex2display;
 
   BEGIN
-    dig <= not(hex2display(not(std_logic_vector(to_unsigned(hex, 4)))));
+    dig <= not(hex2display(std_logic_vector(to_unsigned(hex, 4))));
 END behaviour;

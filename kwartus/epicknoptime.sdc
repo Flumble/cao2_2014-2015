@@ -1,0 +1,17 @@
+#create_clock -period 10.000 -name clk [get_ports clk]
+#set_attribute -name pin_number -value R22 -port rst
+#set_attribute -name pin_number -value R21 -port btn
+#set_attribute -name pin_number -value E1 -port cnt_ten(0)
+#set_attribute -name pin_number -value H6 -port cnt_ten(1)
+#set_attribute -name pin_number -value H5 -port cnt_ten(2)
+#set_attribute -name pin_number -value H4 -port cnt_ten(3)
+#set_attribute -name pin_number -value G3 -port cnt_ten(4)
+#set_attribute -name pin_number -value D2 -port cnt_ten(5)
+#set_attribute -name pin_number -value D1 -port cnt_ten(6)
+#set_attribute -name pin_number -value J2 -port cnt_unit(0)
+#set_attribute -name pin_number -value J1 -port cnt_unit(1)
+#set_attribute -name pin_number -value H2 -port cnt_unit(2)
+#set_attribute -name pin_number -value H1 -port cnt_unit(3)
+#set_attribute -name pin_number -value F2 -port cnt_unit(4)
+#set_attribute -name pin_number -value F1 -port cnt_unit(5)
+#set_attribute -name pin_number -value E2 -port cnt_unit(6)
