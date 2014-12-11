@@ -1,5 +1,5 @@
 Analysis & Synthesis report for epicknoptime
-Fri Dec 05 17:18:04 2014
+Thu Dec 11 17:50:49 2014
 Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
 
 
@@ -13,14 +13,20 @@ Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: modcounter:G2
- 10. Parameter Settings for User Entity Instance: modcounter:G3
- 11. Port Connectivity Checks: "display:G5"
- 12. Port Connectivity Checks: "display:G4"
- 13. Port Connectivity Checks: "modcounter:G3"
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  8. State Machine - |epicknoptime|audio_interface:G6|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: modcounter:G2
+ 14. Parameter Settings for User Entity Instance: modcounter:G3
+ 15. Port Connectivity Checks: "morsegenerator:G9"
+ 16. Port Connectivity Checks: "audio_interface:G6"
+ 17. Port Connectivity Checks: "display:G5"
+ 18. Port Connectivity Checks: "display:G4"
+ 19. Port Connectivity Checks: "modcounter:G3"
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
 
 
 
@@ -46,16 +52,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Dec 05 17:18:04 2014         ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 11 17:50:49 2014         ;
 ; Quartus II Version                 ; 11.0 Build 208 07/03/2011 SP 1 SJ Web Edition ;
 ; Revision Name                      ; epicknoptime                                  ;
 ; Top-level Entity Name              ; epicknoptime                                  ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 25                                            ;
-;     Total combinational functions  ; 25                                            ;
-;     Dedicated logic registers      ; 11                                            ;
-; Total registers                    ; 11                                            ;
-; Total pins                         ; 17                                            ;
+; Total logic elements               ; 350                                           ;
+;     Total combinational functions  ; 317                                           ;
+;     Dedicated logic registers      ; 156                                           ;
+; Total registers                    ; 156                                           ;
+; Total pins                         ; 27                                            ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0                                             ;
 ; Embedded Multiplier 9-bit elements ; 0                                             ;
@@ -156,60 +162,138 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                             ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+
-; ../speeltuin/modcounter.vhd      ; yes             ; User VHDL File  ; D:/School/2014-2015/Computerarchitectuur en -organisatie 2/git/speeltuin/modcounter.vhd     ;
-; ../speeltuin/knopcontroller.vhd  ; yes             ; User VHDL File  ; D:/School/2014-2015/Computerarchitectuur en -organisatie 2/git/speeltuin/knopcontroller.vhd ;
-; ../speeltuin/epicknoptime.vhd    ; yes             ; User VHDL File  ; D:/School/2014-2015/Computerarchitectuur en -organisatie 2/git/speeltuin/epicknoptime.vhd   ;
-; ../speeltuin/display.vhd         ; yes             ; User VHDL File  ; D:/School/2014-2015/Computerarchitectuur en -organisatie 2/git/speeltuin/display.vhd        ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                 ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+
+; ../speeltuin/morsegenerator.vhd  ; yes             ; User VHDL File  ; D:/School/2014-2015/Computerarchitectuur en -organisatie 2/git/speeltuin/morsegenerator.vhd  ;
+; ../speeltuin/audio_interface.vhd ; yes             ; User VHDL File  ; D:/School/2014-2015/Computerarchitectuur en -organisatie 2/git/speeltuin/audio_interface.vhd ;
+; ../speeltuin/toongenerator.vhd   ; yes             ; User VHDL File  ; D:/School/2014-2015/Computerarchitectuur en -organisatie 2/git/speeltuin/toongenerator.vhd   ;
+; ../speeltuin/modcounter.vhd      ; yes             ; User VHDL File  ; D:/School/2014-2015/Computerarchitectuur en -organisatie 2/git/speeltuin/modcounter.vhd      ;
+; ../speeltuin/knopcontroller.vhd  ; yes             ; User VHDL File  ; D:/School/2014-2015/Computerarchitectuur en -organisatie 2/git/speeltuin/knopcontroller.vhd  ;
+; ../speeltuin/epicknoptime.vhd    ; yes             ; User VHDL File  ; D:/School/2014-2015/Computerarchitectuur en -organisatie 2/git/speeltuin/epicknoptime.vhd    ;
+; ../speeltuin/display.vhd         ; yes             ; User VHDL File  ; D:/School/2014-2015/Computerarchitectuur en -organisatie 2/git/speeltuin/display.vhd         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                           ;
-+---------------------------------------------+-------------------------+
-; Resource                                    ; Usage                   ;
-+---------------------------------------------+-------------------------+
-; Estimated Total logic elements              ; 25                      ;
-;                                             ;                         ;
-; Total combinational functions               ; 25                      ;
-; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 19                      ;
-;     -- 3 input functions                    ; 2                       ;
-;     -- <=2 input functions                  ; 4                       ;
-;                                             ;                         ;
-; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 25                      ;
-;     -- arithmetic mode                      ; 0                       ;
-;                                             ;                         ;
-; Total registers                             ; 11                      ;
-;     -- Dedicated logic registers            ; 11                      ;
-;     -- I/O registers                        ; 0                       ;
-;                                             ;                         ;
-; I/O pins                                    ; 17                      ;
-; Maximum fan-out node                        ; modcounter:G2|output[0] ;
-; Maximum fan-out                             ; 12                      ;
-; Total fan-out                               ; 132                     ;
-; Average fan-out                             ; 2.49                    ;
-+---------------------------------------------+-------------------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 350   ;
+;                                             ;       ;
+; Total combinational functions               ; 317   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 172   ;
+;     -- 3 input functions                    ; 28    ;
+;     -- <=2 input functions                  ; 117   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 243   ;
+;     -- arithmetic mode                      ; 74    ;
+;                                             ;       ;
+; Total registers                             ; 156   ;
+;     -- Dedicated logic registers            ; 156   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 27    ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 143   ;
+; Total fan-out                               ; 1605  ;
+; Average fan-out                             ; 3.21  ;
++---------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+
-; |epicknoptime              ; 25 (0)            ; 11 (0)       ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |epicknoptime                   ;              ;
-;    |display:G4|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|display:G4        ;              ;
-;    |display:G5|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|display:G5        ;              ;
-;    |knopcontroller:G1|     ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|knopcontroller:G1 ;              ;
-;    |modcounter:G2|         ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|modcounter:G2     ;              ;
-;    |modcounter:G3|         ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|modcounter:G3     ;              ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                      ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
+; |epicknoptime              ; 317 (6)           ; 156 (0)      ; 0           ; 0            ; 0       ; 0         ; 27   ; 0            ; |epicknoptime                    ;              ;
+;    |audio_interface:G6|    ; 62 (62)           ; 70 (70)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|audio_interface:G6 ;              ;
+;    |display:G4|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|display:G4         ;              ;
+;    |display:G5|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|display:G5         ;              ;
+;    |knopcontroller:G1|     ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|knopcontroller:G1  ;              ;
+;    |knopcontroller:G22|    ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|knopcontroller:G22 ;              ;
+;    |modcounter:G2|         ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|modcounter:G2      ;              ;
+;    |modcounter:G3|         ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|modcounter:G3      ;              ;
+;    |morsegenerator:G8|     ; 70 (70)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|morsegenerator:G8  ;              ;
+;    |morsegenerator:G9|     ; 69 (69)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|morsegenerator:G9  ;              ;
+;    |toongenerator:G7|      ; 84 (84)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|toongenerator:G7   ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |epicknoptime|audio_interface:G6|state                                                                                                                                                                                                                                                                                                                                                            ;
++------------------+-------------+---------------+---------------+-------------+----------+----------+----------+----------+----------+----------+----------+----------+-------------+----------+----------+----------+----------+----------+----------+----------+----------+-------------+----------+----------+----------+----------+----------+----------+----------+----------+-------------+------------------+
+; Name             ; state.b_end ; state.b_stop1 ; state.b_stop0 ; state.d_ack ; state.d7 ; state.d6 ; state.d5 ; state.d4 ; state.d3 ; state.d2 ; state.d1 ; state.d0 ; state.a_ack ; state.a7 ; state.a6 ; state.a5 ; state.a4 ; state.a3 ; state.a2 ; state.a1 ; state.a0 ; state.b_ack ; state.b7 ; state.b6 ; state.b5 ; state.b4 ; state.b3 ; state.b2 ; state.b1 ; state.b0 ; state.start ; state.initialize ;
++------------------+-------------+---------------+---------------+-------------+----------+----------+----------+----------+----------+----------+----------+----------+-------------+----------+----------+----------+----------+----------+----------+----------+----------+-------------+----------+----------+----------+----------+----------+----------+----------+----------+-------------+------------------+
+; state.initialize ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0                ;
+; state.start      ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1           ; 1                ;
+; state.b0         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0           ; 1                ;
+; state.b1         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0           ; 1                ;
+; state.b2         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0           ; 1                ;
+; state.b3         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.b4         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.b5         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.b6         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.b7         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.b_ack      ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.a0         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.a1         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.a2         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.a3         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.a4         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.a5         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.a6         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.a7         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.a_ack      ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.d0         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.d1         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.d2         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.d3         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.d4         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.d5         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.d6         ; 0           ; 0             ; 0             ; 0           ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.d7         ; 0           ; 0             ; 0             ; 0           ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.d_ack      ; 0           ; 0             ; 0             ; 1           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.b_stop0    ; 0           ; 0             ; 1             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.b_stop1    ; 0           ; 1             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.b_end      ; 1           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
++------------------+-------------+---------------+---------------+-------------+----------+----------+----------+----------+----------+----------+----------+----------+-------------+----------+----------+----------+----------+----------+----------+----------+----------+-------------+----------+----------+----------+----------+----------+----------+----------+----------+-------------+------------------+
+
+
++------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                 ;
++----------------------------------------+-------------------------------------------+
+; Register name                          ; Reason for Removal                        ;
++----------------------------------------+-------------------------------------------+
+; audio_interface:G6|LRDATA[15]          ; Merged with audio_interface:G6|LRDATA[31] ;
+; audio_interface:G6|LRDATA[14]          ; Merged with audio_interface:G6|LRDATA[30] ;
+; audio_interface:G6|LRDATA[13]          ; Merged with audio_interface:G6|LRDATA[29] ;
+; audio_interface:G6|LRDATA[12]          ; Merged with audio_interface:G6|LRDATA[28] ;
+; audio_interface:G6|LRDATA[11]          ; Merged with audio_interface:G6|LRDATA[27] ;
+; audio_interface:G6|LRDATA[10]          ; Merged with audio_interface:G6|LRDATA[26] ;
+; audio_interface:G6|LRDATA[9]           ; Merged with audio_interface:G6|LRDATA[25] ;
+; audio_interface:G6|LRDATA[8]           ; Merged with audio_interface:G6|LRDATA[24] ;
+; audio_interface:G6|LRDATA[7]           ; Merged with audio_interface:G6|LRDATA[23] ;
+; audio_interface:G6|LRDATA[6]           ; Merged with audio_interface:G6|LRDATA[22] ;
+; audio_interface:G6|LRDATA[5]           ; Merged with audio_interface:G6|LRDATA[21] ;
+; audio_interface:G6|LRDATA[4]           ; Merged with audio_interface:G6|LRDATA[20] ;
+; audio_interface:G6|LRDATA[3]           ; Merged with audio_interface:G6|LRDATA[19] ;
+; audio_interface:G6|LRDATA[2]           ; Merged with audio_interface:G6|LRDATA[18] ;
+; audio_interface:G6|LRDATA[1]           ; Merged with audio_interface:G6|LRDATA[17] ;
+; audio_interface:G6|LRDATA[0]           ; Merged with audio_interface:G6|LRDATA[16] ;
+; audio_interface:G6|LRDATA[30,31]       ; Merged with audio_interface:G6|LRDATA[29] ;
+; morsegenerator:G8|finished             ; Stuck at GND due to stuck port data_in    ;
+; audio_interface:G6|flag1               ; Lost fanout                               ;
+; audio_interface:G6|Bcount[4]           ; Lost fanout                               ;
+; Total Number of Removed Registers = 21 ;                                           ;
++----------------------------------------+-------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -217,14 +301,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 11    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 156   ;
+; Number of registers using Synchronous Clear  ; 57    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 9     ;
+; Number of registers using Asynchronous Clear ; 152   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 73    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; audio_interface:G6|Bcount[1]           ; 7       ;
+; audio_interface:G6|Bcount[0]           ; 7       ;
+; audio_interface:G6|Bcount[3]           ; 3       ;
+; audio_interface:G6|Bcount[2]           ; 2       ;
+; Total number of inverted registers = 4 ;         ;
++----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                 ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------------+----------------------------+
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; |epicknoptime|audio_interface:G6|Bcount[0] ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------------+----------------------------+
 
 
 +------------------------------------------------------------+
@@ -245,6 +351,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; max            ; 9     ; Signed Integer                    ;
 +----------------+-------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "morsegenerator:G9"                                                                    ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; finish ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "audio_interface:G6"                                                                        ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; adc_full    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_over   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; aud_adcdat  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; aud_adclrck ; Input  ; Info     ; Stuck at GND                                                                        ;
+; adcdata     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------+
@@ -279,7 +407,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -289,9 +417,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Dec 05 17:18:03 2014
+    Info: Processing started: Thu Dec 11 17:50:46 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off epicknoptime -c epicknoptime
 Warning: Parallel compilation is not licensed and has been disabled
+Info: Found 2 design units, including 1 entities, in source file /school/2014-2015/computerarchitectuur en -organisatie 2/git/speeltuin/morsegenerator.vhd
+    Info: Found design unit 1: morsegenerator-behaviour
+    Info: Found entity 1: morsegenerator
+Info: Found 2 design units, including 1 entities, in source file /school/2014-2015/computerarchitectuur en -organisatie 2/git/speeltuin/audio_interface.vhd
+    Info: Found design unit 1: audio_interface-Behavorial
+    Info: Found entity 1: audio_interface
+Info: Found 2 design units, including 1 entities, in source file /school/2014-2015/computerarchitectuur en -organisatie 2/git/speeltuin/toongenerator.vhd
+    Info: Found design unit 1: toongenerator-behaviour
+    Info: Found entity 1: toongenerator
 Info: Found 2 design units, including 1 entities, in source file /school/2014-2015/computerarchitectuur en -organisatie 2/git/speeltuin/modcounter.vhd
     Info: Found design unit 1: modcounter-behaviour
     Info: Found entity 1: modcounter
@@ -305,19 +442,43 @@ Info: Found 2 design units, including 1 entities, in source file /school/2014-20
     Info: Found design unit 1: display-behaviour
     Info: Found entity 1: display
 Info: Elaborating entity "epicknoptime" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at epicknoptime.vhd(25): used implicit default value for signal "temp_audio" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info: Elaborating entity "knopcontroller" for hierarchy "knopcontroller:G1"
 Info: Elaborating entity "modcounter" for hierarchy "modcounter:G2"
 Info: Elaborating entity "display" for hierarchy "display:G4"
+Info: Elaborating entity "audio_interface" for hierarchy "audio_interface:G6"
+Info: Elaborating entity "toongenerator" for hierarchy "toongenerator:G7"
+Info: Elaborating entity "morsegenerator" for hierarchy "morsegenerator:G8"
 Warning: 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning: Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "morsegenerator:G8|index[3]" is converted into an equivalent circuit using register "morsegenerator:G8|index[3]~_emulated" and latch "morsegenerator:G8|index[3]~latch"
+    Warning (13310): Register "morsegenerator:G8|index[2]" is converted into an equivalent circuit using register "morsegenerator:G8|index[2]~_emulated" and latch "morsegenerator:G8|index[2]~latch"
+    Warning (13310): Register "morsegenerator:G8|index[1]" is converted into an equivalent circuit using register "morsegenerator:G8|index[1]~_emulated" and latch "morsegenerator:G8|index[1]~latch"
+    Warning (13310): Register "morsegenerator:G9|index[3]" is converted into an equivalent circuit using register "morsegenerator:G9|index[3]~_emulated" and latch "morsegenerator:G9|index[3]~latch"
+    Warning (13310): Register "morsegenerator:G9|index[2]" is converted into an equivalent circuit using register "morsegenerator:G9|index[2]~_emulated" and latch "morsegenerator:G9|index[2]~latch"
+    Warning (13310): Register "morsegenerator:G9|index[1]" is converted into an equivalent circuit using register "morsegenerator:G9|index[1]~_emulated" and latch "morsegenerator:G9|index[1]~latch"
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "temp_audio" is stuck at GND
+Critical Warning: Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register audio_interface:G6|Bcount[1] will power up to High
+    Critical Warning (18010): Register audio_interface:G6|Bcount[0] will power up to High
+    Critical Warning (18010): Register audio_interface:G6|Bcount[3] will power up to High
+    Critical Warning (18010): Register audio_interface:G6|Bcount[2] will power up to High
+Info: 2 registers lost all their fanouts during netlist optimizations. The first 2 are displayed below.
+    Info: Register "audio_interface:G6|flag1" lost all its fanouts during netlist optimizations.
+    Info: Register "audio_interface:G6|Bcount[4]" lost all its fanouts during netlist optimizations.
 Info: Generating hard_block partition "hard_block:auto_generated_inst"
-Info: Implemented 42 device resources after synthesis - the final resource count might be different
-    Info: Implemented 3 input pins
-    Info: Implemented 14 output pins
-    Info: Implemented 25 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 293 megabytes
-    Info: Processing ended: Fri Dec 05 17:18:04 2014
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+Warning: Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "AUD_ADCDAT"
+    Warning (15610): No output dependent on input pin "AUD_ADCLRCK"
+Info: Implemented 381 device resources after synthesis - the final resource count might be different
+    Info: Implemented 7 input pins
+    Info: Implemented 20 output pins
+    Info: Implemented 354 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 294 megabytes
+    Info: Processing ended: Thu Dec 11 17:50:49 2014
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

@@ -8,7 +8,7 @@ ENTITY toongenerator IS
 port(
     clk   : IN std_logic;
     reset : IN std_logic;
-    play  : IN std_logic;
+    onness: IN std_logic;
     data  : OUT std_logic_vector(15 downto 0)
   );
 END toongenerator;
@@ -86,13 +86,13 @@ ARCHITECTURE behaviour OF toongenerator IS
   END sinlut;  
 
   BEGIN 
-    PROCESS (clk, reset, play) 
+    PROCESS (clk, reset, onness) 
       variable cnt : integer RANGE 0 TO 800;
     BEGIN  
       IF reset = '0' THEN
         cnt := 0;
         index <= (OTHERS=>'0');
-      ELSIF rising_edge(clk) AND play = '1' THEN
+      ELSIF rising_edge(clk) AND onness = '1' THEN
         IF cnt < 800 THEN
           cnt := cnt + 1;
         ELSE
@@ -103,4 +103,4 @@ ARCHITECTURE behaviour OF toongenerator IS
     END process; 
 
     data <= sinlut(std_logic_vector(index));
-END bhv;
+END behaviour;

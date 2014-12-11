@@ -70,10 +70,10 @@ Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage 
 -------------------------------------------------------------------------------------------------------------
 GND                          : A1        : gnd    :                   :         :           :                
 VCCIO3                       : A2        : power  :                   : 3.3V    : 3         :                
-GND*                         : A3        :        :                   :         : 3         :                
-GND*                         : A4        :        :                   :         : 3         :                
-GND*                         : A5        :        :                   :         : 3         :                
-GND*                         : A6        :        :                   :         : 3         :                
+I2C_SCLK                     : A3        : output : 3.3-V LVTTL       :         : 3         : Y              
+AUD_BCLK                     : A4        : input  : 3.3-V LVTTL       :         : 3         : Y              
+AUD_DACLRCK                  : A5        : input  : 3.3-V LVTTL       :         : 3         : Y              
+AUD_ADCLRCK                  : A6        : input  : 3.3-V LVTTL       :         : 3         : Y              
 GND*                         : A7        :        :                   :         : 3         :                
 GND*                         : A8        :        :                   :         : 3         :                
 GND*                         : A9        :        :                   :         : 3         :                
@@ -136,10 +136,10 @@ VCCIO7                       : AB21      : power  :                   : 3.3V    
 GND                          : AB22      : gnd    :                   :         :           :                
 VCCIO2                       : B1        : power  :                   : 3.3V    : 2         :                
 GND                          : B2        : gnd    :                   :         :           :                
-GND*                         : B3        :        :                   :         : 3         :                
-GND*                         : B4        :        :                   :         : 3         :                
-GND*                         : B5        :        :                   :         : 3         :                
-GND*                         : B6        :        :                   :         : 3         :                
+I2C_SDAT                     : B3        : output : 3.3-V LVTTL       :         : 3         : Y              
+AUD_MCLK                     : B4        : output : 3.3-V LVTTL       :         : 3         : Y              
+AUD_DACDAT                   : B5        : output : 3.3-V LVTTL       :         : 3         : Y              
+AUD_ADCDAT                   : B6        : input  : 3.3-V LVTTL       :         : 3         : Y              
 GND*                         : B7        :        :                   :         : 3         :                
 GND*                         : B8        :        :                   :         : 3         :                
 GND*                         : B9        :        :                   :         : 3         :                
@@ -485,7 +485,7 @@ GND*                         : U18       :        :                   :         
 GND*                         : U19       :        :                   :         : 6         :                
 GND*                         : U20       :        :                   :         : 6         :                
 GND*                         : U21       :        :                   :         : 6         :                
-GND*                         : U22       :        :                   :         : 6         :                
+init_finish                  : U22       : output : 3.3-V LVTTL       :         : 6         : Y              
 GND*                         : V1        :        :                   :         : 1         :                
 GND*                         : V2        :        :                   :         : 1         :                
 GND                          : V3        : gnd    :                   :         :           :                
@@ -507,7 +507,7 @@ GND_PLL4                     : V18       : gnd    :                   :         
 GND*                         : V19       :        :                   :         : 6         :                
 GND*                         : V20       :        :                   :         : 6         :                
 GND*                         : V21       :        :                   :         : 6         :                
-GND*                         : V22       :        :                   :         : 6         :                
+temp_audio                   : V22       : output : 3.3-V LVTTL       :         : 6         : Y              
 GND*                         : W1        :        :                   :         : 1         :                
 GND*                         : W2        :        :                   :         : 1         :                
 GND*                         : W3        :        :                   :         : 1         :                
