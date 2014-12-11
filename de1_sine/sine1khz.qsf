@@ -1,0 +1,14 @@
+set_global_assignment -name TOP_LEVEL_ENTITY sine1khz
+set_global_assignment -name DEVICE EP2C20F484C7
+set_global_assignment -name FAMILY "Cyclone II"
+set_location_assignment PIN_L1 -to clk -comment CLOCK_50
+set_location_assignment PIN_R22 -to reset -comment KEY[0]
+set_location_assignment PIN_U22 -to init_finish -comment LEDG[0]
+set_location_assignment PIN_B4 -to AUD_MCLK
+set_location_assignment PIN_A4 -to AUD_BCLK
+set_location_assignment PIN_B6 -to AUD_ADCDAT
+set_location_assignment PIN_B5 -to AUD_DACDAT
+set_location_assignment PIN_A5 -to AUD_DACLRCK
+set_location_assignment PIN_A6 -to AUD_ADCLRCK
+set_location_assignment PIN_B3 -to I2C_SDAT
+set_location_assignment PIN_A3 -to I2C_SCLK
