@@ -9,6 +9,7 @@ ENTITY modcounter IS
 
 	PORT (
 		inc, reset : IN  std_logic;
+		
 		outp : OUT natural RANGE 0 TO max;
 		over : OUT std_logic
 	);
@@ -18,7 +19,7 @@ ARCHITECTURE behaviour OF modcounter IS
 	SIGNAL output : natural RANGE 0 TO max;
 
 BEGIN
-	PROCESS(inc,reset)
+	PROCESS (inc,reset)
 	BEGIN
 		IF reset = '1' THEN
 			over <= '0';

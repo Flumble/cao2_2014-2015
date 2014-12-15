@@ -7,8 +7,9 @@ USE IEEE.numeric_std.ALL;
 ENTITY toongenerator IS
 	GENERIC (wait_cycles : natural := 800);
 
-	PORT(
+	PORT (
 		clock, activate : IN std_logic;
+		
 		data : OUT std_logic_vector(15 downto 0)
 	);
 END toongenerator;

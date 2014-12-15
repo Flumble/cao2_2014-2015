@@ -1,5 +1,5 @@
 Fitter report for epicknoptime
-Mon Dec 15 22:26:21 2014
+Mon Dec 15 23:07:18 2014
 Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
 
 
@@ -35,9 +35,7 @@ Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
  27. LAB Distinct Inputs
  28. Fitter Device Options
  29. Operating Settings and Conditions
- 30. Estimated Delay Added for Hold Timing Summary
- 31. Estimated Delay Added for Hold Timing Details
- 32. Fitter Messages
+ 30. Fitter Messages
 
 
 
@@ -63,15 +61,15 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                     ;
 +------------------------------------+-----------------------------------------------+
-; Fitter Status                      ; Successful - Mon Dec 15 22:26:21 2014         ;
+; Fitter Status                      ; Successful - Mon Dec 15 23:07:18 2014         ;
 ; Quartus II Version                 ; 11.0 Build 208 07/03/2011 SP 1 SJ Web Edition ;
 ; Revision Name                      ; epicknoptime                                  ;
-; Top-level Entity Name              ; epicknoptime                                  ;
+; Top-level Entity Name              ; morseknopper                                  ;
 ; Family                             ; Cyclone II                                    ;
 ; Device                             ; EP2C20F484C7                                  ;
 ; Timing Models                      ; Final                                         ;
-; Total logic elements               ; 339 / 18,752 ( 2 % )                          ;
-;     Total combinational functions  ; 322 / 18,752 ( 2 % )                          ;
+; Total logic elements               ; 340 / 18,752 ( 2 % )                          ;
+;     Total combinational functions  ; 323 / 18,752 ( 2 % )                          ;
 ;     Dedicated logic registers      ; 156 / 18,752 ( < 1 % )                        ;
 ; Total registers                    ; 156                                           ;
 ; Total pins                         ; 26 / 315 ( 8 % )                              ;
@@ -150,8 +148,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 514 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 514 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 515 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 515 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -174,7 +172,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 511     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 512     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -190,19 +188,19 @@ The pin-out file can be found in D:/School/2014-2015/Computerarchitectuur en -or
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 339 / 18,752 ( 2 % )   ;
-;     -- Combinational with no register       ; 183                    ;
+; Total logic elements                        ; 340 / 18,752 ( 2 % )   ;
+;     -- Combinational with no register       ; 184                    ;
 ;     -- Register only                        ; 17                     ;
 ;     -- Combinational with a register        ; 139                    ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 173                    ;
-;     -- 3 input functions                    ; 29                     ;
-;     -- <=2 input functions                  ; 120                    ;
+;     -- 4 input functions                    ; 178                    ;
+;     -- 3 input functions                    ; 30                     ;
+;     -- <=2 input functions                  ; 115                    ;
 ;     -- Register only                        ; 17                     ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 248                    ;
+;     -- normal mode                          ; 249                    ;
 ;     -- arithmetic mode                      ; 74                     ;
 ;                                             ;                        ;
 ; Total registers*                            ; 156 / 19,649 ( < 1 % ) ;
@@ -225,13 +223,13 @@ The pin-out file can be found in D:/School/2014-2015/Computerarchitectuur en -or
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )          ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )          ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%           ;
-; Peak interconnect usage (total/H/V)         ; 2% / 2% / 2%           ;
+; Peak interconnect usage (total/H/V)         ; 2% / 2% / 3%           ;
 ; Maximum fan-out node                        ; clock~clkctrl          ;
 ; Maximum fan-out                             ; 140                    ;
 ; Highest non-global fan-out signal           ; button_reset           ;
-; Highest non-global fan-out                  ; 94                     ;
-; Total fan-out                               ; 1611                   ;
-; Average fan-out                             ; 3.06                   ;
+; Highest non-global fan-out                  ; 95                     ;
+; Total fan-out                               ; 1626                   ;
+; Average fan-out                             ; 3.07                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -244,19 +242,19 @@ The pin-out file can be found in D:/School/2014-2015/Computerarchitectuur en -or
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 339 / 18752 ( 1 % )   ; 0 / 18752 ( 0 % )              ;
-;     -- Combinational with no register       ; 183                   ; 0                              ;
+; Total logic elements                        ; 340 / 18752 ( 1 % )   ; 0 / 18752 ( 0 % )              ;
+;     -- Combinational with no register       ; 184                   ; 0                              ;
 ;     -- Register only                        ; 17                    ; 0                              ;
 ;     -- Combinational with a register        ; 139                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 173                   ; 0                              ;
-;     -- 3 input functions                    ; 29                    ; 0                              ;
-;     -- <=2 input functions                  ; 120                   ; 0                              ;
+;     -- 4 input functions                    ; 178                   ; 0                              ;
+;     -- 3 input functions                    ; 30                    ; 0                              ;
+;     -- <=2 input functions                  ; 115                   ; 0                              ;
 ;     -- Register only                        ; 17                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 248                   ; 0                              ;
+;     -- normal mode                          ; 249                   ; 0                              ;
 ;     -- arithmetic mode                      ; 74                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Total registers                             ; 156                   ; 0                              ;
@@ -279,8 +277,8 @@ The pin-out file can be found in D:/School/2014-2015/Computerarchitectuur en -or
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 1611                  ; 0                              ;
-;     -- Registered Connections               ; 685                   ; 0                              ;
+;     -- Total Connections                    ; 1626                  ; 0                              ;
+;     -- Registered Connections               ; 701                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 0                              ;
@@ -317,7 +315,7 @@ The pin-out file can be found in D:/School/2014-2015/Computerarchitectuur en -or
 ; AUD_BCLK     ; A4    ; 3        ; 1            ; 27           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; AUD_DACLRCK  ; A5    ; 3        ; 3            ; 27           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; button_count ; R21   ; 6        ; 50           ; 10           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; button_reset ; R22   ; 6        ; 50           ; 10           ; 1           ; 94                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; button_reset ; R22   ; 6        ; 50           ; 10           ; 1           ; 95                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; clock        ; L1    ; 2        ; 0            ; 13           ; 0           ; 4                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 +--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
@@ -895,23 +893,23 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                        ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name              ; Library Name ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------+--------------+
-; |epicknoptime              ; 339 (6)     ; 156 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 26   ; 0            ; 183 (6)      ; 17 (0)            ; 139 (0)          ; |epicknoptime                    ;              ;
-;    |audio_interface:G6|    ; 93 (93)     ; 70 (70)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 23 (23)      ; 17 (17)           ; 53 (53)          ; |epicknoptime|audio_interface:G6 ;              ;
-;    |display:G4|            ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |epicknoptime|display:G4         ;              ;
-;    |display:G5|            ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |epicknoptime|display:G5         ;              ;
-;    |modcounter:G2|         ; 5 (5)       ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (5)            ; |epicknoptime|modcounter:G2      ;              ;
-;    |modcounter:G3|         ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; |epicknoptime|modcounter:G3      ;              ;
-;    |morsegenerator:G8|     ; 70 (70)     ; 29 (29)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 41 (41)      ; 0 (0)             ; 29 (29)          ; |epicknoptime|morsegenerator:G8  ;              ;
-;    |morsegenerator:G9|     ; 69 (69)     ; 28 (28)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 40 (40)      ; 0 (0)             ; 29 (29)          ; |epicknoptime|morsegenerator:G9  ;              ;
-;    |puls:G1|               ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |epicknoptime|puls:G1            ;              ;
-;    |puls:G22|              ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |epicknoptime|puls:G22           ;              ;
-;    |toongenerator:G7|      ; 89 (89)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 59 (59)      ; 0 (0)             ; 30 (30)          ; |epicknoptime|toongenerator:G7   ;              ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                               ;
++--------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------+--------------+
+; Compilation Hierarchy Node           ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                           ; Library Name ;
++--------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------+--------------+
+; |morseknopper                        ; 340 (8)     ; 156 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 26   ; 0            ; 184 (8)      ; 17 (0)            ; 139 (1)          ; |morseknopper                                 ;              ;
+;    |audio_interface:Caudio|          ; 93 (93)     ; 70 (70)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 23 (23)      ; 17 (17)           ; 53 (53)          ; |morseknopper|audio_interface:Caudio          ;              ;
+;    |display:Ceenhedenweergave|       ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |morseknopper|display:Ceenhedenweergave       ;              ;
+;    |display:Ctientallenweergave|     ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |morseknopper|display:Ctientallenweergave     ;              ;
+;    |modcounter:Ceenheden|            ; 6 (6)       ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 5 (5)            ; |morseknopper|modcounter:Ceenheden            ;              ;
+;    |modcounter:Ctientallen|          ; 5 (5)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; |morseknopper|modcounter:Ctientallen          ;              ;
+;    |morsegenerator:Ceenhedenmorse|   ; 68 (68)     ; 29 (29)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 39 (39)      ; 0 (0)             ; 29 (29)          ; |morseknopper|morsegenerator:Ceenhedenmorse   ;              ;
+;    |morsegenerator:Ctientallenmorse| ; 67 (67)     ; 28 (28)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 38 (38)      ; 0 (0)             ; 29 (29)          ; |morseknopper|morsegenerator:Ctientallenmorse ;              ;
+;    |puls:Ceenheden_naar_puls|        ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |morseknopper|puls:Ceenheden_naar_puls        ;              ;
+;    |puls:Cknop_naar_puls|            ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |morseknopper|puls:Cknop_naar_puls            ;              ;
+;    |toongenerator:Ctoongenerator|    ; 90 (90)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 60 (60)      ; 0 (0)             ; 30 (30)          ; |morseknopper|toongenerator:Ctoongenerator    ;              ;
++--------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -941,7 +939,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; AUD_DACDAT   ; Output   ; --            ; --            ; --                    ; --  ;
 ; AUD_ADCLRCK  ; Input    ; (0) 312 ps    ; (0) 312 ps    ; --                    ; --  ;
 ; I2C_SCLK     ; Output   ; --            ; --            ; --                    ; --  ;
-; button_reset ; Input    ; (3) 2486 ps   ; (0) 325 ps    ; --                    ; --  ;
+; button_reset ; Input    ; (2) 1854 ps   ; (0) 325 ps    ; --                    ; --  ;
 ; clock        ; Input    ; (0) 325 ps    ; (0) 325 ps    ; --                    ; --  ;
 ; button_count ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
 ; AUD_DACLRCK  ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
@@ -949,727 +947,730 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+----------+---------------+---------------+-----------------------+-----+
 
 
-+---------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                            ;
-+---------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                         ; Pad To Core Index ; Setting ;
-+---------------------------------------------+-------------------+---------+
-; AUD_ADCDAT                                  ;                   ;         ;
-; AUD_ADCLRCK                                 ;                   ;         ;
-; button_reset                                ;                   ;         ;
-;      - modcounter:G2|output[0]              ; 1                 ; 0       ;
-;      - modcounter:G2|output[1]              ; 1                 ; 0       ;
-;      - modcounter:G2|output[2]              ; 1                 ; 0       ;
-;      - modcounter:G2|output[3]              ; 1                 ; 0       ;
-;      - modcounter:G2|over                   ; 1                 ; 0       ;
-;      - modcounter:G3|output[0]              ; 1                 ; 0       ;
-;      - modcounter:G3|output[1]              ; 1                 ; 0       ;
-;      - modcounter:G3|output[2]              ; 1                 ; 0       ;
-;      - modcounter:G3|output[3]              ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[16]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[17]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[18]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[19]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[20]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[21]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[22]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[23]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[24]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[25]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[26]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[27]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[28]        ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b_end       ; 1                 ; 0       ;
-;      - audio_interface:G6|Bcount[0]         ; 1                 ; 0       ;
-;      - audio_interface:G6|Bcount[1]         ; 1                 ; 0       ;
-;      - audio_interface:G6|Bcount[2]         ; 1                 ; 0       ;
-;      - audio_interface:G6|Bcount[3]         ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[29]        ; 1                 ; 0       ;
-;      - audio_interface:G6|i2c_counter[2]    ; 1                 ; 0       ;
-;      - audio_interface:G6|i2c_counter[1]    ; 1                 ; 0       ;
-;      - audio_interface:G6|i2c_counter[9]    ; 1                 ; 0       ;
-;      - audio_interface:G6|i2c_counter[8]    ; 1                 ; 0       ;
-;      - audio_interface:G6|i2c_counter[7]    ; 1                 ; 0       ;
-;      - audio_interface:G6|i2c_counter[6]    ; 1                 ; 0       ;
-;      - audio_interface:G6|i2c_counter[5]    ; 1                 ; 0       ;
-;      - audio_interface:G6|i2c_counter[4]    ; 1                 ; 0       ;
-;      - audio_interface:G6|i2c_counter[3]    ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b_stop1     ; 1                 ; 0       ;
-;      - audio_interface:G6|i2c_counter[0]    ; 1                 ; 0       ;
-;      - audio_interface:G6|dack0             ; 1                 ; 0       ;
-;      - audio_interface:G6|dack1             ; 1                 ; 0       ;
-;      - audio_interface:G6|bck0              ; 1                 ; 0       ;
-;      - audio_interface:G6|bck1              ; 1                 ; 0       ;
-;      - audio_interface:G6|state.d2          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.a3          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.a5          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.a6          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.d6          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.d5          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.a7          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.d3          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.d0          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.d4          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b2          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b3          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b5          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.d1          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.a4          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.initialize  ; 1                 ; 0       ;
-;      - audio_interface:G6|state.d7          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b_ack       ; 1                 ; 0       ;
-;      - audio_interface:G6|state.a_ack       ; 1                 ; 0       ;
-;      - audio_interface:G6|state.d_ack       ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b_stop0     ; 1                 ; 0       ;
-;      - audio_interface:G6|word_counter~0    ; 1                 ; 0       ;
-;      - audio_interface:G6|sck1              ; 1                 ; 0       ;
-;      - audio_interface:G6|sck0              ; 1                 ; 0       ;
-;      - audio_interface:G6|state.a2          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b1          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b4          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b7          ; 1                 ; 0       ;
-;      - morsegenerator:G8|index[3]~head_lut  ; 1                 ; 0       ;
-;      - morsegenerator:G8|index[2]~head_lut  ; 1                 ; 0       ;
-;      - morsegenerator:G8|index[1]~head_lut  ; 1                 ; 0       ;
-;      - morsegenerator:G8|finish~0           ; 1                 ; 0       ;
-;      - morsegenerator:G9|index[3]~head_lut  ; 1                 ; 0       ;
-;      - morsegenerator:G9|index[2]~head_lut  ; 1                 ; 0       ;
-;      - morsegenerator:G9|index[1]~head_lut  ; 1                 ; 0       ;
-;      - morsegenerator:G9|finish~0           ; 1                 ; 0       ;
-;      - audio_interface:G6|state.a1          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b0          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b6          ; 1                 ; 0       ;
-;      - morsegenerator:G8|index[3]~clear_lut ; 1                 ; 0       ;
-;      - morsegenerator:G8|index[3]~8         ; 1                 ; 0       ;
-;      - morsegenerator:G9|index[3]~clear_lut ; 1                 ; 0       ;
-;      - morsegenerator:G9|index[3]~9         ; 1                 ; 0       ;
-;      - audio_interface:G6|state.a0          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.start       ; 1                 ; 0       ;
-;      - morsegenerator:G8|index[3]~latch     ; 1                 ; 0       ;
-;      - morsegenerator:G8|index[2]~latch     ; 1                 ; 0       ;
-;      - morsegenerator:G8|index[1]~latch     ; 1                 ; 0       ;
-;      - morsegenerator:G9|index[3]~latch     ; 0                 ; 3       ;
-;      - morsegenerator:G9|index[2]~latch     ; 0                 ; 3       ;
-;      - morsegenerator:G9|index[1]~latch     ; 0                 ; 3       ;
-; clock                                       ;                   ;         ;
-; button_count                                ;                   ;         ;
-;      - puls:G1|output~0                     ; 0                 ; 6       ;
-;      - puls:G1|activated~0                  ; 0                 ; 6       ;
-; AUD_DACLRCK                                 ;                   ;         ;
-;      - audio_interface:G6|dack0             ; 0                 ; 6       ;
-; AUD_BCLK                                    ;                   ;         ;
-;      - audio_interface:G6|bck0~feeder       ; 0                 ; 6       ;
-+---------------------------------------------+-------------------+---------+
++-----------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                          ;
++-----------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                       ; Pad To Core Index ; Setting ;
++-----------------------------------------------------------+-------------------+---------+
+; AUD_ADCDAT                                                ;                   ;         ;
+; AUD_ADCLRCK                                               ;                   ;         ;
+; button_reset                                              ;                   ;         ;
+;      - modcounter:Ceenheden|output[0]                     ; 1                 ; 0       ;
+;      - modcounter:Ceenheden|output[1]                     ; 1                 ; 0       ;
+;      - modcounter:Ceenheden|output[2]                     ; 1                 ; 0       ;
+;      - modcounter:Ceenheden|output[3]                     ; 1                 ; 0       ;
+;      - modcounter:Ceenheden|over                          ; 1                 ; 0       ;
+;      - modcounter:Ctientallen|output[0]                   ; 1                 ; 0       ;
+;      - modcounter:Ctientallen|output[1]                   ; 1                 ; 0       ;
+;      - modcounter:Ctientallen|output[2]                   ; 1                 ; 0       ;
+;      - modcounter:Ctientallen|output[3]                   ; 1                 ; 0       ;
+;      - audio_interface:Caudio|LRDATA[16]                  ; 1                 ; 0       ;
+;      - audio_interface:Caudio|LRDATA[17]                  ; 1                 ; 0       ;
+;      - audio_interface:Caudio|LRDATA[18]                  ; 1                 ; 0       ;
+;      - audio_interface:Caudio|LRDATA[19]                  ; 1                 ; 0       ;
+;      - audio_interface:Caudio|LRDATA[20]                  ; 1                 ; 0       ;
+;      - audio_interface:Caudio|LRDATA[21]                  ; 1                 ; 0       ;
+;      - audio_interface:Caudio|LRDATA[22]                  ; 1                 ; 0       ;
+;      - audio_interface:Caudio|LRDATA[23]                  ; 1                 ; 0       ;
+;      - audio_interface:Caudio|LRDATA[24]                  ; 1                 ; 0       ;
+;      - audio_interface:Caudio|LRDATA[25]                  ; 1                 ; 0       ;
+;      - audio_interface:Caudio|LRDATA[26]                  ; 1                 ; 0       ;
+;      - audio_interface:Caudio|LRDATA[27]                  ; 1                 ; 0       ;
+;      - audio_interface:Caudio|LRDATA[28]                  ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.b_end                 ; 1                 ; 0       ;
+;      - audio_interface:Caudio|Bcount[0]                   ; 1                 ; 0       ;
+;      - audio_interface:Caudio|Bcount[1]                   ; 1                 ; 0       ;
+;      - audio_interface:Caudio|Bcount[2]                   ; 1                 ; 0       ;
+;      - audio_interface:Caudio|Bcount[3]                   ; 1                 ; 0       ;
+;      - audio_interface:Caudio|LRDATA[29]                  ; 1                 ; 0       ;
+;      - audio_interface:Caudio|i2c_counter[2]              ; 1                 ; 0       ;
+;      - audio_interface:Caudio|i2c_counter[1]              ; 1                 ; 0       ;
+;      - audio_interface:Caudio|i2c_counter[9]              ; 1                 ; 0       ;
+;      - audio_interface:Caudio|i2c_counter[8]              ; 1                 ; 0       ;
+;      - audio_interface:Caudio|i2c_counter[7]              ; 1                 ; 0       ;
+;      - audio_interface:Caudio|i2c_counter[6]              ; 1                 ; 0       ;
+;      - audio_interface:Caudio|i2c_counter[5]              ; 1                 ; 0       ;
+;      - audio_interface:Caudio|i2c_counter[4]              ; 1                 ; 0       ;
+;      - audio_interface:Caudio|i2c_counter[3]              ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.b_stop1               ; 1                 ; 0       ;
+;      - audio_interface:Caudio|i2c_counter[0]              ; 1                 ; 0       ;
+;      - audio_interface:Caudio|dack0                       ; 1                 ; 0       ;
+;      - audio_interface:Caudio|dack1                       ; 1                 ; 0       ;
+;      - audio_interface:Caudio|bck0                        ; 1                 ; 0       ;
+;      - audio_interface:Caudio|bck1                        ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.d2                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.a3                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.a5                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.a6                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.d6                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.d5                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.a7                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.d3                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.d0                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.d4                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.b2                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.b3                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.b5                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.d1                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.a4                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.initialize            ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.d7                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.b_ack                 ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.a_ack                 ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.d_ack                 ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.b_stop0               ; 1                 ; 0       ;
+;      - audio_interface:Caudio|word_counter~0              ; 1                 ; 0       ;
+;      - audio_interface:Caudio|sck1                        ; 1                 ; 0       ;
+;      - audio_interface:Caudio|sck0                        ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.a2                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.b1                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.b4                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.b7                    ; 1                 ; 0       ;
+;      - morsegenerator:Ceenhedenmorse|index[1]~head_lut    ; 1                 ; 0       ;
+;      - morsegenerator:Ceenhedenmorse|finished~2           ; 1                 ; 0       ;
+;      - morsegenerator:Ceenhedenmorse|index[2]~head_lut    ; 1                 ; 0       ;
+;      - morsegenerator:Ceenhedenmorse|index[3]~head_lut    ; 1                 ; 0       ;
+;      - morsegenerator:Ctientallenmorse|index[1]~head_lut  ; 1                 ; 0       ;
+;      - morsegenerator:Ctientallenmorse|finished~0         ; 1                 ; 0       ;
+;      - morsegenerator:Ctientallenmorse|index[2]~head_lut  ; 1                 ; 0       ;
+;      - morsegenerator:Ctientallenmorse|index[3]~head_lut  ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.a1                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.b0                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.b6                    ; 1                 ; 0       ;
+;      - morsegenerator:Ceenhedenmorse|index[2]~clear_lut   ; 1                 ; 0       ;
+;      - morsegenerator:Ceenhedenmorse|index[3]~7           ; 1                 ; 0       ;
+;      - morsegenerator:Ctientallenmorse|index[2]~clear_lut ; 1                 ; 0       ;
+;      - morsegenerator:Ctientallenmorse|index[3]~7         ; 1                 ; 0       ;
+;      - minder_dan_tien                                    ; 0                 ; 2       ;
+;      - audio_interface:Caudio|state.a0                    ; 1                 ; 0       ;
+;      - audio_interface:Caudio|state.start                 ; 1                 ; 0       ;
+;      - morsegenerator:Ceenhedenmorse|index[1]~latch       ; 1                 ; 0       ;
+;      - morsegenerator:Ceenhedenmorse|index[2]~latch       ; 1                 ; 0       ;
+;      - morsegenerator:Ceenhedenmorse|index[3]~latch       ; 1                 ; 0       ;
+;      - morsegenerator:Ctientallenmorse|index[1]~latch     ; 0                 ; 2       ;
+;      - morsegenerator:Ctientallenmorse|index[2]~latch     ; 0                 ; 2       ;
+;      - morsegenerator:Ctientallenmorse|index[3]~latch     ; 0                 ; 2       ;
+; clock                                                     ;                   ;         ;
+; button_count                                              ;                   ;         ;
+;      - puls:Cknop_naar_puls|output~0                      ; 0                 ; 6       ;
+;      - puls:Cknop_naar_puls|activated~0                   ; 0                 ; 6       ;
+; AUD_DACLRCK                                               ;                   ;         ;
+;      - audio_interface:Caudio|dack0                       ; 1                 ; 6       ;
+; AUD_BCLK                                                  ;                   ;         ;
+;      - audio_interface:Caudio|bck0~feeder                 ; 0                 ; 6       ;
++-----------------------------------------------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                    ;
-+--------------------------------------+--------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
-; Name                                 ; Location           ; Fan-Out ; Usage         ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+--------------------------------------+--------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
-; audio_interface:G6|Bcount[2]~0       ; LCCOMB_X29_Y22_N0  ; 4       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; audio_interface:G6|DACData_reg~0     ; LCCOMB_X29_Y22_N4  ; 14      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; audio_interface:G6|I2C_SCLK          ; LCCOMB_X31_Y22_N0  ; 4       ; Clock         ; yes    ; Global Clock         ; GCLK11           ; --                        ;
-; audio_interface:G6|WideOr32~0        ; LCCOMB_X30_Y22_N18 ; 1       ; Output enable ; no     ; --                   ; --               ; --                        ;
-; audio_interface:G6|next_state_i2c~0  ; LCCOMB_X29_Y22_N24 ; 28      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; audio_interface:G6|state.d_ack       ; LCFF_X32_Y22_N13   ; 6       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; audio_interface:G6|word_counter~0    ; LCCOMB_X31_Y22_N10 ; 4       ; Async. clear  ; no     ; --                   ; --               ; --                        ;
-; button_reset                         ; PIN_R22            ; 94      ; Async. clear  ; no     ; --                   ; --               ; --                        ;
-; clock                                ; PIN_L1             ; 4       ; Clock         ; no     ; --                   ; --               ; --                        ;
-; clock                                ; PIN_L1             ; 140     ; Clock         ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; comb~5                               ; LCCOMB_X34_Y20_N30 ; 10      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; modcounter:G2|over                   ; LCFF_X25_Y20_N5    ; 4       ; Clock         ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-; morsegenerator:G8|LessThan0~6        ; LCCOMB_X27_Y21_N2  ; 24      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
-; morsegenerator:G8|finish~0           ; LCCOMB_X27_Y20_N0  ; 26      ; Async. clear  ; no     ; --                   ; --               ; --                        ;
-; morsegenerator:G8|index[3]~8         ; LCCOMB_X27_Y20_N4  ; 3       ; Latch enable  ; yes    ; Global Clock         ; GCLK9            ; --                        ;
-; morsegenerator:G8|index[3]~clear_lut ; LCCOMB_X27_Y20_N30 ; 3       ; Async. clear  ; no     ; --                   ; --               ; --                        ;
-; morsegenerator:G8|index[4]~7         ; LCCOMB_X25_Y20_N2  ; 5       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; morsegenerator:G9|LessThan0~8        ; LCCOMB_X31_Y20_N28 ; 23      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
-; morsegenerator:G9|finish~0           ; LCCOMB_X31_Y20_N0  ; 25      ; Async. clear  ; no     ; --                   ; --               ; --                        ;
-; morsegenerator:G9|index[3]~9         ; LCCOMB_X31_Y20_N14 ; 3       ; Latch enable  ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; morsegenerator:G9|index[3]~clear_lut ; LCCOMB_X31_Y20_N4  ; 3       ; Async. clear  ; no     ; --                   ; --               ; --                        ;
-; morsegenerator:G9|index[4]~8         ; LCCOMB_X31_Y20_N8  ; 5       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; puls:G1|output                       ; LCFF_X27_Y20_N3    ; 5       ; Clock         ; yes    ; Global Clock         ; GCLK8            ; --                        ;
-; toongenerator:G7|index[5]            ; LCFF_X35_Y20_N29   ; 31      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
-; toongenerator:G7|index[5]~9          ; LCCOMB_X34_Y20_N28 ; 5       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-+--------------------------------------+--------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                  ;
++----------------------------------------------------+--------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
+; Name                                               ; Location           ; Fan-Out ; Usage         ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------------------------------------------------+--------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
+; audio_interface:Caudio|Bcount[2]~0                 ; LCCOMB_X45_Y14_N8  ; 4       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; audio_interface:Caudio|DACData_reg~0               ; LCCOMB_X45_Y14_N28 ; 14      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; audio_interface:Caudio|I2C_SCLK                    ; LCCOMB_X46_Y14_N30 ; 4       ; Clock         ; yes    ; Global Clock         ; GCLK5            ; --                        ;
+; audio_interface:Caudio|WideOr32~0                  ; LCCOMB_X47_Y14_N0  ; 1       ; Output enable ; no     ; --                   ; --               ; --                        ;
+; audio_interface:Caudio|next_state_i2c~0            ; LCCOMB_X45_Y14_N24 ; 28      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; audio_interface:Caudio|state.d_ack                 ; LCFF_X44_Y14_N13   ; 6       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; audio_interface:Caudio|word_counter~0              ; LCCOMB_X46_Y14_N6  ; 4       ; Async. clear  ; no     ; --                   ; --               ; --                        ;
+; button_reset                                       ; PIN_R22            ; 95      ; Async. clear  ; no     ; --                   ; --               ; --                        ;
+; clock                                              ; PIN_L1             ; 4       ; Clock         ; no     ; --                   ; --               ; --                        ;
+; clock                                              ; PIN_L1             ; 140     ; Clock         ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; comb~7                                             ; LCCOMB_X39_Y19_N30 ; 10      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; modcounter:Ceenheden|over                          ; LCFF_X39_Y22_N29   ; 4       ; Clock         ; yes    ; Global Clock         ; GCLK8            ; --                        ;
+; morsegenerator:Ceenhedenmorse|LessThan0~5          ; LCCOMB_X39_Y20_N4  ; 24      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
+; morsegenerator:Ceenhedenmorse|finished~2           ; LCCOMB_X39_Y21_N10 ; 26      ; Async. clear  ; no     ; --                   ; --               ; --                        ;
+; morsegenerator:Ceenhedenmorse|index[2]~clear_lut   ; LCCOMB_X39_Y21_N4  ; 3       ; Async. clear  ; no     ; --                   ; --               ; --                        ;
+; morsegenerator:Ceenhedenmorse|index[3]~7           ; LCCOMB_X39_Y21_N30 ; 3       ; Latch enable  ; yes    ; Global Clock         ; GCLK10           ; --                        ;
+; morsegenerator:Ceenhedenmorse|index[4]~9           ; LCCOMB_X39_Y21_N18 ; 5       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; morsegenerator:Ctientallenmorse|LessThan0~7        ; LCCOMB_X38_Y17_N28 ; 23      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
+; morsegenerator:Ctientallenmorse|finished~0         ; LCCOMB_X39_Y22_N16 ; 25      ; Async. clear  ; no     ; --                   ; --               ; --                        ;
+; morsegenerator:Ctientallenmorse|index[2]~clear_lut ; LCCOMB_X39_Y17_N14 ; 3       ; Async. clear  ; no     ; --                   ; --               ; --                        ;
+; morsegenerator:Ctientallenmorse|index[3]~7         ; LCCOMB_X39_Y17_N18 ; 3       ; Latch enable  ; yes    ; Global Clock         ; GCLK7            ; --                        ;
+; morsegenerator:Ctientallenmorse|index[4]~9         ; LCCOMB_X38_Y17_N30 ; 5       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; puls:Cknop_naar_puls|output                        ; LCFF_X39_Y21_N29   ; 5       ; Clock         ; yes    ; Global Clock         ; GCLK11           ; --                        ;
+; toongenerator:Ctoongenerator|index[5]              ; LCFF_X39_Y19_N29   ; 31      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
+; toongenerator:Ctoongenerator|index[5]~13           ; LCCOMB_X39_Y19_N10 ; 5       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
++----------------------------------------------------+--------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                       ;
-+------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
-; Name                         ; Location           ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
-; audio_interface:G6|I2C_SCLK  ; LCCOMB_X31_Y22_N0  ; 4       ; Global Clock         ; GCLK11           ; --                        ;
-; clock                        ; PIN_L1             ; 140     ; Global Clock         ; GCLK2            ; --                        ;
-; modcounter:G2|over           ; LCFF_X25_Y20_N5    ; 4       ; Global Clock         ; GCLK10           ; --                        ;
-; morsegenerator:G8|index[3]~8 ; LCCOMB_X27_Y20_N4  ; 3       ; Global Clock         ; GCLK9            ; --                        ;
-; morsegenerator:G9|index[3]~9 ; LCCOMB_X31_Y20_N14 ; 3       ; Global Clock         ; GCLK4            ; --                        ;
-; puls:G1|output               ; LCFF_X27_Y20_N3    ; 5       ; Global Clock         ; GCLK8            ; --                        ;
-+------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                     ;
++--------------------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
+; Name                                       ; Location           ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++--------------------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
+; audio_interface:Caudio|I2C_SCLK            ; LCCOMB_X46_Y14_N30 ; 4       ; Global Clock         ; GCLK5            ; --                        ;
+; clock                                      ; PIN_L1             ; 140     ; Global Clock         ; GCLK2            ; --                        ;
+; modcounter:Ceenheden|over                  ; LCFF_X39_Y22_N29   ; 4       ; Global Clock         ; GCLK8            ; --                        ;
+; morsegenerator:Ceenhedenmorse|index[3]~7   ; LCCOMB_X39_Y21_N30 ; 3       ; Global Clock         ; GCLK10           ; --                        ;
+; morsegenerator:Ctientallenmorse|index[3]~7 ; LCCOMB_X39_Y17_N18 ; 3       ; Global Clock         ; GCLK7            ; --                        ;
+; puls:Cknop_naar_puls|output                ; LCFF_X39_Y21_N29   ; 5       ; Global Clock         ; GCLK11           ; --                        ;
++--------------------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
 
 
-+---------------------------------------------------+
-; Non-Global High Fan-Out Signals                   ;
-+-----------------------------------------+---------+
-; Name                                    ; Fan-Out ;
-+-----------------------------------------+---------+
-; button_reset                            ; 94      ;
-; toongenerator:G7|index[2]               ; 40      ;
-; toongenerator:G7|index[3]               ; 37      ;
-; toongenerator:G7|index[4]               ; 36      ;
-; toongenerator:G7|index[0]               ; 34      ;
-; toongenerator:G7|index[1]               ; 33      ;
-; toongenerator:G7|index[5]               ; 31      ;
-; audio_interface:G6|next_state_i2c~0     ; 28      ;
-; morsegenerator:G8|finish~0              ; 26      ;
-; morsegenerator:G9|finish~0              ; 25      ;
-; morsegenerator:G8|LessThan0~6           ; 24      ;
-; morsegenerator:G9|LessThan0~8           ; 23      ;
-; modcounter:G2|output[2]                 ; 21      ;
-; modcounter:G2|output[0]                 ; 21      ;
-; modcounter:G3|output[2]                 ; 21      ;
-; modcounter:G2|output[3]                 ; 20      ;
-; modcounter:G2|output[1]                 ; 20      ;
-; modcounter:G3|output[0]                 ; 20      ;
-; modcounter:G3|output[3]                 ; 19      ;
-; modcounter:G3|output[1]                 ; 19      ;
-; audio_interface:G6|word_count[1]        ; 14      ;
-; audio_interface:G6|word_count[0]        ; 14      ;
-; audio_interface:G6|DACData_reg~0        ; 14      ;
-; comb~5                                  ; 10      ;
-; morsegenerator:G9|index[2]~head_lut     ; 9       ;
-; morsegenerator:G8|index[2]~head_lut     ; 9       ;
-; morsegenerator:G9|index[3]~head_lut     ; 8       ;
-; morsegenerator:G8|index[3]~head_lut     ; 8       ;
-; audio_interface:G6|dack0                ; 7       ;
-; audio_interface:G6|Bcount[0]            ; 7       ;
-; audio_interface:G6|Bcount[1]            ; 7       ;
-; toongenerator:G7|Equal0~2               ; 6       ;
-; audio_interface:G6|I2C_SCLK             ; 6       ;
-; audio_interface:G6|state.d_ack          ; 6       ;
-; audio_interface:G6|word_count[2]        ; 6       ;
-; audio_interface:G6|dack1                ; 6       ;
-; morsegenerator:G9|index[4]~8            ; 5       ;
-; morsegenerator:G9|index[1]~head_lut     ; 5       ;
-; morsegenerator:G8|index[4]~7            ; 5       ;
-; morsegenerator:G8|index[1]~head_lut     ; 5       ;
-; toongenerator:G7|index[5]~9             ; 5       ;
-; morsegenerator:G9|index[3]~9            ; 4       ;
-; morsegenerator:G8|index[3]~8            ; 4       ;
-; audio_interface:G6|word_counter~0       ; 4       ;
-; morsegenerator:G9|index[4]              ; 4       ;
-; morsegenerator:G8|index[4]              ; 4       ;
-; morsegenerator:G9|index[0]              ; 4       ;
-; morsegenerator:G8|index[0]              ; 4       ;
-; audio_interface:G6|Bcount[2]~0          ; 4       ;
-; audio_interface:G6|state.b_end          ; 4       ;
-; clock                                   ; 3       ;
-; morsegenerator:G9|index[1]~latch        ; 3       ;
-; morsegenerator:G9|index[2]~latch        ; 3       ;
-; morsegenerator:G9|index[3]~latch        ; 3       ;
-; morsegenerator:G8|index[1]~latch        ; 3       ;
-; morsegenerator:G8|index[2]~latch        ; 3       ;
-; morsegenerator:G8|index[3]~latch        ; 3       ;
-; morsegenerator:G8|finish                ; 3       ;
-; morsegenerator:G9|index[3]~clear_lut    ; 3       ;
-; morsegenerator:G8|index[3]~clear_lut    ; 3       ;
-; morsegenerator:G9|Mux7~0                ; 3       ;
-; morsegenerator:G8|Mux7~0                ; 3       ;
-; audio_interface:G6|sck0                 ; 3       ;
-; comb~4                                  ; 3       ;
-; comb~0                                  ; 3       ;
-; audio_interface:G6|word_count[3]        ; 3       ;
-; audio_interface:G6|state.initialize     ; 3       ;
-; audio_interface:G6|state.d3             ; 3       ;
-; audio_interface:G6|state.d5             ; 3       ;
-; audio_interface:G6|state.d6             ; 3       ;
-; audio_interface:G6|state.a6             ; 3       ;
-; audio_interface:G6|state.a5             ; 3       ;
-; audio_interface:G6|state.a3             ; 3       ;
-; audio_interface:G6|state.d2             ; 3       ;
-; audio_interface:G6|Bcount[3]            ; 3       ;
-; morsegenerator:G9|cnt[21]               ; 3       ;
-; morsegenerator:G9|cnt[20]               ; 3       ;
-; morsegenerator:G9|cnt[22]               ; 3       ;
-; morsegenerator:G8|cnt[21]               ; 3       ;
-; morsegenerator:G8|cnt[20]               ; 3       ;
-; morsegenerator:G8|cnt[22]               ; 3       ;
-; button_count                            ; 2       ;
-; audio_interface:G6|state.start          ; 2       ;
-; morsegenerator:G9|Mux2~0                ; 2       ;
-; morsegenerator:G9|Mux1~0                ; 2       ;
-; morsegenerator:G8|Mux2~0                ; 2       ;
-; morsegenerator:G8|Mux1~0                ; 2       ;
-; morsegenerator:G9|LessThan0~6           ; 2       ;
-; puls:G22|output                         ; 2       ;
-; morsegenerator:G8|finish~1              ; 2       ;
-; morsegenerator:G8|LessThan0~4           ; 2       ;
-; audio_interface:G6|Equal0~0             ; 2       ;
-; audio_interface:G6|Selector0~0          ; 2       ;
-; audio_interface:G6|sck1                 ; 2       ;
-; toongenerator:G7|wait_counter[9]        ; 2       ;
-; toongenerator:G7|wait_counter[8]        ; 2       ;
-; toongenerator:G7|wait_counter[7]        ; 2       ;
-; toongenerator:G7|wait_counter[6]        ; 2       ;
-; toongenerator:G7|wait_counter[4]        ; 2       ;
-; toongenerator:G7|wait_counter[5]        ; 2       ;
-; toongenerator:G7|wait_counter[3]        ; 2       ;
-; toongenerator:G7|wait_counter[2]        ; 2       ;
-; toongenerator:G7|wait_counter[1]        ; 2       ;
-; toongenerator:G7|wait_counter[0]        ; 2       ;
-; audio_interface:G6|state.b_stop0        ; 2       ;
-; modcounter:G2|Equal0~0                  ; 2       ;
-; audio_interface:G6|state.a_ack          ; 2       ;
-; audio_interface:G6|state.b_ack          ; 2       ;
-; audio_interface:G6|state.d7             ; 2       ;
-; audio_interface:G6|Mux1~0               ; 2       ;
-; audio_interface:G6|state.a4             ; 2       ;
-; audio_interface:G6|state.d1             ; 2       ;
-; audio_interface:G6|state.b5             ; 2       ;
-; audio_interface:G6|state.b3             ; 2       ;
-; audio_interface:G6|state.b2             ; 2       ;
-; audio_interface:G6|state.d4             ; 2       ;
-; audio_interface:G6|state.d0             ; 2       ;
-; audio_interface:G6|state.a7             ; 2       ;
-; toongenerator:G7|Mux2~0                 ; 2       ;
-; toongenerator:G7|Mux13~1                ; 2       ;
-; toongenerator:G7|Mux13~0                ; 2       ;
-; audio_interface:G6|bck0                 ; 2       ;
-; audio_interface:G6|i2c_counter[0]       ; 2       ;
-; audio_interface:G6|I2C_SCLK~0           ; 2       ;
-; audio_interface:G6|state.b_stop1        ; 2       ;
-; puls:G1|output                          ; 2       ;
-; audio_interface:G6|Bcount[2]            ; 2       ;
-; morsegenerator:G9|cnt[11]               ; 2       ;
-; morsegenerator:G9|cnt[10]               ; 2       ;
-; morsegenerator:G9|cnt[9]                ; 2       ;
-; morsegenerator:G9|cnt[8]                ; 2       ;
-; morsegenerator:G9|cnt[7]                ; 2       ;
-; morsegenerator:G9|cnt[6]                ; 2       ;
-; morsegenerator:G9|cnt[14]               ; 2       ;
-; morsegenerator:G9|cnt[13]               ; 2       ;
-; morsegenerator:G9|cnt[12]               ; 2       ;
-; morsegenerator:G9|cnt[17]               ; 2       ;
-; morsegenerator:G9|cnt[16]               ; 2       ;
-; morsegenerator:G9|cnt[15]               ; 2       ;
-; morsegenerator:G9|cnt[19]               ; 2       ;
-; morsegenerator:G9|cnt[18]               ; 2       ;
-; morsegenerator:G8|cnt[19]               ; 2       ;
-; morsegenerator:G8|cnt[18]               ; 2       ;
-; morsegenerator:G8|cnt[17]               ; 2       ;
-; morsegenerator:G8|cnt[16]               ; 2       ;
-; morsegenerator:G8|cnt[15]               ; 2       ;
-; morsegenerator:G8|cnt[14]               ; 2       ;
-; morsegenerator:G8|cnt[13]               ; 2       ;
-; morsegenerator:G8|cnt[12]               ; 2       ;
-; morsegenerator:G8|cnt[11]               ; 2       ;
-; morsegenerator:G8|cnt[10]               ; 2       ;
-; morsegenerator:G8|cnt[9]                ; 2       ;
-; morsegenerator:G8|cnt[8]                ; 2       ;
-; morsegenerator:G8|cnt[7]                ; 2       ;
-; morsegenerator:G8|cnt[6]                ; 2       ;
-; audio_interface:G6|i2c_counter[9]       ; 2       ;
-; audio_interface:G6|i2c_counter[2]       ; 2       ;
-; AUD_BCLK                                ; 1       ;
-; AUD_DACLRCK                             ; 1       ;
-; morsegenerator:G9|index[0]~10           ; 1       ;
-; morsegenerator:G8|index[0]~9            ; 1       ;
-; puls:G1|activated~0                     ; 1       ;
-; audio_interface:G6|word_count[0]~2      ; 1       ;
-; audio_interface:G6|i2c_counter[0]~27    ; 1       ;
-; modcounter:G2|output[0]~3               ; 1       ;
-; modcounter:G3|output[0]~3               ; 1       ;
-; audio_interface:G6|Add0~17              ; 1       ;
-; audio_interface:G6|Add0~16              ; 1       ;
-; audio_interface:G6|Add0~15              ; 1       ;
-; audio_interface:G6|Selector1~0          ; 1       ;
-; morsegenerator:G8|finish~2              ; 1       ;
-; audio_interface:G6|state.a0             ; 1       ;
-; puls:G22|output~0                       ; 1       ;
-; puls:G22|activated                      ; 1       ;
-; morsegenerator:G9|index[1]~data_lut     ; 1       ;
-; morsegenerator:G9|index[2]~data_lut     ; 1       ;
-; morsegenerator:G9|index[3]~data_lut     ; 1       ;
-; morsegenerator:G8|index[1]~data_lut     ; 1       ;
-; morsegenerator:G8|index[2]~data_lut     ; 1       ;
-; morsegenerator:G8|index[3]~data_lut     ; 1       ;
-; audio_interface:G6|state.b6             ; 1       ;
-; audio_interface:G6|state.b0             ; 1       ;
-; audio_interface:G6|state.a1             ; 1       ;
-; morsegenerator:G9|LessThan0~7           ; 1       ;
-; morsegenerator:G9|LessThan0~5           ; 1       ;
-; morsegenerator:G9|LessThan0~4           ; 1       ;
-; morsegenerator:G9|LessThan0~3           ; 1       ;
-; morsegenerator:G9|LessThan0~2           ; 1       ;
-; morsegenerator:G9|index[4]~7            ; 1       ;
-; morsegenerator:G9|index[1]~tail_lut     ; 1       ;
-; morsegenerator:G9|index[1]~_emulated    ; 1       ;
-; morsegenerator:G9|index[2]~tail_lut     ; 1       ;
-; morsegenerator:G9|index[2]~_emulated    ; 1       ;
-; morsegenerator:G9|index[3]~tail_lut     ; 1       ;
-; morsegenerator:G9|index[3]~_emulated    ; 1       ;
-; morsegenerator:G8|LessThan0~5           ; 1       ;
-; morsegenerator:G8|LessThan0~3           ; 1       ;
-; morsegenerator:G8|LessThan0~2           ; 1       ;
-; morsegenerator:G8|LessThan0~1           ; 1       ;
-; morsegenerator:G8|LessThan0~0           ; 1       ;
-; morsegenerator:G8|index[1]~tail_lut     ; 1       ;
-; morsegenerator:G8|index[1]~_emulated    ; 1       ;
-; morsegenerator:G8|index[2]~tail_lut     ; 1       ;
-; morsegenerator:G8|index[2]~_emulated    ; 1       ;
-; morsegenerator:G8|index[3]~tail_lut     ; 1       ;
-; morsegenerator:G8|index[3]~_emulated    ; 1       ;
-; toongenerator:G7|wait_counter~3         ; 1       ;
-; toongenerator:G7|wait_counter~2         ; 1       ;
-; toongenerator:G7|wait_counter~1         ; 1       ;
-; toongenerator:G7|wait_counter~0         ; 1       ;
-; audio_interface:G6|Selector29~0         ; 1       ;
-; audio_interface:G6|state.b7             ; 1       ;
-; audio_interface:G6|word_count[3]~1      ; 1       ;
-; audio_interface:G6|word_count[3]~0      ; 1       ;
-; audio_interface:G6|Selector0~1          ; 1       ;
-; audio_interface:G6|state.b4             ; 1       ;
-; audio_interface:G6|state.b1             ; 1       ;
-; audio_interface:G6|state.a2             ; 1       ;
-; audio_interface:G6|Mux10~0              ; 1       ;
-; toongenerator:G7|index[0]~16            ; 1       ;
-; comb~3                                  ; 1       ;
-; morsegenerator:G9|Mux13~0               ; 1       ;
-; comb~2                                  ; 1       ;
-; comb~1                                  ; 1       ;
-; morsegenerator:G8|Mux13~0               ; 1       ;
-; morsegenerator:G9|Mux14~11              ; 1       ;
-; morsegenerator:G9|Mux14~10              ; 1       ;
-; morsegenerator:G9|Mux14~9               ; 1       ;
-; morsegenerator:G9|Mux14~8               ; 1       ;
-; morsegenerator:G9|Mux14~7               ; 1       ;
-; morsegenerator:G9|Mux14~6               ; 1       ;
-; morsegenerator:G9|Mux14~5               ; 1       ;
-; morsegenerator:G9|Mux14~4               ; 1       ;
-; morsegenerator:G9|Mux14~3               ; 1       ;
-; morsegenerator:G9|Mux14~2               ; 1       ;
-; morsegenerator:G9|Mux14~1               ; 1       ;
-; morsegenerator:G9|Mux14~0               ; 1       ;
-; morsegenerator:G9|Mux4~0                ; 1       ;
-; morsegenerator:G8|Mux14~10              ; 1       ;
-; morsegenerator:G8|Mux14~9               ; 1       ;
-; morsegenerator:G8|Mux10~0               ; 1       ;
-; morsegenerator:G8|Mux14~8               ; 1       ;
-; morsegenerator:G8|Mux14~7               ; 1       ;
-; morsegenerator:G8|Mux14~6               ; 1       ;
-; morsegenerator:G8|Mux14~5               ; 1       ;
-; morsegenerator:G8|Mux14~4               ; 1       ;
-; morsegenerator:G8|Mux14~3               ; 1       ;
-; morsegenerator:G8|Mux14~2               ; 1       ;
-; morsegenerator:G8|Mux14~1               ; 1       ;
-; morsegenerator:G8|Mux14~0               ; 1       ;
-; morsegenerator:G8|Mux4~0                ; 1       ;
-; toongenerator:G7|Equal0~1               ; 1       ;
-; toongenerator:G7|Equal0~0               ; 1       ;
-; audio_interface:G6|next_state.b_stop1~0 ; 1       ;
-; puls:G1|output~0                        ; 1       ;
-; puls:G1|activated                       ; 1       ;
-; audio_interface:G6|WideOr32~0           ; 1       ;
-; audio_interface:G6|Selector30~14        ; 1       ;
-; audio_interface:G6|Selector30~13        ; 1       ;
-; audio_interface:G6|Mux12~0              ; 1       ;
-; audio_interface:G6|Selector30~12        ; 1       ;
-; audio_interface:G6|Selector30~11        ; 1       ;
-; audio_interface:G6|Mux6~0               ; 1       ;
-; audio_interface:G6|Selector30~10        ; 1       ;
-; audio_interface:G6|Selector30~9         ; 1       ;
-; audio_interface:G6|Selector30~8         ; 1       ;
-; audio_interface:G6|Selector30~7         ; 1       ;
-; audio_interface:G6|Selector30~6         ; 1       ;
-; audio_interface:G6|Selector30~5         ; 1       ;
-; audio_interface:G6|Selector30~4         ; 1       ;
-; audio_interface:G6|Selector30~3         ; 1       ;
-; audio_interface:G6|Selector30~2         ; 1       ;
-; audio_interface:G6|Selector30~1         ; 1       ;
-; audio_interface:G6|Selector30~0         ; 1       ;
-; toongenerator:G7|Mux2~1                 ; 1       ;
-; toongenerator:G7|Mux3~2                 ; 1       ;
-; toongenerator:G7|Mux3~1                 ; 1       ;
-; toongenerator:G7|Mux3~0                 ; 1       ;
-; toongenerator:G7|Mux12~5                ; 1       ;
-; toongenerator:G7|Mux12~4                ; 1       ;
-; toongenerator:G7|Mux12~3                ; 1       ;
-; toongenerator:G7|Mux12~2                ; 1       ;
-; toongenerator:G7|Mux12~1                ; 1       ;
-; toongenerator:G7|Mux12~0                ; 1       ;
-; toongenerator:G7|Mux15~3                ; 1       ;
-; toongenerator:G7|Mux15~2                ; 1       ;
-; toongenerator:G7|Mux15~1                ; 1       ;
-; toongenerator:G7|Mux15~0                ; 1       ;
-; toongenerator:G7|Mux14~5                ; 1       ;
-; toongenerator:G7|Mux14~4                ; 1       ;
-; toongenerator:G7|Mux14~3                ; 1       ;
-; toongenerator:G7|Mux14~2                ; 1       ;
-; toongenerator:G7|Mux14~1                ; 1       ;
-; toongenerator:G7|Mux14~0                ; 1       ;
-; toongenerator:G7|Mux13~4                ; 1       ;
-; toongenerator:G7|Mux13~3                ; 1       ;
-; toongenerator:G7|Mux13~2                ; 1       ;
-; toongenerator:G7|Mux8~4                 ; 1       ;
-; toongenerator:G7|Mux8~3                 ; 1       ;
-; toongenerator:G7|Mux8~2                 ; 1       ;
-; toongenerator:G7|Mux8~1                 ; 1       ;
-; toongenerator:G7|Mux8~0                 ; 1       ;
-; toongenerator:G7|Mux11~5                ; 1       ;
-; toongenerator:G7|Mux11~4                ; 1       ;
-; toongenerator:G7|Mux11~3                ; 1       ;
-; toongenerator:G7|Mux11~2                ; 1       ;
-; toongenerator:G7|Mux11~1                ; 1       ;
-; toongenerator:G7|Mux11~0                ; 1       ;
-; toongenerator:G7|Mux9~5                 ; 1       ;
-; toongenerator:G7|Mux9~4                 ; 1       ;
-; toongenerator:G7|Mux9~3                 ; 1       ;
-; toongenerator:G7|Mux9~2                 ; 1       ;
-; toongenerator:G7|Mux9~1                 ; 1       ;
-; toongenerator:G7|Mux9~0                 ; 1       ;
-; toongenerator:G7|Mux10~5                ; 1       ;
-; toongenerator:G7|Mux10~4                ; 1       ;
-; toongenerator:G7|Mux10~3                ; 1       ;
-; toongenerator:G7|Mux10~2                ; 1       ;
-; toongenerator:G7|Mux10~1                ; 1       ;
-; toongenerator:G7|Mux10~0                ; 1       ;
-; toongenerator:G7|Mux4~2                 ; 1       ;
-; toongenerator:G7|Mux4~1                 ; 1       ;
-; toongenerator:G7|Mux4~0                 ; 1       ;
-; toongenerator:G7|Mux7~4                 ; 1       ;
-; toongenerator:G7|Mux7~3                 ; 1       ;
-; toongenerator:G7|Mux7~2                 ; 1       ;
-; toongenerator:G7|Mux7~1                 ; 1       ;
-; toongenerator:G7|Mux7~0                 ; 1       ;
-; audio_interface:G6|Add0~10              ; 1       ;
-; toongenerator:G7|Mux6~4                 ; 1       ;
-; toongenerator:G7|Mux6~3                 ; 1       ;
-; toongenerator:G7|Mux6~2                 ; 1       ;
-; toongenerator:G7|Mux6~1                 ; 1       ;
-; toongenerator:G7|Mux6~0                 ; 1       ;
-; audio_interface:G6|bck1                 ; 1       ;
-; toongenerator:G7|Mux5~2                 ; 1       ;
-; toongenerator:G7|Mux5~1                 ; 1       ;
-; toongenerator:G7|Mux5~0                 ; 1       ;
-; modcounter:G2|output~2                  ; 1       ;
-; modcounter:G2|output[2]~1               ; 1       ;
-; modcounter:G2|output~0                  ; 1       ;
-; modcounter:G3|output~2                  ; 1       ;
-; modcounter:G3|output[2]~1               ; 1       ;
-; modcounter:G3|output~0                  ; 1       ;
-; audio_interface:G6|Mux13~8              ; 1       ;
-; audio_interface:G6|Mux13~7              ; 1       ;
-; audio_interface:G6|LRDATA[28]           ; 1       ;
-; audio_interface:G6|Mux13~6              ; 1       ;
-; audio_interface:G6|Mux13~5              ; 1       ;
-; audio_interface:G6|LRDATA[19]           ; 1       ;
-; audio_interface:G6|Mux13~4              ; 1       ;
-; audio_interface:G6|LRDATA[16]           ; 1       ;
-; audio_interface:G6|LRDATA[17]           ; 1       ;
-; audio_interface:G6|LRDATA[18]           ; 1       ;
-; audio_interface:G6|Mux13~3              ; 1       ;
-; audio_interface:G6|LRDATA[23]           ; 1       ;
-; audio_interface:G6|Mux13~2              ; 1       ;
-; audio_interface:G6|LRDATA[20]           ; 1       ;
-; audio_interface:G6|LRDATA[22]           ; 1       ;
-; audio_interface:G6|LRDATA[21]           ; 1       ;
-; audio_interface:G6|Mux13~1              ; 1       ;
-; audio_interface:G6|LRDATA[27]           ; 1       ;
-; audio_interface:G6|Mux13~0              ; 1       ;
-; audio_interface:G6|LRDATA[24]           ; 1       ;
-; audio_interface:G6|LRDATA[25]           ; 1       ;
-; audio_interface:G6|LRDATA[26]           ; 1       ;
-; display:G4|Mux0~0                       ; 1       ;
-; display:G4|Mux1~0                       ; 1       ;
-; display:G4|Mux2~0                       ; 1       ;
-; display:G4|Mux3~0                       ; 1       ;
-; display:G4|Mux4~0                       ; 1       ;
-; display:G4|Mux5~0                       ; 1       ;
-; display:G4|Mux6~0                       ; 1       ;
-; display:G5|Mux0~0                       ; 1       ;
-; display:G5|Mux1~0                       ; 1       ;
-; display:G5|Mux2~0                       ; 1       ;
-; display:G5|Mux3~0                       ; 1       ;
-; display:G5|Mux4~0                       ; 1       ;
-; display:G5|Mux5~0                       ; 1       ;
-; display:G5|Mux6~0                       ; 1       ;
-; morsegenerator:G9|cnt[22]~67            ; 1       ;
-; morsegenerator:G9|cnt[21]~66            ; 1       ;
-; morsegenerator:G9|cnt[21]~65            ; 1       ;
-; morsegenerator:G9|cnt[20]~64            ; 1       ;
-; morsegenerator:G9|cnt[20]~63            ; 1       ;
-; morsegenerator:G9|cnt[19]~62            ; 1       ;
-; morsegenerator:G9|cnt[19]~61            ; 1       ;
-; morsegenerator:G9|cnt[18]~60            ; 1       ;
-; morsegenerator:G9|cnt[18]~59            ; 1       ;
-; morsegenerator:G9|cnt[17]~58            ; 1       ;
-; morsegenerator:G9|cnt[17]~57            ; 1       ;
-; morsegenerator:G9|cnt[16]~56            ; 1       ;
-; morsegenerator:G9|cnt[16]~55            ; 1       ;
-; morsegenerator:G9|cnt[15]~54            ; 1       ;
-; morsegenerator:G9|cnt[15]~53            ; 1       ;
-; morsegenerator:G9|cnt[14]~52            ; 1       ;
-; morsegenerator:G9|cnt[14]~51            ; 1       ;
-; morsegenerator:G9|cnt[13]~50            ; 1       ;
-; morsegenerator:G9|cnt[13]~49            ; 1       ;
-; morsegenerator:G9|cnt[12]~48            ; 1       ;
-; morsegenerator:G9|cnt[12]~47            ; 1       ;
-; morsegenerator:G9|cnt[11]~46            ; 1       ;
-; morsegenerator:G9|cnt[11]~45            ; 1       ;
-; morsegenerator:G9|cnt[10]~44            ; 1       ;
-; morsegenerator:G9|cnt[10]~43            ; 1       ;
-; morsegenerator:G9|cnt[9]~42             ; 1       ;
-; morsegenerator:G9|cnt[9]~41             ; 1       ;
-; morsegenerator:G9|cnt[8]~40             ; 1       ;
-; morsegenerator:G9|cnt[8]~39             ; 1       ;
-; morsegenerator:G9|cnt[7]~38             ; 1       ;
-; morsegenerator:G9|cnt[7]~37             ; 1       ;
-; morsegenerator:G9|cnt[6]~36             ; 1       ;
-; morsegenerator:G9|cnt[6]~35             ; 1       ;
-; morsegenerator:G9|cnt[5]~34             ; 1       ;
-; morsegenerator:G9|cnt[5]~33             ; 1       ;
-; morsegenerator:G9|cnt[4]~32             ; 1       ;
-; morsegenerator:G9|cnt[4]~31             ; 1       ;
-; morsegenerator:G9|cnt[3]~30             ; 1       ;
-; morsegenerator:G9|cnt[3]~29             ; 1       ;
-; morsegenerator:G9|cnt[2]~28             ; 1       ;
-; morsegenerator:G9|cnt[2]~27             ; 1       ;
-; morsegenerator:G9|cnt[1]~26             ; 1       ;
-; morsegenerator:G9|cnt[1]~25             ; 1       ;
-; morsegenerator:G9|cnt[0]~24             ; 1       ;
-; morsegenerator:G9|cnt[0]~23             ; 1       ;
-; morsegenerator:G9|cnt[0]                ; 1       ;
-; morsegenerator:G9|cnt[1]                ; 1       ;
-; morsegenerator:G9|cnt[2]                ; 1       ;
-; morsegenerator:G9|cnt[3]                ; 1       ;
-; morsegenerator:G9|cnt[4]                ; 1       ;
-; morsegenerator:G9|cnt[5]                ; 1       ;
-; morsegenerator:G8|cnt[22]~67            ; 1       ;
-; morsegenerator:G8|cnt[21]~66            ; 1       ;
-; morsegenerator:G8|cnt[21]~65            ; 1       ;
-; morsegenerator:G8|cnt[20]~64            ; 1       ;
-; morsegenerator:G8|cnt[20]~63            ; 1       ;
-; morsegenerator:G8|cnt[19]~62            ; 1       ;
-; morsegenerator:G8|cnt[19]~61            ; 1       ;
-; morsegenerator:G8|cnt[18]~60            ; 1       ;
-; morsegenerator:G8|cnt[18]~59            ; 1       ;
-; morsegenerator:G8|cnt[17]~58            ; 1       ;
-; morsegenerator:G8|cnt[17]~57            ; 1       ;
-; morsegenerator:G8|cnt[16]~56            ; 1       ;
-; morsegenerator:G8|cnt[16]~55            ; 1       ;
-; morsegenerator:G8|cnt[15]~54            ; 1       ;
-; morsegenerator:G8|cnt[15]~53            ; 1       ;
-; morsegenerator:G8|cnt[14]~52            ; 1       ;
-; morsegenerator:G8|cnt[14]~51            ; 1       ;
-; morsegenerator:G8|cnt[13]~50            ; 1       ;
-; morsegenerator:G8|cnt[13]~49            ; 1       ;
-; morsegenerator:G8|cnt[12]~48            ; 1       ;
-; morsegenerator:G8|cnt[12]~47            ; 1       ;
-; morsegenerator:G8|cnt[11]~46            ; 1       ;
-; morsegenerator:G8|cnt[11]~45            ; 1       ;
-; morsegenerator:G8|cnt[10]~44            ; 1       ;
-; morsegenerator:G8|cnt[10]~43            ; 1       ;
-; morsegenerator:G8|cnt[9]~42             ; 1       ;
-; morsegenerator:G8|cnt[9]~41             ; 1       ;
-; morsegenerator:G8|cnt[8]~40             ; 1       ;
-; morsegenerator:G8|cnt[8]~39             ; 1       ;
-; morsegenerator:G8|cnt[7]~38             ; 1       ;
-; morsegenerator:G8|cnt[7]~37             ; 1       ;
-; morsegenerator:G8|cnt[6]~36             ; 1       ;
-; morsegenerator:G8|cnt[6]~35             ; 1       ;
-; morsegenerator:G8|cnt[5]~34             ; 1       ;
-; morsegenerator:G8|cnt[5]~33             ; 1       ;
-; morsegenerator:G8|cnt[4]~32             ; 1       ;
-; morsegenerator:G8|cnt[4]~31             ; 1       ;
-; morsegenerator:G8|cnt[3]~30             ; 1       ;
-; morsegenerator:G8|cnt[3]~29             ; 1       ;
-; morsegenerator:G8|cnt[2]~28             ; 1       ;
-; morsegenerator:G8|cnt[2]~27             ; 1       ;
-; morsegenerator:G8|cnt[1]~26             ; 1       ;
-; morsegenerator:G8|cnt[1]~25             ; 1       ;
-; morsegenerator:G8|cnt[0]~24             ; 1       ;
-; morsegenerator:G8|cnt[0]~23             ; 1       ;
-; morsegenerator:G8|cnt[0]                ; 1       ;
-; morsegenerator:G8|cnt[1]                ; 1       ;
-; morsegenerator:G8|cnt[2]                ; 1       ;
-; morsegenerator:G8|cnt[3]                ; 1       ;
-; morsegenerator:G8|cnt[4]                ; 1       ;
-; morsegenerator:G8|cnt[5]                ; 1       ;
-; morsegenerator:G9|Add1~6                ; 1       ;
-; morsegenerator:G9|Add1~5                ; 1       ;
-; morsegenerator:G9|Add1~4                ; 1       ;
-; morsegenerator:G9|Add1~3                ; 1       ;
-; morsegenerator:G9|Add1~2                ; 1       ;
-; morsegenerator:G9|Add1~1                ; 1       ;
-; morsegenerator:G9|Add1~0                ; 1       ;
-; morsegenerator:G8|Add1~6                ; 1       ;
-; morsegenerator:G8|Add1~5                ; 1       ;
-; morsegenerator:G8|Add1~4                ; 1       ;
-; morsegenerator:G8|Add1~3                ; 1       ;
-; morsegenerator:G8|Add1~2                ; 1       ;
-; morsegenerator:G8|Add1~1                ; 1       ;
-; morsegenerator:G8|Add1~0                ; 1       ;
-; toongenerator:G7|Add1~18                ; 1       ;
-; toongenerator:G7|Add1~17                ; 1       ;
-; toongenerator:G7|Add1~16                ; 1       ;
-; toongenerator:G7|Add1~15                ; 1       ;
-; toongenerator:G7|Add1~14                ; 1       ;
-; toongenerator:G7|Add1~13                ; 1       ;
-; toongenerator:G7|Add1~12                ; 1       ;
-; toongenerator:G7|Add1~11                ; 1       ;
-; toongenerator:G7|Add1~10                ; 1       ;
-; toongenerator:G7|Add1~9                 ; 1       ;
-; toongenerator:G7|Add1~8                 ; 1       ;
-; toongenerator:G7|Add1~7                 ; 1       ;
-; toongenerator:G7|Add1~6                 ; 1       ;
-; toongenerator:G7|Add1~5                 ; 1       ;
-; toongenerator:G7|Add1~4                 ; 1       ;
-; toongenerator:G7|Add1~3                 ; 1       ;
-; toongenerator:G7|Add1~2                 ; 1       ;
-; toongenerator:G7|Add1~1                 ; 1       ;
-; toongenerator:G7|Add1~0                 ; 1       ;
-; audio_interface:G6|i2c_counter[9]~25    ; 1       ;
-; audio_interface:G6|i2c_counter[8]~24    ; 1       ;
-; audio_interface:G6|i2c_counter[8]~23    ; 1       ;
-; audio_interface:G6|i2c_counter[7]~22    ; 1       ;
-; audio_interface:G6|i2c_counter[7]~21    ; 1       ;
-; audio_interface:G6|i2c_counter[6]~20    ; 1       ;
-; audio_interface:G6|i2c_counter[6]~19    ; 1       ;
-; audio_interface:G6|i2c_counter[5]~18    ; 1       ;
-; audio_interface:G6|i2c_counter[5]~17    ; 1       ;
-; audio_interface:G6|i2c_counter[4]~16    ; 1       ;
-; audio_interface:G6|i2c_counter[4]~15    ; 1       ;
-; audio_interface:G6|i2c_counter[3]~14    ; 1       ;
-; audio_interface:G6|i2c_counter[3]~13    ; 1       ;
-; audio_interface:G6|i2c_counter[3]       ; 1       ;
-; audio_interface:G6|i2c_counter[4]       ; 1       ;
-; audio_interface:G6|i2c_counter[5]       ; 1       ;
-; audio_interface:G6|i2c_counter[6]       ; 1       ;
-; audio_interface:G6|i2c_counter[7]       ; 1       ;
-; audio_interface:G6|i2c_counter[8]       ; 1       ;
-; toongenerator:G7|index[5]~14            ; 1       ;
-; toongenerator:G7|index[4]~13            ; 1       ;
-; toongenerator:G7|index[4]~12            ; 1       ;
-; toongenerator:G7|index[3]~11            ; 1       ;
-; toongenerator:G7|index[3]~10            ; 1       ;
-; toongenerator:G7|index[2]~8             ; 1       ;
-; toongenerator:G7|index[2]~7             ; 1       ;
-; toongenerator:G7|index[1]~6             ; 1       ;
-; toongenerator:G7|index[1]~5             ; 1       ;
-; audio_interface:G6|Add0~13              ; 1       ;
-; audio_interface:G6|Add0~12              ; 1       ;
-; audio_interface:G6|Add0~11              ; 1       ;
-; audio_interface:G6|Add0~9               ; 1       ;
-; audio_interface:G6|Add0~8               ; 1       ;
-; audio_interface:G6|Add0~7               ; 1       ;
-; audio_interface:G6|i2c_counter[2]~12    ; 1       ;
-; audio_interface:G6|i2c_counter[2]~11    ; 1       ;
-; audio_interface:G6|i2c_counter[1]~10    ; 1       ;
-; audio_interface:G6|i2c_counter[1]~9     ; 1       ;
-; audio_interface:G6|i2c_counter[1]       ; 1       ;
-; audio_interface:G6|LRDATA[29]           ; 1       ;
-+-----------------------------------------+---------+
++--------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                              ;
++----------------------------------------------------+---------+
+; Name                                               ; Fan-Out ;
++----------------------------------------------------+---------+
+; button_reset                                       ; 95      ;
+; toongenerator:Ctoongenerator|index[2]              ; 40      ;
+; toongenerator:Ctoongenerator|index[3]              ; 37      ;
+; toongenerator:Ctoongenerator|index[4]              ; 36      ;
+; toongenerator:Ctoongenerator|index[0]              ; 34      ;
+; toongenerator:Ctoongenerator|index[1]              ; 33      ;
+; toongenerator:Ctoongenerator|index[5]              ; 31      ;
+; audio_interface:Caudio|next_state_i2c~0            ; 28      ;
+; morsegenerator:Ceenhedenmorse|finished~2           ; 26      ;
+; morsegenerator:Ctientallenmorse|finished~0         ; 25      ;
+; morsegenerator:Ceenhedenmorse|LessThan0~5          ; 24      ;
+; morsegenerator:Ctientallenmorse|LessThan0~7        ; 23      ;
+; modcounter:Ceenheden|output[2]                     ; 21      ;
+; modcounter:Ceenheden|output[1]                     ; 21      ;
+; modcounter:Ceenheden|output[0]                     ; 21      ;
+; modcounter:Ctientallen|output[2]                   ; 21      ;
+; modcounter:Ctientallen|output[1]                   ; 21      ;
+; modcounter:Ctientallen|output[0]                   ; 21      ;
+; modcounter:Ceenheden|output[3]                     ; 20      ;
+; modcounter:Ctientallen|output[3]                   ; 20      ;
+; audio_interface:Caudio|word_count[1]               ; 14      ;
+; audio_interface:Caudio|word_count[0]               ; 14      ;
+; audio_interface:Caudio|DACData_reg~0               ; 14      ;
+; comb~7                                             ; 10      ;
+; morsegenerator:Ctientallenmorse|index[0]           ; 8       ;
+; morsegenerator:Ceenhedenmorse|index[0]             ; 8       ;
+; morsegenerator:Ctientallenmorse|index[2]~head_lut  ; 7       ;
+; morsegenerator:Ceenhedenmorse|index[3]~head_lut    ; 7       ;
+; morsegenerator:Ceenhedenmorse|index[2]~head_lut    ; 7       ;
+; audio_interface:Caudio|dack0                       ; 7       ;
+; audio_interface:Caudio|Bcount[0]                   ; 7       ;
+; audio_interface:Caudio|Bcount[1]                   ; 7       ;
+; morsegenerator:Ceenhedenmorse|index[4]             ; 6       ;
+; toongenerator:Ctoongenerator|Equal0~2              ; 6       ;
+; audio_interface:Caudio|I2C_SCLK                    ; 6       ;
+; audio_interface:Caudio|state.d_ack                 ; 6       ;
+; audio_interface:Caudio|word_count[2]               ; 6       ;
+; audio_interface:Caudio|dack1                       ; 6       ;
+; morsegenerator:Ceenhedenmorse|index[4]~9           ; 5       ;
+; morsegenerator:Ctientallenmorse|index[4]~9         ; 5       ;
+; morsegenerator:Ctientallenmorse|index[3]~head_lut  ; 5       ;
+; toongenerator:Ctoongenerator|index[5]~13           ; 5       ;
+; morsegenerator:Ctientallenmorse|index[3]~7         ; 4       ;
+; morsegenerator:Ceenhedenmorse|index[3]~7           ; 4       ;
+; morsegenerator:Ctientallenmorse|index[1]~head_lut  ; 4       ;
+; morsegenerator:Ceenhedenmorse|index[1]~head_lut    ; 4       ;
+; audio_interface:Caudio|word_counter~0              ; 4       ;
+; morsegenerator:Ctientallenmorse|index[4]           ; 4       ;
+; audio_interface:Caudio|Bcount[2]~0                 ; 4       ;
+; audio_interface:Caudio|state.b_end                 ; 4       ;
+; clock                                              ; 3       ;
+; morsegenerator:Ctientallenmorse|index[3]~latch     ; 3       ;
+; morsegenerator:Ctientallenmorse|index[2]~latch     ; 3       ;
+; morsegenerator:Ctientallenmorse|index[1]~latch     ; 3       ;
+; morsegenerator:Ceenhedenmorse|index[3]~latch       ; 3       ;
+; morsegenerator:Ceenhedenmorse|index[2]~latch       ; 3       ;
+; morsegenerator:Ceenhedenmorse|index[1]~latch       ; 3       ;
+; minder_dan_tien                                    ; 3       ;
+; morsegenerator:Ceenhedenmorse|finished             ; 3       ;
+; morsegenerator:Ctientallenmorse|index[2]~clear_lut ; 3       ;
+; morsegenerator:Ceenhedenmorse|index[2]~clear_lut   ; 3       ;
+; morsegenerator:Ctientallenmorse|Mux7~0             ; 3       ;
+; morsegenerator:Ceenhedenmorse|Mux7~0               ; 3       ;
+; audio_interface:Caudio|sck0                        ; 3       ;
+; comb~6                                             ; 3       ;
+; comb~5                                             ; 3       ;
+; modcounter:Ceenheden|Equal0~0                      ; 3       ;
+; audio_interface:Caudio|word_count[3]               ; 3       ;
+; audio_interface:Caudio|state.initialize            ; 3       ;
+; audio_interface:Caudio|state.d3                    ; 3       ;
+; audio_interface:Caudio|state.d5                    ; 3       ;
+; audio_interface:Caudio|state.d6                    ; 3       ;
+; audio_interface:Caudio|state.a6                    ; 3       ;
+; audio_interface:Caudio|state.a5                    ; 3       ;
+; audio_interface:Caudio|state.a3                    ; 3       ;
+; audio_interface:Caudio|state.d2                    ; 3       ;
+; audio_interface:Caudio|Bcount[3]                   ; 3       ;
+; morsegenerator:Ctientallenmorse|cnt[21]            ; 3       ;
+; morsegenerator:Ctientallenmorse|cnt[20]            ; 3       ;
+; morsegenerator:Ctientallenmorse|cnt[22]            ; 3       ;
+; morsegenerator:Ceenhedenmorse|cnt[21]              ; 3       ;
+; morsegenerator:Ceenhedenmorse|cnt[20]              ; 3       ;
+; morsegenerator:Ceenhedenmorse|cnt[22]              ; 3       ;
+; button_count                                       ; 2       ;
+; audio_interface:Caudio|state.start                 ; 2       ;
+; morsegenerator:Ctientallenmorse|Mux1~0             ; 2       ;
+; morsegenerator:Ctientallenmorse|Mux2~0             ; 2       ;
+; morsegenerator:Ceenhedenmorse|Mux1~0               ; 2       ;
+; morsegenerator:Ceenhedenmorse|Mux2~0               ; 2       ;
+; morsegenerator:Ctientallenmorse|LessThan0~6        ; 2       ;
+; puls:Ceenheden_naar_puls|output                    ; 2       ;
+; morsegenerator:Ceenhedenmorse|LessThan0~4          ; 2       ;
+; audio_interface:Caudio|Equal0~0                    ; 2       ;
+; audio_interface:Caudio|Selector0~0                 ; 2       ;
+; audio_interface:Caudio|sck1                        ; 2       ;
+; modcounter:Ctientallen|Equal0~0                    ; 2       ;
+; comb~2                                             ; 2       ;
+; comb~1                                             ; 2       ;
+; toongenerator:Ctoongenerator|wait_counter[9]       ; 2       ;
+; toongenerator:Ctoongenerator|wait_counter[8]       ; 2       ;
+; toongenerator:Ctoongenerator|wait_counter[7]       ; 2       ;
+; toongenerator:Ctoongenerator|wait_counter[6]       ; 2       ;
+; toongenerator:Ctoongenerator|wait_counter[4]       ; 2       ;
+; toongenerator:Ctoongenerator|wait_counter[5]       ; 2       ;
+; toongenerator:Ctoongenerator|wait_counter[3]       ; 2       ;
+; toongenerator:Ctoongenerator|wait_counter[2]       ; 2       ;
+; toongenerator:Ctoongenerator|wait_counter[1]       ; 2       ;
+; toongenerator:Ctoongenerator|wait_counter[0]       ; 2       ;
+; audio_interface:Caudio|state.b_stop0               ; 2       ;
+; audio_interface:Caudio|state.a_ack                 ; 2       ;
+; audio_interface:Caudio|state.b_ack                 ; 2       ;
+; audio_interface:Caudio|state.d7                    ; 2       ;
+; audio_interface:Caudio|Mux1~0                      ; 2       ;
+; audio_interface:Caudio|state.a4                    ; 2       ;
+; audio_interface:Caudio|state.d1                    ; 2       ;
+; audio_interface:Caudio|state.b5                    ; 2       ;
+; audio_interface:Caudio|state.b3                    ; 2       ;
+; audio_interface:Caudio|state.b2                    ; 2       ;
+; audio_interface:Caudio|state.d4                    ; 2       ;
+; audio_interface:Caudio|state.d0                    ; 2       ;
+; audio_interface:Caudio|state.a7                    ; 2       ;
+; toongenerator:Ctoongenerator|Mux2~0                ; 2       ;
+; toongenerator:Ctoongenerator|Mux13~1               ; 2       ;
+; toongenerator:Ctoongenerator|Mux13~0               ; 2       ;
+; audio_interface:Caudio|bck0                        ; 2       ;
+; audio_interface:Caudio|i2c_counter[0]              ; 2       ;
+; audio_interface:Caudio|I2C_SCLK~0                  ; 2       ;
+; audio_interface:Caudio|state.b_stop1               ; 2       ;
+; puls:Cknop_naar_puls|output                        ; 2       ;
+; audio_interface:Caudio|Bcount[2]                   ; 2       ;
+; morsegenerator:Ctientallenmorse|cnt[11]            ; 2       ;
+; morsegenerator:Ctientallenmorse|cnt[10]            ; 2       ;
+; morsegenerator:Ctientallenmorse|cnt[9]             ; 2       ;
+; morsegenerator:Ctientallenmorse|cnt[8]             ; 2       ;
+; morsegenerator:Ctientallenmorse|cnt[7]             ; 2       ;
+; morsegenerator:Ctientallenmorse|cnt[6]             ; 2       ;
+; morsegenerator:Ctientallenmorse|cnt[14]            ; 2       ;
+; morsegenerator:Ctientallenmorse|cnt[13]            ; 2       ;
+; morsegenerator:Ctientallenmorse|cnt[12]            ; 2       ;
+; morsegenerator:Ctientallenmorse|cnt[17]            ; 2       ;
+; morsegenerator:Ctientallenmorse|cnt[16]            ; 2       ;
+; morsegenerator:Ctientallenmorse|cnt[15]            ; 2       ;
+; morsegenerator:Ctientallenmorse|cnt[19]            ; 2       ;
+; morsegenerator:Ctientallenmorse|cnt[18]            ; 2       ;
+; morsegenerator:Ceenhedenmorse|cnt[19]              ; 2       ;
+; morsegenerator:Ceenhedenmorse|cnt[18]              ; 2       ;
+; morsegenerator:Ceenhedenmorse|cnt[17]              ; 2       ;
+; morsegenerator:Ceenhedenmorse|cnt[16]              ; 2       ;
+; morsegenerator:Ceenhedenmorse|cnt[15]              ; 2       ;
+; morsegenerator:Ceenhedenmorse|cnt[14]              ; 2       ;
+; morsegenerator:Ceenhedenmorse|cnt[13]              ; 2       ;
+; morsegenerator:Ceenhedenmorse|cnt[12]              ; 2       ;
+; morsegenerator:Ceenhedenmorse|cnt[11]              ; 2       ;
+; morsegenerator:Ceenhedenmorse|cnt[10]              ; 2       ;
+; morsegenerator:Ceenhedenmorse|cnt[9]               ; 2       ;
+; morsegenerator:Ceenhedenmorse|cnt[8]               ; 2       ;
+; morsegenerator:Ceenhedenmorse|cnt[7]               ; 2       ;
+; morsegenerator:Ceenhedenmorse|cnt[6]               ; 2       ;
+; audio_interface:Caudio|i2c_counter[9]              ; 2       ;
+; audio_interface:Caudio|i2c_counter[2]              ; 2       ;
+; AUD_BCLK                                           ; 1       ;
+; AUD_DACLRCK                                        ; 1       ;
+; morsegenerator:Ctientallenmorse|index[0]~10        ; 1       ;
+; morsegenerator:Ceenhedenmorse|index[0]~10          ; 1       ;
+; puls:Cknop_naar_puls|activated~0                   ; 1       ;
+; audio_interface:Caudio|word_count[0]~2             ; 1       ;
+; audio_interface:Caudio|i2c_counter[0]~27           ; 1       ;
+; modcounter:Ceenheden|output[0]~3                   ; 1       ;
+; modcounter:Ctientallen|output[0]~3                 ; 1       ;
+; morsegenerator:Ceenhedenmorse|index[4]~8           ; 1       ;
+; morsegenerator:Ctientallenmorse|index[4]~8         ; 1       ;
+; morsegenerator:Ceenhedenmorse|finished~3           ; 1       ;
+; toongenerator:Ctoongenerator|index[0]~21           ; 1       ;
+; audio_interface:Caudio|Add0~17                     ; 1       ;
+; audio_interface:Caudio|Add0~16                     ; 1       ;
+; audio_interface:Caudio|Add0~15                     ; 1       ;
+; audio_interface:Caudio|Selector1~0                 ; 1       ;
+; audio_interface:Caudio|state.a0                    ; 1       ;
+; morsegenerator:Ctientallenmorse|index[3]~data_lut  ; 1       ;
+; morsegenerator:Ctientallenmorse|index[2]~data_lut  ; 1       ;
+; puls:Ceenheden_naar_puls|output~0                  ; 1       ;
+; puls:Ceenheden_naar_puls|activated                 ; 1       ;
+; morsegenerator:Ctientallenmorse|index[1]~data_lut  ; 1       ;
+; morsegenerator:Ceenhedenmorse|index[3]~data_lut    ; 1       ;
+; morsegenerator:Ceenhedenmorse|index[2]~data_lut    ; 1       ;
+; morsegenerator:Ceenhedenmorse|index[1]~data_lut    ; 1       ;
+; audio_interface:Caudio|state.b6                    ; 1       ;
+; audio_interface:Caudio|state.b0                    ; 1       ;
+; audio_interface:Caudio|state.a1                    ; 1       ;
+; morsegenerator:Ctientallenmorse|index[3]~tail_lut  ; 1       ;
+; morsegenerator:Ctientallenmorse|index[3]~_emulated ; 1       ;
+; morsegenerator:Ctientallenmorse|index[2]~tail_lut  ; 1       ;
+; morsegenerator:Ctientallenmorse|index[2]~_emulated ; 1       ;
+; morsegenerator:Ctientallenmorse|LessThan0~5        ; 1       ;
+; morsegenerator:Ctientallenmorse|LessThan0~4        ; 1       ;
+; morsegenerator:Ctientallenmorse|LessThan0~3        ; 1       ;
+; morsegenerator:Ctientallenmorse|LessThan0~2        ; 1       ;
+; morsegenerator:Ctientallenmorse|index[1]~tail_lut  ; 1       ;
+; morsegenerator:Ctientallenmorse|index[1]~_emulated ; 1       ;
+; morsegenerator:Ceenhedenmorse|index[3]~tail_lut    ; 1       ;
+; morsegenerator:Ceenhedenmorse|index[3]~_emulated   ; 1       ;
+; morsegenerator:Ceenhedenmorse|index[2]~tail_lut    ; 1       ;
+; morsegenerator:Ceenhedenmorse|index[2]~_emulated   ; 1       ;
+; morsegenerator:Ceenhedenmorse|LessThan0~3          ; 1       ;
+; morsegenerator:Ceenhedenmorse|LessThan0~2          ; 1       ;
+; morsegenerator:Ceenhedenmorse|LessThan0~1          ; 1       ;
+; morsegenerator:Ceenhedenmorse|LessThan0~0          ; 1       ;
+; morsegenerator:Ceenhedenmorse|index[1]~tail_lut    ; 1       ;
+; morsegenerator:Ceenhedenmorse|index[1]~_emulated   ; 1       ;
+; toongenerator:Ctoongenerator|wait_counter~3        ; 1       ;
+; toongenerator:Ctoongenerator|wait_counter~2        ; 1       ;
+; toongenerator:Ctoongenerator|wait_counter~1        ; 1       ;
+; toongenerator:Ctoongenerator|wait_counter~0        ; 1       ;
+; audio_interface:Caudio|Selector29~0                ; 1       ;
+; audio_interface:Caudio|state.b7                    ; 1       ;
+; audio_interface:Caudio|word_count[3]~1             ; 1       ;
+; audio_interface:Caudio|word_count[3]~0             ; 1       ;
+; audio_interface:Caudio|Selector0~1                 ; 1       ;
+; audio_interface:Caudio|state.b4                    ; 1       ;
+; audio_interface:Caudio|state.b1                    ; 1       ;
+; audio_interface:Caudio|state.a2                    ; 1       ;
+; audio_interface:Caudio|Mux10~0                     ; 1       ;
+; toongenerator:Ctoongenerator|index[0]~20           ; 1       ;
+; morsegenerator:Ctientallenmorse|Mux14~9            ; 1       ;
+; morsegenerator:Ctientallenmorse|Mux14~8            ; 1       ;
+; morsegenerator:Ctientallenmorse|Mux14~7            ; 1       ;
+; morsegenerator:Ctientallenmorse|Mux14~6            ; 1       ;
+; morsegenerator:Ctientallenmorse|Mux14~5            ; 1       ;
+; morsegenerator:Ctientallenmorse|Mux14~4            ; 1       ;
+; morsegenerator:Ctientallenmorse|Mux4~0             ; 1       ;
+; morsegenerator:Ctientallenmorse|Mux14~3            ; 1       ;
+; morsegenerator:Ctientallenmorse|Mux14~2            ; 1       ;
+; morsegenerator:Ctientallenmorse|Mux14~1            ; 1       ;
+; morsegenerator:Ctientallenmorse|Mux14~0            ; 1       ;
+; morsegenerator:Ctientallenmorse|Mux10~0            ; 1       ;
+; morsegenerator:Ceenhedenmorse|Mux14~9              ; 1       ;
+; morsegenerator:Ceenhedenmorse|Mux14~8              ; 1       ;
+; morsegenerator:Ceenhedenmorse|Mux14~7              ; 1       ;
+; morsegenerator:Ceenhedenmorse|Mux14~6              ; 1       ;
+; morsegenerator:Ceenhedenmorse|Mux14~5              ; 1       ;
+; morsegenerator:Ceenhedenmorse|Mux14~4              ; 1       ;
+; morsegenerator:Ceenhedenmorse|Mux4~0               ; 1       ;
+; morsegenerator:Ceenhedenmorse|Mux14~3              ; 1       ;
+; morsegenerator:Ceenhedenmorse|Mux14~2              ; 1       ;
+; morsegenerator:Ceenhedenmorse|Mux14~1              ; 1       ;
+; morsegenerator:Ceenhedenmorse|Mux14~0              ; 1       ;
+; morsegenerator:Ceenhedenmorse|Mux10~0              ; 1       ;
+; comb~4                                             ; 1       ;
+; comb~3                                             ; 1       ;
+; morsegenerator:Ctientallenmorse|Mux13~0            ; 1       ;
+; comb~0                                             ; 1       ;
+; morsegenerator:Ceenhedenmorse|Mux13~0              ; 1       ;
+; toongenerator:Ctoongenerator|Equal0~1              ; 1       ;
+; toongenerator:Ctoongenerator|Equal0~0              ; 1       ;
+; audio_interface:Caudio|next_state.b_stop1~0        ; 1       ;
+; puls:Cknop_naar_puls|output~0                      ; 1       ;
+; puls:Cknop_naar_puls|activated                     ; 1       ;
+; audio_interface:Caudio|WideOr32~0                  ; 1       ;
+; audio_interface:Caudio|Selector30~14               ; 1       ;
+; audio_interface:Caudio|Selector30~13               ; 1       ;
+; audio_interface:Caudio|Mux12~0                     ; 1       ;
+; audio_interface:Caudio|Selector30~12               ; 1       ;
+; audio_interface:Caudio|Selector30~11               ; 1       ;
+; audio_interface:Caudio|Mux6~0                      ; 1       ;
+; audio_interface:Caudio|Selector30~10               ; 1       ;
+; audio_interface:Caudio|Selector30~9                ; 1       ;
+; audio_interface:Caudio|Selector30~8                ; 1       ;
+; audio_interface:Caudio|Selector30~7                ; 1       ;
+; audio_interface:Caudio|Selector30~6                ; 1       ;
+; audio_interface:Caudio|Selector30~5                ; 1       ;
+; audio_interface:Caudio|Selector30~4                ; 1       ;
+; audio_interface:Caudio|Selector30~3                ; 1       ;
+; audio_interface:Caudio|Selector30~2                ; 1       ;
+; audio_interface:Caudio|Selector30~1                ; 1       ;
+; audio_interface:Caudio|Selector30~0                ; 1       ;
+; toongenerator:Ctoongenerator|Mux2~1                ; 1       ;
+; toongenerator:Ctoongenerator|Mux3~2                ; 1       ;
+; toongenerator:Ctoongenerator|Mux3~1                ; 1       ;
+; toongenerator:Ctoongenerator|Mux3~0                ; 1       ;
+; toongenerator:Ctoongenerator|Mux12~5               ; 1       ;
+; toongenerator:Ctoongenerator|Mux12~4               ; 1       ;
+; toongenerator:Ctoongenerator|Mux12~3               ; 1       ;
+; toongenerator:Ctoongenerator|Mux12~2               ; 1       ;
+; toongenerator:Ctoongenerator|Mux12~1               ; 1       ;
+; toongenerator:Ctoongenerator|Mux12~0               ; 1       ;
+; toongenerator:Ctoongenerator|Mux15~3               ; 1       ;
+; toongenerator:Ctoongenerator|Mux15~2               ; 1       ;
+; toongenerator:Ctoongenerator|Mux15~1               ; 1       ;
+; toongenerator:Ctoongenerator|Mux15~0               ; 1       ;
+; toongenerator:Ctoongenerator|Mux14~5               ; 1       ;
+; toongenerator:Ctoongenerator|Mux14~4               ; 1       ;
+; toongenerator:Ctoongenerator|Mux14~3               ; 1       ;
+; toongenerator:Ctoongenerator|Mux14~2               ; 1       ;
+; toongenerator:Ctoongenerator|Mux14~1               ; 1       ;
+; toongenerator:Ctoongenerator|Mux14~0               ; 1       ;
+; toongenerator:Ctoongenerator|Mux13~4               ; 1       ;
+; toongenerator:Ctoongenerator|Mux13~3               ; 1       ;
+; toongenerator:Ctoongenerator|Mux13~2               ; 1       ;
+; toongenerator:Ctoongenerator|Mux8~4                ; 1       ;
+; toongenerator:Ctoongenerator|Mux8~3                ; 1       ;
+; toongenerator:Ctoongenerator|Mux8~2                ; 1       ;
+; toongenerator:Ctoongenerator|Mux8~1                ; 1       ;
+; toongenerator:Ctoongenerator|Mux8~0                ; 1       ;
+; toongenerator:Ctoongenerator|Mux11~5               ; 1       ;
+; toongenerator:Ctoongenerator|Mux11~4               ; 1       ;
+; toongenerator:Ctoongenerator|Mux11~3               ; 1       ;
+; toongenerator:Ctoongenerator|Mux11~2               ; 1       ;
+; toongenerator:Ctoongenerator|Mux11~1               ; 1       ;
+; toongenerator:Ctoongenerator|Mux11~0               ; 1       ;
+; toongenerator:Ctoongenerator|Mux9~5                ; 1       ;
+; toongenerator:Ctoongenerator|Mux9~4                ; 1       ;
+; toongenerator:Ctoongenerator|Mux9~3                ; 1       ;
+; toongenerator:Ctoongenerator|Mux9~2                ; 1       ;
+; toongenerator:Ctoongenerator|Mux9~1                ; 1       ;
+; toongenerator:Ctoongenerator|Mux9~0                ; 1       ;
+; toongenerator:Ctoongenerator|Mux10~5               ; 1       ;
+; toongenerator:Ctoongenerator|Mux10~4               ; 1       ;
+; toongenerator:Ctoongenerator|Mux10~3               ; 1       ;
+; toongenerator:Ctoongenerator|Mux10~2               ; 1       ;
+; toongenerator:Ctoongenerator|Mux10~1               ; 1       ;
+; toongenerator:Ctoongenerator|Mux10~0               ; 1       ;
+; toongenerator:Ctoongenerator|Mux4~2                ; 1       ;
+; toongenerator:Ctoongenerator|Mux4~1                ; 1       ;
+; toongenerator:Ctoongenerator|Mux4~0                ; 1       ;
+; toongenerator:Ctoongenerator|Mux7~4                ; 1       ;
+; toongenerator:Ctoongenerator|Mux7~3                ; 1       ;
+; toongenerator:Ctoongenerator|Mux7~2                ; 1       ;
+; toongenerator:Ctoongenerator|Mux7~1                ; 1       ;
+; toongenerator:Ctoongenerator|Mux7~0                ; 1       ;
+; audio_interface:Caudio|Add0~10                     ; 1       ;
+; toongenerator:Ctoongenerator|Mux6~4                ; 1       ;
+; toongenerator:Ctoongenerator|Mux6~3                ; 1       ;
+; toongenerator:Ctoongenerator|Mux6~2                ; 1       ;
+; toongenerator:Ctoongenerator|Mux6~1                ; 1       ;
+; toongenerator:Ctoongenerator|Mux6~0                ; 1       ;
+; audio_interface:Caudio|bck1                        ; 1       ;
+; toongenerator:Ctoongenerator|Mux5~2                ; 1       ;
+; toongenerator:Ctoongenerator|Mux5~1                ; 1       ;
+; toongenerator:Ctoongenerator|Mux5~0                ; 1       ;
+; modcounter:Ceenheden|output~2                      ; 1       ;
+; modcounter:Ceenheden|output[2]~1                   ; 1       ;
+; modcounter:Ceenheden|output~0                      ; 1       ;
+; modcounter:Ctientallen|output~2                    ; 1       ;
+; modcounter:Ctientallen|output[2]~1                 ; 1       ;
+; modcounter:Ctientallen|output~0                    ; 1       ;
+; modcounter:Ceenheden|over                          ; 1       ;
+; audio_interface:Caudio|Mux13~8                     ; 1       ;
+; audio_interface:Caudio|Mux13~7                     ; 1       ;
+; audio_interface:Caudio|LRDATA[28]                  ; 1       ;
+; audio_interface:Caudio|Mux13~6                     ; 1       ;
+; audio_interface:Caudio|Mux13~5                     ; 1       ;
+; audio_interface:Caudio|LRDATA[19]                  ; 1       ;
+; audio_interface:Caudio|Mux13~4                     ; 1       ;
+; audio_interface:Caudio|LRDATA[16]                  ; 1       ;
+; audio_interface:Caudio|LRDATA[17]                  ; 1       ;
+; audio_interface:Caudio|LRDATA[18]                  ; 1       ;
+; audio_interface:Caudio|Mux13~3                     ; 1       ;
+; audio_interface:Caudio|LRDATA[23]                  ; 1       ;
+; audio_interface:Caudio|Mux13~2                     ; 1       ;
+; audio_interface:Caudio|LRDATA[20]                  ; 1       ;
+; audio_interface:Caudio|LRDATA[22]                  ; 1       ;
+; audio_interface:Caudio|LRDATA[21]                  ; 1       ;
+; audio_interface:Caudio|Mux13~1                     ; 1       ;
+; audio_interface:Caudio|LRDATA[27]                  ; 1       ;
+; audio_interface:Caudio|Mux13~0                     ; 1       ;
+; audio_interface:Caudio|LRDATA[24]                  ; 1       ;
+; audio_interface:Caudio|LRDATA[25]                  ; 1       ;
+; audio_interface:Caudio|LRDATA[26]                  ; 1       ;
+; display:Ceenhedenweergave|Mux0~0                   ; 1       ;
+; display:Ceenhedenweergave|Mux1~0                   ; 1       ;
+; display:Ceenhedenweergave|Mux2~0                   ; 1       ;
+; display:Ceenhedenweergave|Mux3~0                   ; 1       ;
+; display:Ceenhedenweergave|Mux4~0                   ; 1       ;
+; display:Ceenhedenweergave|Mux5~0                   ; 1       ;
+; display:Ceenhedenweergave|Mux6~0                   ; 1       ;
+; display:Ctientallenweergave|Mux0~0                 ; 1       ;
+; display:Ctientallenweergave|Mux1~0                 ; 1       ;
+; display:Ctientallenweergave|Mux2~0                 ; 1       ;
+; display:Ctientallenweergave|Mux3~0                 ; 1       ;
+; display:Ctientallenweergave|Mux4~0                 ; 1       ;
+; display:Ctientallenweergave|Mux5~0                 ; 1       ;
+; display:Ctientallenweergave|Mux6~0                 ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[22]~67         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[21]~66         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[21]~65         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[20]~64         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[20]~63         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[19]~62         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[19]~61         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[18]~60         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[18]~59         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[17]~58         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[17]~57         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[16]~56         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[16]~55         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[15]~54         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[15]~53         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[14]~52         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[14]~51         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[13]~50         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[13]~49         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[12]~48         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[12]~47         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[11]~46         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[11]~45         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[10]~44         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[10]~43         ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[9]~42          ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[9]~41          ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[8]~40          ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[8]~39          ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[7]~38          ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[7]~37          ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[6]~36          ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[6]~35          ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[5]~34          ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[5]~33          ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[4]~32          ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[4]~31          ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[3]~30          ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[3]~29          ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[2]~28          ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[2]~27          ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[1]~26          ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[1]~25          ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[0]~24          ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[0]~23          ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[0]             ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[1]             ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[2]             ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[3]             ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[4]             ; 1       ;
+; morsegenerator:Ctientallenmorse|cnt[5]             ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[22]~67           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[21]~66           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[21]~65           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[20]~64           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[20]~63           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[19]~62           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[19]~61           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[18]~60           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[18]~59           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[17]~58           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[17]~57           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[16]~56           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[16]~55           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[15]~54           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[15]~53           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[14]~52           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[14]~51           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[13]~50           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[13]~49           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[12]~48           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[12]~47           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[11]~46           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[11]~45           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[10]~44           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[10]~43           ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[9]~42            ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[9]~41            ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[8]~40            ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[8]~39            ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[7]~38            ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[7]~37            ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[6]~36            ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[6]~35            ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[5]~34            ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[5]~33            ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[4]~32            ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[4]~31            ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[3]~30            ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[3]~29            ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[2]~28            ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[2]~27            ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[1]~26            ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[1]~25            ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[0]~24            ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[0]~23            ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[0]               ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[1]               ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[2]               ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[3]               ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[4]               ; 1       ;
+; morsegenerator:Ceenhedenmorse|cnt[5]               ; 1       ;
+; morsegenerator:Ctientallenmorse|Add1~6             ; 1       ;
+; morsegenerator:Ctientallenmorse|Add1~5             ; 1       ;
+; morsegenerator:Ctientallenmorse|Add1~4             ; 1       ;
+; morsegenerator:Ctientallenmorse|Add1~3             ; 1       ;
+; morsegenerator:Ctientallenmorse|Add1~2             ; 1       ;
+; morsegenerator:Ctientallenmorse|Add1~1             ; 1       ;
+; morsegenerator:Ctientallenmorse|Add1~0             ; 1       ;
+; morsegenerator:Ceenhedenmorse|Add1~6               ; 1       ;
+; morsegenerator:Ceenhedenmorse|Add1~5               ; 1       ;
+; morsegenerator:Ceenhedenmorse|Add1~4               ; 1       ;
+; morsegenerator:Ceenhedenmorse|Add1~3               ; 1       ;
+; morsegenerator:Ceenhedenmorse|Add1~2               ; 1       ;
+; morsegenerator:Ceenhedenmorse|Add1~1               ; 1       ;
+; morsegenerator:Ceenhedenmorse|Add1~0               ; 1       ;
+; toongenerator:Ctoongenerator|Add1~18               ; 1       ;
+; toongenerator:Ctoongenerator|Add1~17               ; 1       ;
+; toongenerator:Ctoongenerator|Add1~16               ; 1       ;
+; toongenerator:Ctoongenerator|Add1~15               ; 1       ;
+; toongenerator:Ctoongenerator|Add1~14               ; 1       ;
+; toongenerator:Ctoongenerator|Add1~13               ; 1       ;
+; toongenerator:Ctoongenerator|Add1~12               ; 1       ;
+; toongenerator:Ctoongenerator|Add1~11               ; 1       ;
+; toongenerator:Ctoongenerator|Add1~10               ; 1       ;
+; toongenerator:Ctoongenerator|Add1~9                ; 1       ;
+; toongenerator:Ctoongenerator|Add1~8                ; 1       ;
+; toongenerator:Ctoongenerator|Add1~7                ; 1       ;
+; toongenerator:Ctoongenerator|Add1~6                ; 1       ;
+; toongenerator:Ctoongenerator|Add1~5                ; 1       ;
+; toongenerator:Ctoongenerator|Add1~4                ; 1       ;
+; toongenerator:Ctoongenerator|Add1~3                ; 1       ;
+; toongenerator:Ctoongenerator|Add1~2                ; 1       ;
+; toongenerator:Ctoongenerator|Add1~1                ; 1       ;
+; toongenerator:Ctoongenerator|Add1~0                ; 1       ;
+; audio_interface:Caudio|i2c_counter[9]~25           ; 1       ;
+; audio_interface:Caudio|i2c_counter[8]~24           ; 1       ;
+; audio_interface:Caudio|i2c_counter[8]~23           ; 1       ;
+; audio_interface:Caudio|i2c_counter[7]~22           ; 1       ;
+; audio_interface:Caudio|i2c_counter[7]~21           ; 1       ;
+; audio_interface:Caudio|i2c_counter[6]~20           ; 1       ;
+; audio_interface:Caudio|i2c_counter[6]~19           ; 1       ;
+; audio_interface:Caudio|i2c_counter[5]~18           ; 1       ;
+; audio_interface:Caudio|i2c_counter[5]~17           ; 1       ;
+; audio_interface:Caudio|i2c_counter[4]~16           ; 1       ;
+; audio_interface:Caudio|i2c_counter[4]~15           ; 1       ;
+; audio_interface:Caudio|i2c_counter[3]~14           ; 1       ;
+; audio_interface:Caudio|i2c_counter[3]~13           ; 1       ;
+; audio_interface:Caudio|i2c_counter[3]              ; 1       ;
+; audio_interface:Caudio|i2c_counter[4]              ; 1       ;
+; audio_interface:Caudio|i2c_counter[5]              ; 1       ;
+; audio_interface:Caudio|i2c_counter[6]              ; 1       ;
+; audio_interface:Caudio|i2c_counter[7]              ; 1       ;
+; audio_interface:Caudio|i2c_counter[8]              ; 1       ;
+; toongenerator:Ctoongenerator|index[5]~18           ; 1       ;
+; toongenerator:Ctoongenerator|index[4]~17           ; 1       ;
+; toongenerator:Ctoongenerator|index[4]~16           ; 1       ;
+; toongenerator:Ctoongenerator|index[3]~15           ; 1       ;
+; toongenerator:Ctoongenerator|index[3]~14           ; 1       ;
+; toongenerator:Ctoongenerator|index[2]~12           ; 1       ;
+; toongenerator:Ctoongenerator|index[2]~11           ; 1       ;
+; toongenerator:Ctoongenerator|index[1]~10           ; 1       ;
+; toongenerator:Ctoongenerator|index[1]~9            ; 1       ;
+; audio_interface:Caudio|Add0~13                     ; 1       ;
+; audio_interface:Caudio|Add0~12                     ; 1       ;
+; audio_interface:Caudio|Add0~11                     ; 1       ;
+; audio_interface:Caudio|Add0~9                      ; 1       ;
+; audio_interface:Caudio|Add0~8                      ; 1       ;
+; audio_interface:Caudio|Add0~7                      ; 1       ;
+; audio_interface:Caudio|i2c_counter[2]~12           ; 1       ;
+; audio_interface:Caudio|i2c_counter[2]~11           ; 1       ;
+; audio_interface:Caudio|i2c_counter[1]~10           ; 1       ;
+; audio_interface:Caudio|i2c_counter[1]~9            ; 1       ;
+; audio_interface:Caudio|i2c_counter[1]              ; 1       ;
+; audio_interface:Caudio|LRDATA[29]                  ; 1       ;
++----------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -1677,21 +1678,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+------------------------+
 ; Interconnect Resource Type ; Usage                  ;
 +----------------------------+------------------------+
-; Block interconnects        ; 362 / 54,004 ( < 1 % ) ;
-; C16 interconnects          ; 7 / 2,100 ( < 1 % )    ;
-; C4 interconnects           ; 153 / 36,000 ( < 1 % ) ;
-; Direct links               ; 104 / 54,004 ( < 1 % ) ;
+; Block interconnects        ; 377 / 54,004 ( < 1 % ) ;
+; C16 interconnects          ; 12 / 2,100 ( < 1 % )   ;
+; C4 interconnects           ; 184 / 36,000 ( < 1 % ) ;
+; Direct links               ; 96 / 54,004 ( < 1 % )  ;
 ; Global clocks              ; 6 / 16 ( 38 % )        ;
-; Local interconnects        ; 222 / 18,752 ( 1 % )   ;
-; R24 interconnects          ; 19 / 1,900 ( 1 % )     ;
-; R4 interconnects           ; 277 / 46,920 ( < 1 % ) ;
+; Local interconnects        ; 219 / 18,752 ( 1 % )   ;
+; R24 interconnects          ; 37 / 1,900 ( 2 % )     ;
+; R4 interconnects           ; 288 / 46,920 ( < 1 % ) ;
 +----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 12.56) ; Number of LABs  (Total = 27) ;
+; Number of Logic Elements  (Average = 12.59) ; Number of LABs  (Total = 27) ;
 +---------------------------------------------+------------------------------+
 ; 1                                           ; 4                            ;
 ; 2                                           ; 0                            ;
@@ -1699,30 +1700,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 4                                           ; 1                            ;
 ; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
-; 7                                           ; 1                            ;
+; 7                                           ; 0                            ;
 ; 8                                           ; 0                            ;
 ; 9                                           ; 0                            ;
 ; 10                                          ; 0                            ;
-; 11                                          ; 0                            ;
-; 12                                          ; 3                            ;
+; 11                                          ; 2                            ;
+; 12                                          ; 2                            ;
 ; 13                                          ; 0                            ;
-; 14                                          ; 0                            ;
+; 14                                          ; 1                            ;
 ; 15                                          ; 0                            ;
-; 16                                          ; 18                           ;
+; 16                                          ; 17                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.93) ; Number of LABs  (Total = 27) ;
+; LAB-wide Signals  (Average = 2.00) ; Number of LABs  (Total = 27) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 14                           ;
+; 1 Async. clear                     ; 15                           ;
 ; 1 Clock                            ; 20                           ;
-; 1 Clock enable                     ; 8                            ;
-; 1 Sync. clear                      ; 4                            ;
-; 2 Async. clears                    ; 1                            ;
-; 2 Clock enables                    ; 2                            ;
+; 1 Clock enable                     ; 9                            ;
+; 1 Sync. clear                      ; 3                            ;
+; 2 Async. clears                    ; 3                            ;
+; 2 Clock enables                    ; 1                            ;
 ; 2 Clocks                           ; 3                            ;
 +------------------------------------+------------------------------+
 
@@ -1730,39 +1731,39 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 18.15) ; Number of LABs  (Total = 27) ;
+; Number of Signals Sourced  (Average = 18.26) ; Number of LABs  (Total = 27) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 2                            ;
 ; 2                                            ; 2                            ;
 ; 3                                            ; 0                            ;
-; 4                                            ; 0                            ;
+; 4                                            ; 1                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 1                            ;
+; 6                                            ; 0                            ;
+; 7                                            ; 0                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
 ; 10                                           ; 0                            ;
-; 11                                           ; 0                            ;
+; 11                                           ; 1                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
 ; 14                                           ; 0                            ;
 ; 15                                           ; 0                            ;
-; 16                                           ; 1                            ;
-; 17                                           ; 1                            ;
-; 18                                           ; 2                            ;
+; 16                                           ; 0                            ;
+; 17                                           ; 2                            ;
+; 18                                           ; 3                            ;
 ; 19                                           ; 0                            ;
-; 20                                           ; 4                            ;
+; 20                                           ; 3                            ;
 ; 21                                           ; 3                            ;
 ; 22                                           ; 2                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 1                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 2                            ;
 ; 25                                           ; 1                            ;
 ; 26                                           ; 0                            ;
-; 27                                           ; 1                            ;
-; 28                                           ; 2                            ;
+; 27                                           ; 2                            ;
+; 28                                           ; 0                            ;
 ; 29                                           ; 1                            ;
-; 30                                           ; 0                            ;
+; 30                                           ; 1                            ;
 ; 31                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
@@ -1770,64 +1771,62 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 7.26) ; Number of LABs  (Total = 27) ;
+; Number of Signals Sourced Out  (Average = 7.70) ; Number of LABs  (Total = 27) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 4                            ;
-; 2                                               ; 3                            ;
-; 3                                               ; 2                            ;
-; 4                                               ; 2                            ;
+; 1                                               ; 6                            ;
+; 2                                               ; 2                            ;
+; 3                                               ; 0                            ;
+; 4                                               ; 1                            ;
 ; 5                                               ; 1                            ;
-; 6                                               ; 0                            ;
+; 6                                               ; 1                            ;
 ; 7                                               ; 2                            ;
 ; 8                                               ; 1                            ;
 ; 9                                               ; 2                            ;
 ; 10                                              ; 1                            ;
 ; 11                                              ; 2                            ;
-; 12                                              ; 1                            ;
-; 13                                              ; 3                            ;
-; 14                                              ; 2                            ;
-; 15                                              ; 0                            ;
-; 16                                              ; 1                            ;
+; 12                                              ; 2                            ;
+; 13                                              ; 2                            ;
+; 14                                              ; 1                            ;
+; 15                                              ; 1                            ;
+; 16                                              ; 2                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 10.93) ; Number of LABs  (Total = 27) ;
+; Number of Distinct Inputs  (Average = 11.07) ; Number of LABs  (Total = 27) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 1                            ;
-; 3                                            ; 3                            ;
+; 3                                            ; 4                            ;
 ; 4                                            ; 3                            ;
 ; 5                                            ; 1                            ;
 ; 6                                            ; 1                            ;
-; 7                                            ; 3                            ;
-; 8                                            ; 2                            ;
+; 7                                            ; 1                            ;
+; 8                                            ; 1                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 2                            ;
-; 11                                           ; 0                            ;
+; 10                                           ; 3                            ;
+; 11                                           ; 2                            ;
 ; 12                                           ; 2                            ;
 ; 13                                           ; 1                            ;
 ; 14                                           ; 0                            ;
-; 15                                           ; 1                            ;
+; 15                                           ; 0                            ;
 ; 16                                           ; 0                            ;
 ; 17                                           ; 1                            ;
-; 18                                           ; 3                            ;
+; 18                                           ; 1                            ;
 ; 19                                           ; 0                            ;
-; 20                                           ; 0                            ;
+; 20                                           ; 1                            ;
 ; 21                                           ; 0                            ;
 ; 22                                           ; 0                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 0                            ;
-; 25                                           ; 1                            ;
-; 26                                           ; 1                            ;
+; 23                                           ; 1                            ;
+; 24                                           ; 1                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 0                            ;
 ; 27                                           ; 0                            ;
-; 28                                           ; 0                            ;
-; 29                                           ; 0                            ;
-; 30                                           ; 1                            ;
+; 28                                           ; 2                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1860,38 +1859,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
-+------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary              ;
-+-----------------+----------------------+-------------------+
-; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
-+-----------------+----------------------+-------------------+
-Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
-This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
-
-
-+----------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                          ;
-+--------------------------------+-----------------------------------+-------------------+
-; Source Register                ; Destination Register              ; Delay Added in ns ;
-+--------------------------------+-----------------------------------+-------------------+
-; button_reset                   ; morsegenerator:G9|index[3]~latch  ; 3.255             ;
-; button_reset                   ; morsegenerator:G9|index[2]~latch  ; 3.255             ;
-; button_reset                   ; morsegenerator:G9|index[1]~latch  ; 3.255             ;
-; button_reset                   ; audio_interface:G6|i2c_counter[4] ; 0.825             ;
-; button_reset                   ; audio_interface:G6|LRDATA[29]     ; 0.251             ;
-; button_reset                   ; audio_interface:G6|state.a4       ; 0.059             ;
-; button_reset                   ; audio_interface:G6|word_count[2]  ; 0.041             ;
-; audio_interface:G6|state.b_end ; audio_interface:G6|word_count[2]  ; 0.041             ;
-+--------------------------------+-----------------------------------+-------------------+
-
-
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Dec 15 22:26:16 2014
+    Info: Processing started: Mon Dec 15 23:07:13 2014
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off epicknoptime -c epicknoptime
 Warning: Parallel compilation is not licensed and has been disabled
 Info: Selected device EP2C20F484C7 for design "epicknoptime"
@@ -1909,51 +1883,54 @@ Info: Fitter converted 3 user pins into dedicated programming pins
     Info: Pin ~LVDS91p/nCEO~ is reserved at location W20
 Info: Timing-driven compilation is using the TimeQuest Timing Analyzer
 Warning: Timing Analysis is analyzing one or more combinational loops as latches
-    Warning: Node "G9|index[2]~latch|combout" is a latch
-    Warning: Node "G9|index[3]~latch|combout" is a latch
-    Warning: Node "G8|index[1]~latch|combout" is a latch
-    Warning: Node "G9|index[1]~latch|combout" is a latch
-    Warning: Node "G8|index[2]~latch|combout" is a latch
-    Warning: Node "G8|index[3]~latch|combout" is a latch
+    Warning: Node "Ceenhedenmorse|index[3]~latch|combout" is a latch
+    Warning: Node "minder_dan_tien|combout" is a latch
+    Warning: Node "Ctientallenmorse|index[3]~latch|combout" is a latch
+    Warning: Node "Ceenhedenmorse|index[1]~latch|combout" is a latch
+    Warning: Node "Ceenhedenmorse|index[2]~latch|combout" is a latch
+    Warning: Node "Ctientallenmorse|index[1]~latch|combout" is a latch
+    Warning: Node "Ctientallenmorse|index[2]~latch|combout" is a latch
 Info: Reading SDC File: 'epicknoptime.sdc'
 Info: No user constrained base clocks found in the design
 Info: Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info: Automatically promoted node clock (placed in PIN L1 (CLK0, LVDSCLK0p, Input))
     Info: Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
     Info: Following destination nodes may be non-global or may not use global or regional clocks
-        Info: Destination node audio_interface:G6|state.b_stop1
-        Info: Destination node audio_interface:G6|state.b_end
-        Info: Destination node puls:G22|output
-Info: Automatically promoted node puls:G1|output 
+        Info: Destination node audio_interface:Caudio|state.b_stop1
+        Info: Destination node audio_interface:Caudio|state.b_end
+        Info: Destination node puls:Ceenheden_naar_puls|output
+Info: Automatically promoted node puls:Cknop_naar_puls|output 
     Info: Automatically promoted destinations to use location or clock signal Global Clock
     Info: Following destination nodes may be non-global or may not use global or regional clocks
-        Info: Destination node morsegenerator:G8|finish~0
-        Info: Destination node morsegenerator:G8|index[3]~8
-Info: Automatically promoted node audio_interface:G6|I2C_SCLK 
+        Info: Destination node morsegenerator:Ceenhedenmorse|finished~2
+        Info: Destination node morsegenerator:Ceenhedenmorse|index[3]~7
+Info: Automatically promoted node audio_interface:Caudio|I2C_SCLK 
     Info: Automatically promoted destinations to use location or clock signal Global Clock
     Info: Following destination nodes may be non-global or may not use global or regional clocks
-        Info: Destination node audio_interface:G6|next_state.b_stop1~0
-        Info: Destination node audio_interface:G6|sck0
-        Info: Destination node audio_interface:G6|Selector0~1
-        Info: Destination node audio_interface:G6|Selector29~0
-        Info: Destination node audio_interface:G6|Selector1~0
+        Info: Destination node audio_interface:Caudio|next_state.b_stop1~0
+        Info: Destination node audio_interface:Caudio|sck0
+        Info: Destination node audio_interface:Caudio|Selector0~1
+        Info: Destination node audio_interface:Caudio|Selector29~0
+        Info: Destination node audio_interface:Caudio|Selector1~0
         Info: Destination node I2C_SCLK
-Info: Automatically promoted node modcounter:G2|over 
-    Info: Automatically promoted destinations to use location or clock signal Global Clock
-Info: Automatically promoted node morsegenerator:G8|index[3]~8 
+Info: Automatically promoted node modcounter:Ceenheden|over 
     Info: Automatically promoted destinations to use location or clock signal Global Clock
     Info: Following destination nodes may be non-global or may not use global or regional clocks
-        Info: Destination node morsegenerator:G8|index[3]~clear_lut
-        Info: Destination node morsegenerator:G8|index[3]~head_lut
-        Info: Destination node morsegenerator:G8|index[2]~head_lut
-        Info: Destination node morsegenerator:G8|index[1]~head_lut
-Info: Automatically promoted node morsegenerator:G9|index[3]~9 
+        Info: Destination node minder_dan_tien
+Info: Automatically promoted node morsegenerator:Ceenhedenmorse|index[3]~7 
     Info: Automatically promoted destinations to use location or clock signal Global Clock
     Info: Following destination nodes may be non-global or may not use global or regional clocks
-        Info: Destination node morsegenerator:G9|index[3]~clear_lut
-        Info: Destination node morsegenerator:G9|index[3]~head_lut
-        Info: Destination node morsegenerator:G9|index[2]~head_lut
-        Info: Destination node morsegenerator:G9|index[1]~head_lut
+        Info: Destination node morsegenerator:Ceenhedenmorse|index[2]~clear_lut
+        Info: Destination node morsegenerator:Ceenhedenmorse|index[2]~head_lut
+        Info: Destination node morsegenerator:Ceenhedenmorse|index[3]~head_lut
+        Info: Destination node morsegenerator:Ceenhedenmorse|index[1]~head_lut
+Info: Automatically promoted node morsegenerator:Ctientallenmorse|index[3]~7 
+    Info: Automatically promoted destinations to use location or clock signal Global Clock
+    Info: Following destination nodes may be non-global or may not use global or regional clocks
+        Info: Destination node morsegenerator:Ctientallenmorse|index[2]~clear_lut
+        Info: Destination node morsegenerator:Ctientallenmorse|index[2]~head_lut
+        Info: Destination node morsegenerator:Ctientallenmorse|index[3]~head_lut
+        Info: Destination node morsegenerator:Ctientallenmorse|index[1]~head_lut
 Info: Starting register packing
 Extra Info: Performing register packing on registers with non-logic cell location assignments
 Extra Info: Completed register packing on registers with non-logic cell location assignments
@@ -1971,7 +1948,7 @@ Info: Fitter placement was successful
 Info: Fitter placement operations ending: elapsed time is 00:00:01
 Info: Fitter routing operations beginning
 Info: Router estimated average interconnect usage is 0% of the available device resources
-    Info: Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X25_Y14 to location X37_Y27
+    Info: Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X38_Y14 to location X50_Y27
 Info: Fitter routing operations ending: elapsed time is 00:00:01
 Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info: Optimizations that may affect the design's routability were skipped
@@ -1999,10 +1976,10 @@ Warning: Found 19 output pins without output pin load capacitance assignment
     Info: Pin "I2C_SCLK" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
 Info: Delay annotation completed successfully
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info: Quartus II Fitter was successful. 0 errors, 11 warnings
+Info: Quartus II Fitter was successful. 0 errors, 12 warnings
     Info: Peak virtual memory: 332 megabytes
-    Info: Processing ended: Mon Dec 15 22:26:21 2014
+    Info: Processing ended: Mon Dec 15 23:07:18 2014
     Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Total CPU time (on all processors): 00:00:05
 
 

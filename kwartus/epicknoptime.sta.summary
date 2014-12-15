@@ -3,83 +3,83 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'clock'
-Slack : -11.736
-TNS   : -612.228
+Slack : -10.477
+TNS   : -556.004
 
-Type  : Slow Model Setup 'puls:G1|output'
-Slack : -2.299
-TNS   : -6.961
+Type  : Slow Model Setup 'puls:Cknop_naar_puls|output'
+Slack : -3.640
+TNS   : -11.973
 
-Type  : Slow Model Setup 'audio_interface:G6|i2c_counter[9]'
-Slack : -0.924
-TNS   : -1.917
-
-Type  : Slow Model Setup 'modcounter:G2|over'
-Slack : -0.464
-TNS   : -1.036
+Type  : Slow Model Setup 'audio_interface:Caudio|i2c_counter[9]'
+Slack : -1.193
+TNS   : -3.476
 
 Type  : Slow Model Setup 'button_reset'
-Slack : 0.259
-TNS   : 0.000
+Slack : -0.795
+TNS   : -1.187
+
+Type  : Slow Model Setup 'modcounter:Ceenheden|over'
+Slack : -0.335
+TNS   : -0.980
 
 Type  : Slow Model Hold 'clock'
-Slack : -2.841
-TNS   : -12.610
+Slack : -2.510
+TNS   : -12.515
 
 Type  : Slow Model Hold 'button_reset'
-Slack : -2.371
-TNS   : -12.697
+Slack : -1.503
+TNS   : -6.627
 
-Type  : Slow Model Hold 'audio_interface:G6|i2c_counter[9]'
+Type  : Slow Model Hold 'audio_interface:Caudio|i2c_counter[9]'
 Slack : 0.445
 TNS   : 0.000
 
-Type  : Slow Model Hold 'modcounter:G2|over'
+Type  : Slow Model Hold 'modcounter:Ceenheden|over'
 Slack : 0.445
 TNS   : 0.000
 
-Type  : Slow Model Hold 'puls:G1|output'
+Type  : Slow Model Hold 'puls:Cknop_naar_puls|output'
 Slack : 0.445
 TNS   : 0.000
 
 Type  : Slow Model Recovery 'clock'
-Slack : -2.565
-TNS   : -179.845
+Slack : -3.473
+TNS   : -193.074
 
-Type  : Slow Model Recovery 'audio_interface:G6|i2c_counter[9]'
-Slack : -2.429
-TNS   : -8.936
+Type  : Slow Model Recovery 'audio_interface:Caudio|i2c_counter[9]'
+Slack : -2.713
+TNS   : -10.792
 
-Type  : Slow Model Recovery 'puls:G1|output'
-Slack : -1.190
-TNS   : -4.921
-
-Type  : Slow Model Recovery 'modcounter:G2|over'
-Slack : -0.724
-TNS   : -2.896
+Type  : Slow Model Recovery 'puls:Cknop_naar_puls|output'
+Slack : -1.375
+TNS   : -2.461
 
 Type  : Slow Model Recovery 'button_reset'
-Slack : 0.159
-TNS   : 0.000
+Slack : -0.469
+TNS   : -0.469
+
+Type  : Slow Model Recovery 'modcounter:Ceenheden|over'
+Slack : -0.147
+TNS   : -0.588
 
 Type  : Slow Model Removal 'button_reset'
-Slack : -3.311
-TNS   : -12.447
-
-Type  : Slow Model Removal 'puls:G1|output'
-Slack : -0.753
-TNS   : -1.958
+Slack : -3.375
+TNS   : -12.459
 
 Type  : Slow Model Removal 'clock'
-Slack : -0.547
-TNS   : -7.292
+Slack : -1.209
+TNS   : -28.368
 
-Type  : Slow Model Removal 'audio_interface:G6|i2c_counter[9]'
-Slack : 0.966
+Type  : Slow Model Removal 'puls:Cknop_naar_puls|output'
+Slack : -0.530
+TNS   : -1.227
+
+Type  : Slow Model Removal 'modcounter:Ceenheden|over'
+Slack : 0.399
 TNS   : 0.000
 
-Type  : Slow Model Removal 'modcounter:G2|over'
-Slack : 0.976
+Type  : Slow Model Removal 'audio_interface:Caudio|i2c_counter[9]'
+Slack : 0.900
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'clock'
@@ -90,96 +90,96 @@ Type  : Slow Model Minimum Pulse Width 'button_reset'
 Slack : -1.469
 TNS   : -1.469
 
-Type  : Slow Model Minimum Pulse Width 'puls:G1|output'
+Type  : Slow Model Minimum Pulse Width 'puls:Cknop_naar_puls|output'
 Slack : -0.611
 TNS   : -6.110
 
-Type  : Slow Model Minimum Pulse Width 'audio_interface:G6|i2c_counter[9]'
+Type  : Slow Model Minimum Pulse Width 'audio_interface:Caudio|i2c_counter[9]'
 Slack : -0.611
 TNS   : -4.888
 
-Type  : Slow Model Minimum Pulse Width 'modcounter:G2|over'
+Type  : Slow Model Minimum Pulse Width 'modcounter:Ceenheden|over'
 Slack : -0.611
 TNS   : -4.888
 
 Type  : Fast Model Setup 'clock'
-Slack : -4.187
-TNS   : -166.534
+Slack : -3.652
+TNS   : -144.723
 
-Type  : Fast Model Setup 'puls:G1|output'
-Slack : -0.654
-TNS   : -1.410
+Type  : Fast Model Setup 'puls:Cknop_naar_puls|output'
+Slack : -1.206
+TNS   : -2.864
 
-Type  : Fast Model Setup 'audio_interface:G6|i2c_counter[9]'
-Slack : -0.050
-TNS   : -0.150
-
-Type  : Fast Model Setup 'modcounter:G2|over'
-Slack : 0.426
-TNS   : 0.000
+Type  : Fast Model Setup 'audio_interface:Caudio|i2c_counter[9]'
+Slack : -0.197
+TNS   : -0.755
 
 Type  : Fast Model Setup 'button_reset'
-Slack : 0.562
+Slack : 0.168
+TNS   : 0.000
+
+Type  : Fast Model Setup 'modcounter:Ceenheden|over'
+Slack : 0.470
 TNS   : 0.000
 
 Type  : Fast Model Hold 'clock'
-Slack : -1.682
-TNS   : -10.350
+Slack : -1.695
+TNS   : -13.933
 
 Type  : Fast Model Hold 'button_reset'
-Slack : -0.814
-TNS   : -4.011
+Slack : -0.388
+TNS   : -1.180
 
-Type  : Fast Model Hold 'audio_interface:G6|i2c_counter[9]'
+Type  : Fast Model Hold 'audio_interface:Caudio|i2c_counter[9]'
 Slack : 0.215
 TNS   : 0.000
 
-Type  : Fast Model Hold 'modcounter:G2|over'
+Type  : Fast Model Hold 'modcounter:Ceenheden|over'
 Slack : 0.215
 TNS   : 0.000
 
-Type  : Fast Model Hold 'puls:G1|output'
+Type  : Fast Model Hold 'puls:Cknop_naar_puls|output'
 Slack : 0.215
 TNS   : 0.000
 
-Type  : Fast Model Recovery 'audio_interface:G6|i2c_counter[9]'
-Slack : -0.528
-TNS   : -1.836
+Type  : Fast Model Recovery 'audio_interface:Caudio|i2c_counter[9]'
+Slack : -0.645
+TNS   : -2.554
 
 Type  : Fast Model Recovery 'clock'
-Slack : -0.212
-TNS   : -8.435
+Slack : -0.528
+TNS   : -13.734
 
-Type  : Fast Model Recovery 'puls:G1|output'
-Slack : 0.080
-TNS   : 0.000
-
-Type  : Fast Model Recovery 'modcounter:G2|over'
-Slack : 0.254
+Type  : Fast Model Recovery 'puls:Cknop_naar_puls|output'
+Slack : 0.019
 TNS   : 0.000
 
 Type  : Fast Model Recovery 'button_reset'
-Slack : 0.584
+Slack : 0.372
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'modcounter:Ceenheden|over'
+Slack : 0.516
 TNS   : 0.000
 
 Type  : Fast Model Removal 'button_reset'
-Slack : -1.722
-TNS   : -6.572
+Slack : -1.833
+TNS   : -7.010
 
 Type  : Fast Model Removal 'clock'
-Slack : -0.814
-TNS   : -20.703
+Slack : -1.073
+TNS   : -28.684
 
-Type  : Fast Model Removal 'puls:G1|output'
-Slack : -0.506
-TNS   : -1.366
+Type  : Fast Model Removal 'puls:Cknop_naar_puls|output'
+Slack : -0.459
+TNS   : -2.206
 
-Type  : Fast Model Removal 'modcounter:G2|over'
-Slack : 0.126
-TNS   : 0.000
+Type  : Fast Model Removal 'modcounter:Ceenheden|over'
+Slack : -0.136
+TNS   : -0.544
 
-Type  : Fast Model Removal 'audio_interface:G6|i2c_counter[9]'
-Slack : 0.144
+Type  : Fast Model Removal 'audio_interface:Caudio|i2c_counter[9]'
+Slack : 0.061
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'clock'
@@ -190,15 +190,15 @@ Type  : Fast Model Minimum Pulse Width 'button_reset'
 Slack : -1.222
 TNS   : -1.222
 
-Type  : Fast Model Minimum Pulse Width 'puls:G1|output'
+Type  : Fast Model Minimum Pulse Width 'puls:Cknop_naar_puls|output'
 Slack : -0.500
 TNS   : -5.000
 
-Type  : Fast Model Minimum Pulse Width 'audio_interface:G6|i2c_counter[9]'
+Type  : Fast Model Minimum Pulse Width 'audio_interface:Caudio|i2c_counter[9]'
 Slack : -0.500
 TNS   : -4.000
 
-Type  : Fast Model Minimum Pulse Width 'modcounter:G2|over'
+Type  : Fast Model Minimum Pulse Width 'modcounter:Ceenheden|over'
 Slack : -0.500
 TNS   : -4.000
 

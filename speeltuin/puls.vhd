@@ -15,7 +15,7 @@ ARCHITECTURE behaviour OF puls IS
   SIGNAL activated : std_logic := '0';
   
   BEGIN
-    PROCESS(input, clock)
+    PROCESS (input, clock)
     BEGIN
       IF rising_edge(clock) THEN
         IF input = '1' THEN
