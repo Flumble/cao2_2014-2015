@@ -7,7 +7,7 @@ USE IEEE.NUMERIC_STD.ALL;
 
 ENTITY display IS
 	PORT (
-		hex : IN  natural RANGE 0 TO 15;
+		hex : IN  std_logic_vector(3 DOWNTO 0);
 		dig : OUT std_logic_vector(6 DOWNTO 0)
 	);
 END display;
@@ -36,5 +36,5 @@ ARCHITECTURE behaviour OF display IS
 	END hex2display;
 
 	BEGIN
-		dig <= not(hex2display(std_logic_vector(to_unsigned(hex, 4))));
+		dig <= not(hex2display(hex));
 END behaviour;
