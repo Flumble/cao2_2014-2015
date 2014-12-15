@@ -1,5 +1,5 @@
 # CAO 2 FPGA opdracht: MorseKnopper
-## Frank Wibbelink & Sander Bakkum
+## Frank Wibbelink (s1184725) & Sander Bakkum (s1346970)
 
 Het door ons gerealiseerde project is een programma voor een FPGA wat het aantal keer indrukken van 
 een knop decimaal telt op twee 7-segment displays. Tevens wordt bij het indrukken van de knop het
