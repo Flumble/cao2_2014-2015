@@ -6,7 +6,7 @@ USE IEEE.numeric_std.ALL;
 
 ENTITY morsegenerator IS
 port(
-    clk   : IN std_logic;
+    clock : IN std_logic;
     reset : IN std_logic;
     start : IN std_logic;
 	
@@ -54,7 +54,7 @@ ARCHITECTURE behaviour OF morsegenerator IS
 --  SIGNAL cnt    : natural RANGE 0 TO 5000000;
 
   BEGIN 
-    PROCESS (clk, reset, number, start)
+    PROCESS (clock, reset, number, start)
       variable cnt   : natural RANGE 0 TO 5000000;
 		variable finished: std_logic;
 		--variable index: natural RANGE 0 TO 22;
@@ -69,7 +69,7 @@ ARCHITECTURE behaviour OF morsegenerator IS
 		cnt := 0;
 		finish <= '0';
 		finished := '0';
-      ELSIF rising_edge(clk) THEN
+      ELSIF rising_edge(clock) THEN
         IF cnt < 5000000 THEN
 			cnt := cnt + 1;
         ELSE

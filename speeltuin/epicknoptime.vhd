@@ -12,14 +12,14 @@ ENTITY epicknoptime IS
 
 		-- audio codec in and outputs
 		init_finish : out std_logic; --lights ledg[0] when init is finished (for debugging)
-		AUD_Mclock  : out std_logic; --audio master clock
-		AUD_Bclock  : in std_logic; -- Digital Audio bit clock
+		AUD_MCLK  : out std_logic; --audio master CLK
+		AUD_BCLK  : in std_logic; -- Digital Audio bit CLK
 		AUD_ADCDAT  : in std_logic;
 		AUD_DACDAT  : out std_logic; -- DAC data line
 		AUD_DACLRCK : in std_logic; -- DAC data left/right select
 		AUD_ADCLRCK : in std_logic; -- DAC data left/right select
 		I2C_SDAT    : out std_logic; -- serial interface data line
-		I2C_Sclock  : out std_logic;  -- serial interface clock
+		I2C_SCLK  : out std_logic  -- serial interface CLK
 	);
 END epicknoptime;
 
@@ -29,13 +29,13 @@ ARCHITECTURE structure OF epicknoptime IS
 	COMPONENT puls
 		PORT (
 			input, clock : IN std_logic;
-			outp : OUT std_logic
+			output : OUT std_logic
 		);
 	END COMPONENT;
 
 	COMPONENT modcounter
 		PORT (
-			inc, button_reset : IN  std_logic;
+			inc, reset : IN  std_logic;
 			outp : OUT natural RANGE 0 TO 9;
 			over : OUT std_logic
 		);
@@ -52,18 +52,18 @@ ARCHITECTURE structure OF epicknoptime IS
 		PORT
 		( 
 			LDATA, RDATA : IN std_logic_vector(15 downto 0); -- parallel external data inputs
-			clock, Reset : IN std_logic; 
+			CLK, Reset : IN std_logic; 
 			INIT_FINISH  : OUT std_logic;
 			adc_full     : OUT std_logic;
 			data_over    : OUT std_logic; -- sample sync pulse
-			AUD_Mclock   : OUT std_logic; -- Codec master clock OUTPUT
-			AUD_Bclock   : IN std_logic; -- Digital Audio bit clock
+			AUD_MCLK   : OUT std_logic; -- Codec master CLK OUTPUT
+			AUD_BCLK   : IN std_logic; -- Digital Audio bit CLK
 			AUD_ADCDAT   : IN std_logic;
 			AUD_DACDAT   : OUT std_logic; -- DAC data line
 			AUD_DACLRCK  : IN std_logic; -- DAC data left/right select
 			AUD_ADCLRCK  : IN std_logic; -- DAC data left/right select
 			I2C_SDAT     : OUT std_logic; -- serial interface data line
-			I2C_Sclock   : OUT std_logic;  -- serial interface clock
+			I2C_SCLK   : OUT std_logic;  -- serial interface CLK
 			ADCDATA      : OUT std_logic_vector(31 downto 0)
 		);
 	END COMPONENT audio_interface;
@@ -97,7 +97,7 @@ BEGIN
 	G3: modcounter      PORT MAP(overflow, not(button_reset), unit10, open);
 	G4: display         PORT MAP(std_logic_vector(to_unsigned(unit1, 4)), cnt_unit);
 	G5: display         PORT MAP(std_logic_vector(to_unsigned(unit10, 4)), cnt_ten);
-	G6: audio_interface PORT MAP(data,data,clock,button_reset,init_finish,OPEN,OPEN,AUD_Mclock,AUD_Bclock,'0',AUD_DACDAT,AUD_DACLRCK,'0',I2C_SDAT,I2C_Sclock,OPEN);
+	G6: audio_interface PORT MAP(data,data,clock,button_reset,init_finish,OPEN,OPEN,AUD_MCLK,AUD_BCLK,'0',AUD_DACDAT,AUD_DACLRCK,'0',I2C_SDAT,I2C_SCLK,OPEN);
 	G7: toongenerator   PORT MAP(clock, toonness1 or toonness2, data);
 	G8: morsegenerator  PORT MAP(clock, button_reset, plus, unit1, toonness1, nextAudio);
 	G22: puls           PORT MAP(nextAudio, clock, nextStart);
