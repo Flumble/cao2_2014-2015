@@ -8,7 +8,7 @@ ENTITY toongenerator IS
 	GENERIC (wait_cycles : natural := 800);
 
 	PORT(
-		clock, reset, activate : IN std_logic;
+		clock, activate : IN std_logic;
 		data : OUT std_logic_vector(15 downto 0)
 	);
 END toongenerator;
@@ -83,16 +83,13 @@ ARCHITECTURE behaviour OF toongenerator IS
 			END CASE;
 	END sinlut;  
 
-	SIGNAL index : unsigned(5 downto 0);
+	SIGNAL index : unsigned(5 downto 0) := (OTHERS => '0');
 
 BEGIN 
-	PROCESS (clock, reset, activate) 
-		VARIABLE wait_counter : integer RANGE 0 TO wait_cycles;
+	PROCESS (clock, activate) 
+		VARIABLE wait_counter : integer RANGE 0 TO wait_cycles := 0;
 	BEGIN  
-		IF reset = '0' THEN
-			wait_counter <= 0;
-			index <= (OTHERS => '0');
-		ELSIF rising_edge(clock) AND activate = '1' THEN
+		IF rising_edge(clock) AND activate = '1' THEN
 			IF wait_counter = wait_cycles THEN
 				wait_counter <= 0;        
 				index <= index + 1;

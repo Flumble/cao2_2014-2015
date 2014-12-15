@@ -70,7 +70,7 @@ ARCHITECTURE structure OF epicknoptime IS
 	
 	COMPONENT toongenerator IS
 	port(
-			clock, reset, activate: IN std_logic;
+			clock, activate: IN std_logic;
 
 			data : OUT std_logic_vector(15 downto 0)
 		);
@@ -98,7 +98,7 @@ BEGIN
 	G4: display         PORT MAP(std_logic_vector(to_unsigned(unit1, 4)), cnt_unit);
 	G5: display         PORT MAP(std_logic_vector(to_unsigned(unit10, 4)), cnt_ten);
 	G6: audio_interface PORT MAP(data,data,clock,button_reset,init_finish,OPEN,OPEN,AUD_Mclock,AUD_Bclock,'0',AUD_DACDAT,AUD_DACLRCK,'0',I2C_SDAT,I2C_Sclock,OPEN);
-	G7: toongenerator   PORT MAP(clock, button_reset, toonness1 or toonness2, data);
+	G7: toongenerator   PORT MAP(clock, toonness1 or toonness2, data);
 	G8: morsegenerator  PORT MAP(clock, button_reset, plus, unit1, toonness1, nextAudio);
 	G22: puls           PORT MAP(nextAudio, clock, nextStart);
 	G9: morsegenerator  PORT MAP(clock, button_reset, nextStart, unit10, toonness2, OPEN);
