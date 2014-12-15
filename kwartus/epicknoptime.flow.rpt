@@ -1,5 +1,5 @@
 Flow report for epicknoptime
-Thu Dec 11 17:50:58 2014
+Mon Dec 15 22:00:13 2014
 Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
 
 
@@ -38,18 +38,18 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Flow Summary                                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Flow Status                        ; Successful - Thu Dec 11 17:50:58 2014         ;
+; Flow Status                        ; Successful - Mon Dec 15 22:00:13 2014         ;
 ; Quartus II Version                 ; 11.0 Build 208 07/03/2011 SP 1 SJ Web Edition ;
 ; Revision Name                      ; epicknoptime                                  ;
 ; Top-level Entity Name              ; epicknoptime                                  ;
 ; Family                             ; Cyclone II                                    ;
 ; Device                             ; EP2C20F484C7                                  ;
 ; Timing Models                      ; Final                                         ;
-; Total logic elements               ; 334 / 18,752 ( 2 % )                          ;
-;     Total combinational functions  ; 317 / 18,752 ( 2 % )                          ;
+; Total logic elements               ; 347 / 18,752 ( 2 % )                          ;
+;     Total combinational functions  ; 331 / 18,752 ( 2 % )                          ;
 ;     Dedicated logic registers      ; 156 / 18,752 ( < 1 % )                        ;
 ; Total registers                    ; 156                                           ;
-; Total pins                         ; 27 / 315 ( 9 % )                              ;
+; Total pins                         ; 28 / 315 ( 9 % )                              ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0 / 239,616 ( 0 % )                           ;
 ; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/11/2014 17:50:47 ;
+; Start date & time ; 12/15/2014 22:00:00 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; epicknoptime        ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +-------------------------------------+--------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                          ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 22930451120129.141831664606396 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 22930451120129.141867720005820 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)         ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                             ; --            ; --          ; --             ;
@@ -89,12 +89,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 294 MB              ; 00:00:03                           ;
-; Fitter                    ; 00:00:04     ; 1.0                     ; 336 MB              ; 00:00:04                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 281 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 257 MB              ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 229 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:11     ; --                      ; --                  ; 00:00:12                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 292 MB              ; 00:00:03                           ;
+; Fitter                    ; 00:00:04     ; 1.0                     ; 333 MB              ; 00:00:04                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 278 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 254 MB              ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 226 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:12     ; --                      ; --                  ; 00:00:12                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

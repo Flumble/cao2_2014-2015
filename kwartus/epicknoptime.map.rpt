@@ -1,5 +1,5 @@
 Analysis & Synthesis report for epicknoptime
-Thu Dec 11 17:50:49 2014
+Mon Dec 15 22:00:03 2014
 Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
 
 
@@ -14,16 +14,16 @@ Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |epicknoptime|audio_interface:G6|state
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: modcounter:G2
- 14. Parameter Settings for User Entity Instance: modcounter:G3
- 15. Port Connectivity Checks: "morsegenerator:G9"
- 16. Port Connectivity Checks: "audio_interface:G6"
- 17. Port Connectivity Checks: "display:G5"
- 18. Port Connectivity Checks: "display:G4"
+  9. Logic Cells Representing Combinational Loops
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: modcounter:G2
+ 15. Parameter Settings for User Entity Instance: modcounter:G3
+ 16. Parameter Settings for User Entity Instance: toongenerator:G7
+ 17. Port Connectivity Checks: "morsegenerator:G9"
+ 18. Port Connectivity Checks: "audio_interface:G6"
  19. Port Connectivity Checks: "modcounter:G3"
  20. Elapsed Time Per Partition
  21. Analysis & Synthesis Messages
@@ -52,16 +52,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 11 17:50:49 2014         ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec 15 22:00:03 2014         ;
 ; Quartus II Version                 ; 11.0 Build 208 07/03/2011 SP 1 SJ Web Edition ;
 ; Revision Name                      ; epicknoptime                                  ;
 ; Top-level Entity Name              ; epicknoptime                                  ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 350                                           ;
-;     Total combinational functions  ; 317                                           ;
+; Total logic elements               ; 364                                           ;
+;     Total combinational functions  ; 331                                           ;
 ;     Dedicated logic registers      ; 156                                           ;
 ; Total registers                    ; 156                                           ;
-; Total pins                         ; 27                                            ;
+; Total pins                         ; 28                                            ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0                                             ;
 ; Embedded Multiplier 9-bit elements ; 0                                             ;
@@ -167,11 +167,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                 ;
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+
+; ../speeltuin/puls.vhd            ; yes             ; User VHDL File  ; D:/School/2014-2015/Computerarchitectuur en -organisatie 2/git/speeltuin/puls.vhd            ;
 ; ../speeltuin/morsegenerator.vhd  ; yes             ; User VHDL File  ; D:/School/2014-2015/Computerarchitectuur en -organisatie 2/git/speeltuin/morsegenerator.vhd  ;
 ; ../speeltuin/audio_interface.vhd ; yes             ; User VHDL File  ; D:/School/2014-2015/Computerarchitectuur en -organisatie 2/git/speeltuin/audio_interface.vhd ;
 ; ../speeltuin/toongenerator.vhd   ; yes             ; User VHDL File  ; D:/School/2014-2015/Computerarchitectuur en -organisatie 2/git/speeltuin/toongenerator.vhd   ;
 ; ../speeltuin/modcounter.vhd      ; yes             ; User VHDL File  ; D:/School/2014-2015/Computerarchitectuur en -organisatie 2/git/speeltuin/modcounter.vhd      ;
-; ../speeltuin/knopcontroller.vhd  ; yes             ; User VHDL File  ; D:/School/2014-2015/Computerarchitectuur en -organisatie 2/git/speeltuin/knopcontroller.vhd  ;
 ; ../speeltuin/epicknoptime.vhd    ; yes             ; User VHDL File  ; D:/School/2014-2015/Computerarchitectuur en -organisatie 2/git/speeltuin/epicknoptime.vhd    ;
 ; ../speeltuin/display.vhd         ; yes             ; User VHDL File  ; D:/School/2014-2015/Computerarchitectuur en -organisatie 2/git/speeltuin/display.vhd         ;
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+
@@ -182,27 +182,27 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 350   ;
+; Estimated Total logic elements              ; 364   ;
 ;                                             ;       ;
-; Total combinational functions               ; 317   ;
+; Total combinational functions               ; 331   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 172   ;
-;     -- 3 input functions                    ; 28    ;
-;     -- <=2 input functions                  ; 117   ;
+;     -- 4 input functions                    ; 180   ;
+;     -- 3 input functions                    ; 32    ;
+;     -- <=2 input functions                  ; 119   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 243   ;
+;     -- normal mode                          ; 257   ;
 ;     -- arithmetic mode                      ; 74    ;
 ;                                             ;       ;
 ; Total registers                             ; 156   ;
 ;     -- Dedicated logic registers            ; 156   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 27    ;
-; Maximum fan-out node                        ; clk   ;
+; I/O pins                                    ; 28    ;
+; Maximum fan-out node                        ; clock ;
 ; Maximum fan-out                             ; 143   ;
-; Total fan-out                               ; 1605  ;
-; Average fan-out                             ; 3.21  ;
+; Total fan-out                               ; 1629  ;
+; Average fan-out                             ; 3.16  ;
 +---------------------------------------------+-------+
 
 
@@ -211,17 +211,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
-; |epicknoptime              ; 317 (6)           ; 156 (0)      ; 0           ; 0            ; 0       ; 0         ; 27   ; 0            ; |epicknoptime                    ;              ;
+; |epicknoptime              ; 331 (9)           ; 156 (0)      ; 0           ; 0            ; 0       ; 0         ; 28   ; 0            ; |epicknoptime                    ;              ;
 ;    |audio_interface:G6|    ; 62 (62)           ; 70 (70)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|audio_interface:G6 ;              ;
 ;    |display:G4|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|display:G4         ;              ;
 ;    |display:G5|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|display:G5         ;              ;
-;    |knopcontroller:G1|     ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|knopcontroller:G1  ;              ;
-;    |knopcontroller:G22|    ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|knopcontroller:G22 ;              ;
 ;    |modcounter:G2|         ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|modcounter:G2      ;              ;
-;    |modcounter:G3|         ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|modcounter:G3      ;              ;
-;    |morsegenerator:G8|     ; 70 (70)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|morsegenerator:G8  ;              ;
-;    |morsegenerator:G9|     ; 69 (69)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|morsegenerator:G9  ;              ;
-;    |toongenerator:G7|      ; 84 (84)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|toongenerator:G7   ;              ;
+;    |modcounter:G3|         ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|modcounter:G3      ;              ;
+;    |morsegenerator:G8|     ; 72 (72)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|morsegenerator:G8  ;              ;
+;    |morsegenerator:G9|     ; 71 (71)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|morsegenerator:G9  ;              ;
+;    |puls:G1|               ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|puls:G1            ;              ;
+;    |puls:G22|              ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|puls:G22           ;              ;
+;    |toongenerator:G7|      ; 90 (90)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |epicknoptime|toongenerator:G7   ;              ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -267,6 +267,17 @@ Encoding Type:  One-Hot
 +------------------+-------------+---------------+---------------+-------------+----------+----------+----------+----------+----------+----------+----------+----------+-------------+----------+----------+----------+----------+----------+----------+----------+----------+-------------+----------+----------+----------+----------+----------+----------+----------+----------+-------------+------------------+
 
 
++------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops               ;
++--------------------------------------------------------+---+
+; Logic Cell Name                                        ;   ;
++--------------------------------------------------------+---+
+; temp_audio2                                            ;   ;
+; Number of logic cells representing combinational loops ; 1 ;
++--------------------------------------------------------+---+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
 +------------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                                 ;
 +----------------------------------------+-------------------------------------------+
@@ -289,10 +300,9 @@ Encoding Type:  One-Hot
 ; audio_interface:G6|LRDATA[1]           ; Merged with audio_interface:G6|LRDATA[17] ;
 ; audio_interface:G6|LRDATA[0]           ; Merged with audio_interface:G6|LRDATA[16] ;
 ; audio_interface:G6|LRDATA[30,31]       ; Merged with audio_interface:G6|LRDATA[29] ;
-; morsegenerator:G8|finished             ; Stuck at GND due to stuck port data_in    ;
 ; audio_interface:G6|flag1               ; Lost fanout                               ;
 ; audio_interface:G6|Bcount[4]           ; Lost fanout                               ;
-; Total Number of Removed Registers = 21 ;                                           ;
+; Total Number of Removed Registers = 20 ;                                           ;
 +----------------------------------------+-------------------------------------------+
 
 
@@ -302,9 +312,9 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 156   ;
-; Number of registers using Synchronous Clear  ; 57    ;
+; Number of registers using Synchronous Clear  ; 47    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 152   ;
+; Number of registers using Asynchronous Clear ; 136   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 73    ;
 ; Number of registers using Preset             ; 0     ;
@@ -320,7 +330,9 @@ Encoding Type:  One-Hot
 ; audio_interface:G6|Bcount[0]           ; 7       ;
 ; audio_interface:G6|Bcount[3]           ; 3       ;
 ; audio_interface:G6|Bcount[2]           ; 2       ;
-; Total number of inverted registers = 4 ;         ;
+; morsegenerator:G8|index[3]~_emulated   ; 1       ;
+; morsegenerator:G9|index[3]~_emulated   ; 1       ;
+; Total number of inverted registers = 6 ;         ;
 +----------------------------------------+---------+
 
 
@@ -329,7 +341,7 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                 ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------------+----------------------------+
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; |epicknoptime|audio_interface:G6|Bcount[0] ;                            ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; |epicknoptime|audio_interface:G6|Bcount[2] ;                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------------+----------------------------+
 
 
@@ -353,13 +365,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "morsegenerator:G9"                                                                    ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; finish ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: toongenerator:G7 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; wait_cycles    ; 800   ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "morsegenerator:G9"                                                                      ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; finished ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
@@ -373,24 +395,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; aud_adclrck ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; adcdata     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "display:G5"                   ;
-+------+-------+------------------+------------------------+
-; Port ; Type  ; Severity         ; Details                ;
-+------+-------+------------------+------------------------+
-; hex  ; Input ; Critical Warning ; Types are incompatible ;
-+------+-------+------------------+------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "display:G4"                   ;
-+------+-------+------------------+------------------------+
-; Port ; Type  ; Severity         ; Details                ;
-+------+-------+------------------+------------------------+
-; hex  ; Input ; Critical Warning ; Types are incompatible ;
-+------+-------+------------------+------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -417,9 +421,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Dec 11 17:50:46 2014
+    Info: Processing started: Mon Dec 15 22:00:00 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off epicknoptime -c epicknoptime
 Warning: Parallel compilation is not licensed and has been disabled
+Info: Found 2 design units, including 1 entities, in source file /school/2014-2015/computerarchitectuur en -organisatie 2/git/speeltuin/puls.vhd
+    Info: Found design unit 1: puls-behaviour
+    Info: Found entity 1: puls
 Info: Found 2 design units, including 1 entities, in source file /school/2014-2015/computerarchitectuur en -organisatie 2/git/speeltuin/morsegenerator.vhd
     Info: Found design unit 1: morsegenerator-behaviour
     Info: Found entity 1: morsegenerator
@@ -432,9 +439,6 @@ Info: Found 2 design units, including 1 entities, in source file /school/2014-20
 Info: Found 2 design units, including 1 entities, in source file /school/2014-2015/computerarchitectuur en -organisatie 2/git/speeltuin/modcounter.vhd
     Info: Found design unit 1: modcounter-behaviour
     Info: Found entity 1: modcounter
-Info: Found 2 design units, including 1 entities, in source file /school/2014-2015/computerarchitectuur en -organisatie 2/git/speeltuin/knopcontroller.vhd
-    Info: Found design unit 1: knopcontroller-behaviour
-    Info: Found entity 1: knopcontroller
 Info: Found 2 design units, including 1 entities, in source file /school/2014-2015/computerarchitectuur en -organisatie 2/git/speeltuin/epicknoptime.vhd
     Info: Found design unit 1: epicknoptime-structure
     Info: Found entity 1: epicknoptime
@@ -442,23 +446,21 @@ Info: Found 2 design units, including 1 entities, in source file /school/2014-20
     Info: Found design unit 1: display-behaviour
     Info: Found entity 1: display
 Info: Elaborating entity "epicknoptime" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at epicknoptime.vhd(25): used implicit default value for signal "temp_audio" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Info: Elaborating entity "knopcontroller" for hierarchy "knopcontroller:G1"
+Info: Elaborating entity "puls" for hierarchy "puls:G1"
 Info: Elaborating entity "modcounter" for hierarchy "modcounter:G2"
 Info: Elaborating entity "display" for hierarchy "display:G4"
 Info: Elaborating entity "audio_interface" for hierarchy "audio_interface:G6"
 Info: Elaborating entity "toongenerator" for hierarchy "toongenerator:G7"
 Info: Elaborating entity "morsegenerator" for hierarchy "morsegenerator:G8"
-Warning: 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning: Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "morsegenerator:G8|index[4]" is converted into an equivalent circuit using register "morsegenerator:G8|index[4]~_emulated" and latch "morsegenerator:G8|index[4]~latch"
     Warning (13310): Register "morsegenerator:G8|index[3]" is converted into an equivalent circuit using register "morsegenerator:G8|index[3]~_emulated" and latch "morsegenerator:G8|index[3]~latch"
     Warning (13310): Register "morsegenerator:G8|index[2]" is converted into an equivalent circuit using register "morsegenerator:G8|index[2]~_emulated" and latch "morsegenerator:G8|index[2]~latch"
     Warning (13310): Register "morsegenerator:G8|index[1]" is converted into an equivalent circuit using register "morsegenerator:G8|index[1]~_emulated" and latch "morsegenerator:G8|index[1]~latch"
-    Warning (13310): Register "morsegenerator:G9|index[3]" is converted into an equivalent circuit using register "morsegenerator:G9|index[3]~_emulated" and latch "morsegenerator:G9|index[3]~latch"
     Warning (13310): Register "morsegenerator:G9|index[2]" is converted into an equivalent circuit using register "morsegenerator:G9|index[2]~_emulated" and latch "morsegenerator:G9|index[2]~latch"
+    Warning (13310): Register "morsegenerator:G9|index[3]" is converted into an equivalent circuit using register "morsegenerator:G9|index[3]~_emulated" and latch "morsegenerator:G9|index[3]~latch"
     Warning (13310): Register "morsegenerator:G9|index[1]" is converted into an equivalent circuit using register "morsegenerator:G9|index[1]~_emulated" and latch "morsegenerator:G9|index[1]~latch"
-Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "temp_audio" is stuck at GND
+    Warning (13310): Register "morsegenerator:G9|index[4]" is converted into an equivalent circuit using register "morsegenerator:G9|index[4]~_emulated" and latch "morsegenerator:G9|index[4]~latch"
 Critical Warning: Ignored Power-Up Level option on the following registers
     Critical Warning (18010): Register audio_interface:G6|Bcount[1] will power up to High
     Critical Warning (18010): Register audio_interface:G6|Bcount[0] will power up to High
@@ -471,13 +473,13 @@ Info: Generating hard_block partition "hard_block:auto_generated_inst"
 Warning: Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "AUD_ADCDAT"
     Warning (15610): No output dependent on input pin "AUD_ADCLRCK"
-Info: Implemented 381 device resources after synthesis - the final resource count might be different
+Info: Implemented 396 device resources after synthesis - the final resource count might be different
     Info: Implemented 7 input pins
-    Info: Implemented 20 output pins
-    Info: Implemented 354 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 294 megabytes
-    Info: Processing ended: Thu Dec 11 17:50:49 2014
+    Info: Implemented 21 output pins
+    Info: Implemented 368 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 292 megabytes
+    Info: Processing ended: Mon Dec 15 22:00:03 2014
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
