@@ -8,7 +8,7 @@ ENTITY modcounter IS
 	GENERIC (max : natural := 9);
 
 	PORT (
-		inc, button_reset : IN  std_logic;
+		inc, rst : IN  std_logic;
 		outp : OUT natural RANGE 0 TO max;
 		over : OUT std_logic
 	);
@@ -18,9 +18,9 @@ ARCHITECTURE behaviour OF modcounter IS
 	SIGNAL output : natural RANGE 0 TO max;
 
 BEGIN
-	PROCESS(inc,button_reset)
+	PROCESS(inc,rst)
 	BEGIN
-		IF button_reset = '1' THEN
+		IF rst = '1' THEN
 			over <= '0';
 			output <= 0;
 		ELSIF rising_edge(inc) THEN

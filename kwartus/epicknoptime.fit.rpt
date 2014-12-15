@@ -1,5 +1,5 @@
 Fitter report for epicknoptime
-Mon Dec 15 22:00:08 2014
+Thu Dec 11 17:50:54 2014
 Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
 
 
@@ -35,9 +35,7 @@ Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
  27. LAB Distinct Inputs
  28. Fitter Device Options
  29. Operating Settings and Conditions
- 30. Estimated Delay Added for Hold Timing Summary
- 31. Estimated Delay Added for Hold Timing Details
- 32. Fitter Messages
+ 30. Fitter Messages
 
 
 
@@ -63,18 +61,18 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                     ;
 +------------------------------------+-----------------------------------------------+
-; Fitter Status                      ; Successful - Mon Dec 15 22:00:08 2014         ;
+; Fitter Status                      ; Successful - Thu Dec 11 17:50:54 2014         ;
 ; Quartus II Version                 ; 11.0 Build 208 07/03/2011 SP 1 SJ Web Edition ;
 ; Revision Name                      ; epicknoptime                                  ;
 ; Top-level Entity Name              ; epicknoptime                                  ;
 ; Family                             ; Cyclone II                                    ;
 ; Device                             ; EP2C20F484C7                                  ;
 ; Timing Models                      ; Final                                         ;
-; Total logic elements               ; 347 / 18,752 ( 2 % )                          ;
-;     Total combinational functions  ; 331 / 18,752 ( 2 % )                          ;
+; Total logic elements               ; 334 / 18,752 ( 2 % )                          ;
+;     Total combinational functions  ; 317 / 18,752 ( 2 % )                          ;
 ;     Dedicated logic registers      ; 156 / 18,752 ( < 1 % )                        ;
 ; Total registers                    ; 156                                           ;
-; Total pins                         ; 28 / 315 ( 9 % )                              ;
+; Total pins                         ; 27 / 315 ( 9 % )                              ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0 / 239,616 ( 0 % )                           ;
 ; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                ;
@@ -150,8 +148,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 525 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 525 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 510 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 510 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -174,7 +172,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 522     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 507     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -190,29 +188,29 @@ The pin-out file can be found in D:/School/2014-2015/Computerarchitectuur en -or
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 347 / 18,752 ( 2 % )   ;
-;     -- Combinational with no register       ; 191                    ;
-;     -- Register only                        ; 16                     ;
-;     -- Combinational with a register        ; 140                    ;
+; Total logic elements                        ; 334 / 18,752 ( 2 % )   ;
+;     -- Combinational with no register       ; 178                    ;
+;     -- Register only                        ; 17                     ;
+;     -- Combinational with a register        ; 139                    ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 180                    ;
-;     -- 3 input functions                    ; 32                     ;
-;     -- <=2 input functions                  ; 119                    ;
-;     -- Register only                        ; 16                     ;
+;     -- 4 input functions                    ; 172                    ;
+;     -- 3 input functions                    ; 28                     ;
+;     -- <=2 input functions                  ; 117                    ;
+;     -- Register only                        ; 17                     ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 257                    ;
+;     -- normal mode                          ; 243                    ;
 ;     -- arithmetic mode                      ; 74                     ;
 ;                                             ;                        ;
 ; Total registers*                            ; 156 / 19,649 ( < 1 % ) ;
 ;     -- Dedicated logic registers            ; 156 / 18,752 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 897 ( 0 % )        ;
 ;                                             ;                        ;
-; Total LABs:  partially or completely used   ; 28 / 1,172 ( 2 % )     ;
+; Total LABs:  partially or completely used   ; 26 / 1,172 ( 2 % )     ;
 ; User inserted logic elements                ; 0                      ;
 ; Virtual pins                                ; 0                      ;
-; I/O pins                                    ; 28 / 315 ( 9 % )       ;
+; I/O pins                                    ; 27 / 315 ( 9 % )       ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )         ;
 ; Global signals                              ; 6                      ;
 ; M4Ks                                        ; 0 / 52 ( 0 % )         ;
@@ -225,13 +223,13 @@ The pin-out file can be found in D:/School/2014-2015/Computerarchitectuur en -or
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )          ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )          ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%           ;
-; Peak interconnect usage (total/H/V)         ; 2% / 2% / 2%           ;
-; Maximum fan-out node                        ; clock~clkctrl          ;
+; Peak interconnect usage (total/H/V)         ; 1% / 2% / 1%           ;
+; Maximum fan-out node                        ; clk~clkctrl            ;
 ; Maximum fan-out                             ; 140                    ;
-; Highest non-global fan-out signal           ; button_reset           ;
-; Highest non-global fan-out                  ; 101                    ;
-; Total fan-out                               ; 1647                   ;
-; Average fan-out                             ; 3.07                   ;
+; Highest non-global fan-out signal           ; rst                    ;
+; Highest non-global fan-out                  ; 110                    ;
+; Total fan-out                               ; 1623                   ;
+; Average fan-out                             ; 3.12                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -244,29 +242,29 @@ The pin-out file can be found in D:/School/2014-2015/Computerarchitectuur en -or
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 347 / 18752 ( 1 % )   ; 0 / 18752 ( 0 % )              ;
-;     -- Combinational with no register       ; 191                   ; 0                              ;
-;     -- Register only                        ; 16                    ; 0                              ;
-;     -- Combinational with a register        ; 140                   ; 0                              ;
+; Total logic elements                        ; 334 / 18752 ( 1 % )   ; 0 / 18752 ( 0 % )              ;
+;     -- Combinational with no register       ; 178                   ; 0                              ;
+;     -- Register only                        ; 17                    ; 0                              ;
+;     -- Combinational with a register        ; 139                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 180                   ; 0                              ;
-;     -- 3 input functions                    ; 32                    ; 0                              ;
-;     -- <=2 input functions                  ; 119                   ; 0                              ;
-;     -- Register only                        ; 16                    ; 0                              ;
+;     -- 4 input functions                    ; 172                   ; 0                              ;
+;     -- 3 input functions                    ; 28                    ; 0                              ;
+;     -- <=2 input functions                  ; 117                   ; 0                              ;
+;     -- Register only                        ; 17                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 257                   ; 0                              ;
+;     -- normal mode                          ; 243                   ; 0                              ;
 ;     -- arithmetic mode                      ; 74                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Total registers                             ; 156                   ; 0                              ;
 ;     -- Dedicated logic registers            ; 156 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 28 / 1172 ( 2 % )     ; 0 / 1172 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 26 / 1172 ( 2 % )     ; 0 / 1172 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
-; I/O pins                                    ; 28                    ; 0                              ;
+; I/O pins                                    ; 27                    ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )        ; 0 / 52 ( 0 % )                 ;
 ; Total memory bits                           ; 0                     ; 0                              ;
 ; Total RAM block bits                        ; 0                     ; 0                              ;
@@ -279,8 +277,8 @@ The pin-out file can be found in D:/School/2014-2015/Computerarchitectuur en -or
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 1647                  ; 0                              ;
-;     -- Registered Connections               ; 694                   ; 0                              ;
+;     -- Total Connections                    ; 1623                  ; 0                              ;
+;     -- Registered Connections               ; 681                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 0                              ;
@@ -288,7 +286,7 @@ The pin-out file can be found in D:/School/2014-2015/Computerarchitectuur en -or
 ;                                             ;                       ;                                ;
 ; Partition Interface                         ;                       ;                                ;
 ;     -- Input Ports                          ; 7                     ; 0                              ;
-;     -- Output Ports                         ; 21                    ; 0                              ;
+;     -- Output Ports                         ; 20                    ; 0                              ;
 ;     -- Bidir Ports                          ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Registered Ports                            ;                       ;                                ;
@@ -307,19 +305,19 @@ The pin-out file can be found in D:/School/2014-2015/Computerarchitectuur en -or
 +---------------------------------------------+-----------------------+--------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Input Pins                                                                                                                                                                                                                                                         ;
-+--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; Name         ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
-+--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; AUD_ADCDAT   ; B6    ; 3        ; 3            ; 27           ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; AUD_ADCLRCK  ; A6    ; 3        ; 3            ; 27           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; AUD_BCLK     ; A4    ; 3        ; 1            ; 27           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; AUD_DACLRCK  ; A5    ; 3        ; 3            ; 27           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; button_count ; R21   ; 6        ; 50           ; 10           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; button_reset ; R22   ; 6        ; 50           ; 10           ; 1           ; 101                   ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; clock        ; L1    ; 2        ; 0            ; 13           ; 0           ; 4                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-+--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                                                                                                        ;
++-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
++-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; AUD_ADCDAT  ; B6    ; 3        ; 3            ; 27           ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; AUD_ADCLRCK ; A6    ; 3        ; 3            ; 27           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; AUD_BCLK    ; A4    ; 3        ; 1            ; 27           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; AUD_DACLRCK ; A5    ; 3        ; 3            ; 27           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; btn         ; R21   ; 6        ; 50           ; 10           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; clk         ; L1    ; 2        ; 0            ; 13           ; 0           ; 4                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; rst         ; R22   ; 6        ; 50           ; 10           ; 1           ; 110                   ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
++-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -346,8 +344,7 @@ The pin-out file can be found in D:/School/2014-2015/Computerarchitectuur en -or
 ; cnt_unit[5] ; F1    ; 2        ; 0            ; 20           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; cnt_unit[6] ; E2    ; 2        ; 0            ; 20           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; init_finish ; U22   ; 6        ; 50           ; 7            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; temp_audio  ; V21   ; 6        ; 50           ; 6            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; temp_audio2 ; Y21   ; 6        ; 50           ; 6            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; temp_audio  ; V22   ; 6        ; 50           ; 7            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 +-------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
@@ -361,7 +358,7 @@ The pin-out file can be found in D:/School/2014-2015/Computerarchitectuur en -or
 ; 3        ; 8 / 43 ( 19 % )  ; 3.3V          ; --           ;
 ; 4        ; 0 / 40 ( 0 % )   ; 3.3V          ; --           ;
 ; 5        ; 0 / 39 ( 0 % )   ; 3.3V          ; --           ;
-; 6        ; 6 / 36 ( 17 % )  ; 3.3V          ; --           ;
+; 6        ; 5 / 36 ( 14 % )  ; 3.3V          ; --           ;
 ; 7        ; 0 / 40 ( 0 % )   ; 3.3V          ; --           ;
 ; 8        ; 0 / 43 ( 0 % )   ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
@@ -636,7 +633,7 @@ The pin-out file can be found in D:/School/2014-2015/Computerarchitectuur en -or
 ; K20      ; 215        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K21      ; 209        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K22      ; 210        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; L1       ; 38         ; 2        ; clock                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; L1       ; 38         ; 2        ; clk                                      ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; L2       ; 39         ; 2        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; L3       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; L4       ; 40         ; 2        ; ^nCONFIG                                 ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -744,8 +741,8 @@ The pin-out file can be found in D:/School/2014-2015/Computerarchitectuur en -or
 ; R18      ; 184        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R19      ; 185        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R20      ; 192        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; R21      ; 190        ; 6        ; button_count                             ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; R22      ; 191        ; 6        ; button_reset                             ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; R21      ; 190        ; 6        ; btn                                      ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; R22      ; 191        ; 6        ; rst                                      ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; T1       ; 59         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T2       ; 60         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T3       ; 69         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -810,8 +807,8 @@ The pin-out file can be found in D:/School/2014-2015/Computerarchitectuur en -or
 ; V18      ;            ;          ; GND_PLL4                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; V19      ; 166        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V20      ; 173        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; V21      ; 180        ; 6        ; temp_audio                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; V22      ; 181        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; V21      ; 180        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; V22      ; 181        ; 6        ; temp_audio                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; W1       ; 71         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W2       ; 72         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W3       ; 75         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -854,7 +851,7 @@ The pin-out file can be found in D:/School/2014-2015/Computerarchitectuur en -or
 ; Y18      ; 165        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y19      ; 168        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y20      ; 169        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; Y21      ; 178        ; 6        ; temp_audio2                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; Y21      ; 178        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y22      ; 179        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 +----------+------------+----------+------------------------------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
@@ -902,55 +899,54 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name              ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------+--------------+
-; |epicknoptime              ; 347 (8)     ; 156 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 28   ; 0            ; 191 (8)      ; 16 (0)            ; 140 (1)          ; |epicknoptime                    ;              ;
-;    |audio_interface:G6|    ; 92 (92)     ; 70 (70)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (22)      ; 16 (16)           ; 54 (54)          ; |epicknoptime|audio_interface:G6 ;              ;
+; |epicknoptime              ; 334 (6)     ; 156 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 27   ; 0            ; 178 (6)      ; 17 (0)            ; 139 (0)          ; |epicknoptime                    ;              ;
+;    |audio_interface:G6|    ; 93 (93)     ; 70 (70)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 23 (23)      ; 17 (17)           ; 53 (53)          ; |epicknoptime|audio_interface:G6 ;              ;
 ;    |display:G4|            ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |epicknoptime|display:G4         ;              ;
 ;    |display:G5|            ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |epicknoptime|display:G5         ;              ;
-;    |modcounter:G2|         ; 6 (6)       ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 5 (5)            ; |epicknoptime|modcounter:G2      ;              ;
-;    |modcounter:G3|         ; 5 (5)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; |epicknoptime|modcounter:G3      ;              ;
-;    |morsegenerator:G8|     ; 72 (72)     ; 29 (29)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 43 (43)      ; 0 (0)             ; 29 (29)          ; |epicknoptime|morsegenerator:G8  ;              ;
-;    |morsegenerator:G9|     ; 71 (71)     ; 28 (28)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 42 (42)      ; 0 (0)             ; 29 (29)          ; |epicknoptime|morsegenerator:G9  ;              ;
-;    |puls:G1|               ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |epicknoptime|puls:G1            ;              ;
-;    |puls:G22|              ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |epicknoptime|puls:G22           ;              ;
-;    |toongenerator:G7|      ; 90 (90)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 60 (60)      ; 0 (0)             ; 30 (30)          ; |epicknoptime|toongenerator:G7   ;              ;
+;    |knopcontroller:G1|     ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |epicknoptime|knopcontroller:G1  ;              ;
+;    |knopcontroller:G22|    ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |epicknoptime|knopcontroller:G22 ;              ;
+;    |modcounter:G2|         ; 5 (5)       ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (5)            ; |epicknoptime|modcounter:G2      ;              ;
+;    |modcounter:G3|         ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; |epicknoptime|modcounter:G3      ;              ;
+;    |morsegenerator:G8|     ; 70 (70)     ; 29 (29)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 41 (41)      ; 0 (0)             ; 29 (29)          ; |epicknoptime|morsegenerator:G8  ;              ;
+;    |morsegenerator:G9|     ; 69 (69)     ; 28 (28)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 40 (40)      ; 0 (0)             ; 29 (29)          ; |epicknoptime|morsegenerator:G9  ;              ;
+;    |toongenerator:G7|      ; 84 (84)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 54 (54)      ; 0 (0)             ; 30 (30)          ; |epicknoptime|toongenerator:G7   ;              ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------+
-; Delay Chain Summary                                                                   ;
-+--------------+----------+---------------+---------------+-----------------------+-----+
-; Name         ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
-+--------------+----------+---------------+---------------+-----------------------+-----+
-; I2C_SDAT     ; Output   ; --            ; --            ; --                    ; --  ;
-; cnt_ten[0]   ; Output   ; --            ; --            ; --                    ; --  ;
-; cnt_ten[1]   ; Output   ; --            ; --            ; --                    ; --  ;
-; cnt_ten[2]   ; Output   ; --            ; --            ; --                    ; --  ;
-; cnt_ten[3]   ; Output   ; --            ; --            ; --                    ; --  ;
-; cnt_ten[4]   ; Output   ; --            ; --            ; --                    ; --  ;
-; cnt_ten[5]   ; Output   ; --            ; --            ; --                    ; --  ;
-; cnt_ten[6]   ; Output   ; --            ; --            ; --                    ; --  ;
-; cnt_unit[0]  ; Output   ; --            ; --            ; --                    ; --  ;
-; cnt_unit[1]  ; Output   ; --            ; --            ; --                    ; --  ;
-; cnt_unit[2]  ; Output   ; --            ; --            ; --                    ; --  ;
-; cnt_unit[3]  ; Output   ; --            ; --            ; --                    ; --  ;
-; cnt_unit[4]  ; Output   ; --            ; --            ; --                    ; --  ;
-; cnt_unit[5]  ; Output   ; --            ; --            ; --                    ; --  ;
-; cnt_unit[6]  ; Output   ; --            ; --            ; --                    ; --  ;
-; temp_audio   ; Output   ; --            ; --            ; --                    ; --  ;
-; temp_audio2  ; Output   ; --            ; --            ; --                    ; --  ;
-; init_finish  ; Output   ; --            ; --            ; --                    ; --  ;
-; AUD_MCLK     ; Output   ; --            ; --            ; --                    ; --  ;
-; AUD_ADCDAT   ; Input    ; (0) 312 ps    ; (0) 312 ps    ; --                    ; --  ;
-; AUD_DACDAT   ; Output   ; --            ; --            ; --                    ; --  ;
-; AUD_ADCLRCK  ; Input    ; (0) 312 ps    ; (0) 312 ps    ; --                    ; --  ;
-; I2C_SCLK     ; Output   ; --            ; --            ; --                    ; --  ;
-; button_reset ; Input    ; (6) 4358 ps   ; (0) 325 ps    ; --                    ; --  ;
-; clock        ; Input    ; (0) 325 ps    ; (0) 325 ps    ; --                    ; --  ;
-; button_count ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
-; AUD_DACLRCK  ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
-; AUD_BCLK     ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
-+--------------+----------+---------------+---------------+-----------------------+-----+
++--------------------------------------------------------------------------------------+
+; Delay Chain Summary                                                                  ;
++-------------+----------+---------------+---------------+-----------------------+-----+
+; Name        ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
++-------------+----------+---------------+---------------+-----------------------+-----+
+; I2C_SDAT    ; Output   ; --            ; --            ; --                    ; --  ;
+; cnt_ten[0]  ; Output   ; --            ; --            ; --                    ; --  ;
+; cnt_ten[1]  ; Output   ; --            ; --            ; --                    ; --  ;
+; cnt_ten[2]  ; Output   ; --            ; --            ; --                    ; --  ;
+; cnt_ten[3]  ; Output   ; --            ; --            ; --                    ; --  ;
+; cnt_ten[4]  ; Output   ; --            ; --            ; --                    ; --  ;
+; cnt_ten[5]  ; Output   ; --            ; --            ; --                    ; --  ;
+; cnt_ten[6]  ; Output   ; --            ; --            ; --                    ; --  ;
+; cnt_unit[0] ; Output   ; --            ; --            ; --                    ; --  ;
+; cnt_unit[1] ; Output   ; --            ; --            ; --                    ; --  ;
+; cnt_unit[2] ; Output   ; --            ; --            ; --                    ; --  ;
+; cnt_unit[3] ; Output   ; --            ; --            ; --                    ; --  ;
+; cnt_unit[4] ; Output   ; --            ; --            ; --                    ; --  ;
+; cnt_unit[5] ; Output   ; --            ; --            ; --                    ; --  ;
+; cnt_unit[6] ; Output   ; --            ; --            ; --                    ; --  ;
+; init_finish ; Output   ; --            ; --            ; --                    ; --  ;
+; AUD_MCLK    ; Output   ; --            ; --            ; --                    ; --  ;
+; AUD_ADCDAT  ; Input    ; (0) 312 ps    ; (0) 312 ps    ; --                    ; --  ;
+; AUD_DACDAT  ; Output   ; --            ; --            ; --                    ; --  ;
+; AUD_ADCLRCK ; Input    ; (0) 312 ps    ; (0) 312 ps    ; --                    ; --  ;
+; I2C_SCLK    ; Output   ; --            ; --            ; --                    ; --  ;
+; temp_audio  ; Output   ; --            ; --            ; --                    ; --  ;
+; rst         ; Input    ; (0) 325 ps    ; (2) 1854 ps   ; --                    ; --  ;
+; clk         ; Input    ; (0) 325 ps    ; (0) 325 ps    ; --                    ; --  ;
+; btn         ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
+; AUD_DACLRCK ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
+; AUD_BCLK    ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
++-------------+----------+---------------+---------------+-----------------------+-----+
 
 
 +---------------------------------------------------------------------------+
@@ -960,116 +956,125 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------+---------+
 ; AUD_ADCDAT                                  ;                   ;         ;
 ; AUD_ADCLRCK                                 ;                   ;         ;
-; button_reset                                ;                   ;         ;
-;      - modcounter:G2|output[0]              ; 1                 ; 0       ;
-;      - modcounter:G2|output[1]              ; 1                 ; 0       ;
-;      - modcounter:G2|output[2]              ; 1                 ; 0       ;
-;      - modcounter:G2|output[3]              ; 1                 ; 0       ;
-;      - modcounter:G2|over                   ; 1                 ; 0       ;
-;      - modcounter:G3|output[0]              ; 1                 ; 0       ;
-;      - modcounter:G3|output[1]              ; 1                 ; 0       ;
-;      - modcounter:G3|output[2]              ; 1                 ; 0       ;
-;      - modcounter:G3|output[3]              ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[16]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[17]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[18]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[19]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[20]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[21]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[22]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[23]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[24]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[25]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[26]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[27]        ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[28]        ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b_end       ; 1                 ; 0       ;
-;      - audio_interface:G6|Bcount[0]         ; 1                 ; 0       ;
-;      - audio_interface:G6|Bcount[1]         ; 1                 ; 0       ;
-;      - audio_interface:G6|Bcount[2]         ; 1                 ; 0       ;
-;      - audio_interface:G6|Bcount[3]         ; 1                 ; 0       ;
-;      - audio_interface:G6|LRDATA[29]        ; 1                 ; 0       ;
-;      - audio_interface:G6|i2c_counter[2]    ; 1                 ; 0       ;
-;      - audio_interface:G6|i2c_counter[1]    ; 1                 ; 0       ;
-;      - audio_interface:G6|i2c_counter[9]    ; 1                 ; 0       ;
-;      - audio_interface:G6|i2c_counter[8]    ; 1                 ; 0       ;
-;      - audio_interface:G6|i2c_counter[7]    ; 1                 ; 0       ;
-;      - audio_interface:G6|i2c_counter[6]    ; 1                 ; 0       ;
-;      - audio_interface:G6|i2c_counter[5]    ; 1                 ; 0       ;
-;      - audio_interface:G6|i2c_counter[4]    ; 1                 ; 0       ;
-;      - audio_interface:G6|i2c_counter[3]    ; 1                 ; 0       ;
-;      - morsegenerator:G8|finished~2         ; 1                 ; 0       ;
-;      - overflowed~0                         ; 0                 ; 6       ;
-;      - audio_interface:G6|state.b_stop1     ; 1                 ; 0       ;
-;      - audio_interface:G6|i2c_counter[0]    ; 1                 ; 0       ;
-;      - audio_interface:G6|dack0             ; 1                 ; 0       ;
-;      - audio_interface:G6|dack1             ; 1                 ; 0       ;
-;      - audio_interface:G6|bck0              ; 1                 ; 0       ;
-;      - audio_interface:G6|bck1              ; 1                 ; 0       ;
-;      - audio_interface:G6|state.d2          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.a3          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.a5          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.a6          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.d6          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.d5          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.a7          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.d3          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.d0          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.d4          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b2          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b3          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b5          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.d1          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.initialize  ; 1                 ; 0       ;
-;      - audio_interface:G6|state.d7          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.a4          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b_ack       ; 1                 ; 0       ;
-;      - audio_interface:G6|state.a_ack       ; 1                 ; 0       ;
-;      - audio_interface:G6|state.d_ack       ; 1                 ; 0       ;
-;      - morsegenerator:G8|index[4]~head_lut  ; 1                 ; 0       ;
-;      - morsegenerator:G8|index[3]~head_lut  ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b_stop0     ; 1                 ; 0       ;
-;      - audio_interface:G6|word_counter~0    ; 1                 ; 0       ;
-;      - audio_interface:G6|sck1              ; 1                 ; 0       ;
-;      - audio_interface:G6|sck0              ; 1                 ; 0       ;
-;      - audio_interface:G6|state.a2          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b1          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b4          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b7          ; 1                 ; 0       ;
-;      - morsegenerator:G8|index[4]~clear_lut ; 1                 ; 0       ;
-;      - morsegenerator:G8|index[4]~6         ; 1                 ; 0       ;
-;      - morsegenerator:G8|index[3]~clear_lut ; 1                 ; 0       ;
-;      - morsegenerator:G8|index[1]~head_lut  ; 1                 ; 0       ;
-;      - morsegenerator:G8|index[2]~head_lut  ; 1                 ; 0       ;
-;      - morsegenerator:G9|index[1]~head_lut  ; 1                 ; 0       ;
-;      - morsegenerator:G9|finished~0         ; 1                 ; 0       ;
-;      - morsegenerator:G9|index[2]~head_lut  ; 1                 ; 0       ;
-;      - morsegenerator:G9|index[3]~head_lut  ; 1                 ; 0       ;
-;      - morsegenerator:G9|index[4]~head_lut  ; 1                 ; 0       ;
-;      - audio_interface:G6|state.a1          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b0          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.b6          ; 1                 ; 0       ;
-;      - morsegenerator:G9|index[2]~clear_lut ; 1                 ; 0       ;
-;      - morsegenerator:G9|index[4]~8         ; 1                 ; 0       ;
-;      - morsegenerator:G9|index[4]~clear_lut ; 1                 ; 0       ;
-;      - audio_interface:G6|state.a0          ; 1                 ; 0       ;
-;      - audio_interface:G6|state.start       ; 1                 ; 0       ;
-;      - morsegenerator:G8|index[4]~latch     ; 0                 ; 6       ;
-;      - morsegenerator:G8|index[3]~latch     ; 1                 ; 0       ;
-;      - morsegenerator:G8|index[1]~latch     ; 1                 ; 0       ;
-;      - morsegenerator:G8|index[2]~latch     ; 1                 ; 0       ;
-;      - morsegenerator:G9|index[1]~latch     ; 1                 ; 0       ;
-;      - morsegenerator:G9|index[2]~latch     ; 1                 ; 0       ;
-;      - morsegenerator:G9|index[3]~latch     ; 1                 ; 0       ;
-;      - morsegenerator:G9|index[4]~latch     ; 0                 ; 6       ;
-; clock                                       ;                   ;         ;
-; button_count                                ;                   ;         ;
-;      - puls:G1|output~0                     ; 0                 ; 6       ;
-;      - puls:G1|activated~0                  ; 0                 ; 6       ;
+; rst                                         ;                   ;         ;
+;      - modcounter:G2|output[0]              ; 0                 ; 0       ;
+;      - modcounter:G2|output[1]              ; 0                 ; 0       ;
+;      - modcounter:G2|output[2]              ; 0                 ; 0       ;
+;      - modcounter:G2|output[3]              ; 0                 ; 0       ;
+;      - modcounter:G2|over                   ; 0                 ; 0       ;
+;      - modcounter:G3|output[0]              ; 0                 ; 0       ;
+;      - modcounter:G3|output[1]              ; 0                 ; 0       ;
+;      - modcounter:G3|output[2]              ; 0                 ; 0       ;
+;      - modcounter:G3|output[3]              ; 0                 ; 0       ;
+;      - audio_interface:G6|LRDATA[16]        ; 0                 ; 0       ;
+;      - audio_interface:G6|LRDATA[17]        ; 0                 ; 0       ;
+;      - audio_interface:G6|LRDATA[18]        ; 0                 ; 0       ;
+;      - audio_interface:G6|LRDATA[19]        ; 0                 ; 0       ;
+;      - audio_interface:G6|LRDATA[20]        ; 0                 ; 0       ;
+;      - audio_interface:G6|LRDATA[21]        ; 0                 ; 0       ;
+;      - audio_interface:G6|LRDATA[22]        ; 0                 ; 0       ;
+;      - audio_interface:G6|LRDATA[23]        ; 0                 ; 0       ;
+;      - audio_interface:G6|LRDATA[24]        ; 0                 ; 0       ;
+;      - audio_interface:G6|LRDATA[25]        ; 0                 ; 0       ;
+;      - audio_interface:G6|LRDATA[26]        ; 0                 ; 0       ;
+;      - audio_interface:G6|LRDATA[27]        ; 0                 ; 0       ;
+;      - audio_interface:G6|LRDATA[28]        ; 0                 ; 0       ;
+;      - audio_interface:G6|state.b_end       ; 0                 ; 0       ;
+;      - audio_interface:G6|Bcount[0]         ; 0                 ; 0       ;
+;      - audio_interface:G6|Bcount[1]         ; 0                 ; 0       ;
+;      - audio_interface:G6|Bcount[2]         ; 0                 ; 0       ;
+;      - audio_interface:G6|Bcount[3]         ; 0                 ; 0       ;
+;      - audio_interface:G6|LRDATA[29]        ; 0                 ; 0       ;
+;      - audio_interface:G6|i2c_counter[2]    ; 0                 ; 0       ;
+;      - audio_interface:G6|i2c_counter[1]    ; 0                 ; 0       ;
+;      - toongenerator:G7|index[1]            ; 0                 ; 0       ;
+;      - toongenerator:G7|index[2]            ; 0                 ; 0       ;
+;      - toongenerator:G7|index[3]            ; 0                 ; 0       ;
+;      - toongenerator:G7|index[4]            ; 0                 ; 0       ;
+;      - toongenerator:G7|index[5]            ; 0                 ; 0       ;
+;      - audio_interface:G6|i2c_counter[9]    ; 0                 ; 0       ;
+;      - toongenerator:G7|cnt[5]              ; 0                 ; 0       ;
+;      - toongenerator:G7|cnt[6]              ; 0                 ; 0       ;
+;      - toongenerator:G7|cnt[7]              ; 0                 ; 0       ;
+;      - toongenerator:G7|cnt[8]              ; 0                 ; 0       ;
+;      - toongenerator:G7|cnt[9]              ; 0                 ; 0       ;
+;      - audio_interface:G6|i2c_counter[8]    ; 0                 ; 0       ;
+;      - toongenerator:G7|cnt[4]              ; 0                 ; 0       ;
+;      - audio_interface:G6|i2c_counter[7]    ; 0                 ; 0       ;
+;      - toongenerator:G7|cnt[3]              ; 0                 ; 0       ;
+;      - audio_interface:G6|i2c_counter[6]    ; 0                 ; 0       ;
+;      - toongenerator:G7|cnt[2]              ; 0                 ; 0       ;
+;      - audio_interface:G6|i2c_counter[5]    ; 0                 ; 0       ;
+;      - toongenerator:G7|cnt[1]              ; 0                 ; 0       ;
+;      - audio_interface:G6|i2c_counter[4]    ; 0                 ; 0       ;
+;      - toongenerator:G7|cnt[0]              ; 0                 ; 0       ;
+;      - audio_interface:G6|i2c_counter[3]    ; 0                 ; 0       ;
+;      - audio_interface:G6|state.b_stop1     ; 0                 ; 0       ;
+;      - audio_interface:G6|i2c_counter[0]    ; 0                 ; 0       ;
+;      - toongenerator:G7|index[0]            ; 0                 ; 0       ;
+;      - audio_interface:G6|dack0             ; 0                 ; 0       ;
+;      - audio_interface:G6|dack1             ; 0                 ; 0       ;
+;      - audio_interface:G6|bck0              ; 0                 ; 0       ;
+;      - audio_interface:G6|bck1              ; 0                 ; 0       ;
+;      - audio_interface:G6|state.d2          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.a3          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.a5          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.a6          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.d6          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.d5          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.a7          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.d3          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.d0          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.d4          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.b2          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.b3          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.b5          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.d1          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.a4          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.initialize  ; 0                 ; 0       ;
+;      - audio_interface:G6|state.d7          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.b_ack       ; 0                 ; 0       ;
+;      - audio_interface:G6|state.a_ack       ; 0                 ; 0       ;
+;      - audio_interface:G6|state.d_ack       ; 0                 ; 0       ;
+;      - audio_interface:G6|state.b_stop0     ; 0                 ; 0       ;
+;      - audio_interface:G6|word_counter~0    ; 0                 ; 0       ;
+;      - audio_interface:G6|sck1              ; 0                 ; 0       ;
+;      - audio_interface:G6|sck0              ; 0                 ; 0       ;
+;      - audio_interface:G6|state.a2          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.b1          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.b4          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.b7          ; 0                 ; 0       ;
+;      - morsegenerator:G8|index[3]~head_lut  ; 0                 ; 0       ;
+;      - morsegenerator:G8|index[2]~head_lut  ; 0                 ; 0       ;
+;      - morsegenerator:G8|index[1]~head_lut  ; 0                 ; 0       ;
+;      - morsegenerator:G8|finish~0           ; 0                 ; 0       ;
+;      - morsegenerator:G9|index[3]~head_lut  ; 0                 ; 0       ;
+;      - morsegenerator:G9|index[2]~head_lut  ; 0                 ; 0       ;
+;      - morsegenerator:G9|index[1]~head_lut  ; 0                 ; 0       ;
+;      - morsegenerator:G9|finish~0           ; 0                 ; 0       ;
+;      - audio_interface:G6|state.a1          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.b0          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.b6          ; 0                 ; 0       ;
+;      - morsegenerator:G8|index[3]~clear_lut ; 0                 ; 0       ;
+;      - morsegenerator:G8|index[3]~8         ; 0                 ; 0       ;
+;      - morsegenerator:G9|index[3]~clear_lut ; 0                 ; 0       ;
+;      - morsegenerator:G9|index[3]~9         ; 0                 ; 0       ;
+;      - audio_interface:G6|state.a0          ; 0                 ; 0       ;
+;      - audio_interface:G6|state.start       ; 0                 ; 0       ;
+;      - morsegenerator:G8|index[3]~latch     ; 0                 ; 0       ;
+;      - morsegenerator:G8|index[2]~latch     ; 0                 ; 0       ;
+;      - morsegenerator:G8|index[1]~latch     ; 0                 ; 0       ;
+;      - morsegenerator:G9|index[3]~latch     ; 1                 ; 2       ;
+;      - morsegenerator:G9|index[2]~latch     ; 1                 ; 2       ;
+;      - morsegenerator:G9|index[1]~latch     ; 1                 ; 2       ;
+; clk                                         ;                   ;         ;
+; btn                                         ;                   ;         ;
+;      - knopcontroller:G1|outp~0             ; 1                 ; 6       ;
+;      - knopcontroller:G1|onness~0           ; 1                 ; 6       ;
 ; AUD_DACLRCK                                 ;                   ;         ;
 ;      - audio_interface:G6|dack0             ; 0                 ; 6       ;
 ; AUD_BCLK                                    ;                   ;         ;
-;      - audio_interface:G6|bck0              ; 0                 ; 6       ;
+;      - audio_interface:G6|bck0~feeder       ; 0                 ; 6       ;
 +---------------------------------------------+-------------------+---------+
 
 
@@ -1078,33 +1083,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------+--------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
 ; Name                                 ; Location           ; Fan-Out ; Usage         ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------------+--------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
-; audio_interface:G6|Bcount[2]~0       ; LCCOMB_X36_Y25_N0  ; 4       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; audio_interface:G6|DACData_reg~0     ; LCCOMB_X36_Y25_N28 ; 14      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; audio_interface:G6|I2C_SCLK          ; LCCOMB_X39_Y25_N10 ; 4       ; Clock         ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-; audio_interface:G6|WideOr32~0        ; LCCOMB_X40_Y25_N0  ; 1       ; Output enable ; no     ; --                   ; --               ; --                        ;
-; audio_interface:G6|next_state_i2c~0  ; LCCOMB_X36_Y25_N16 ; 28      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; audio_interface:G6|state.d_ack       ; LCFF_X37_Y25_N15   ; 6       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; audio_interface:G6|word_counter~0    ; LCCOMB_X39_Y25_N2  ; 4       ; Async. clear  ; no     ; --                   ; --               ; --                        ;
-; button_reset                         ; PIN_R22            ; 101     ; Async. clear  ; no     ; --                   ; --               ; --                        ;
-; clock                                ; PIN_L1             ; 4       ; Clock         ; no     ; --                   ; --               ; --                        ;
-; clock                                ; PIN_L1             ; 140     ; Clock         ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; comb~7                               ; LCCOMB_X35_Y18_N22 ; 10      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; modcounter:G2|over                   ; LCFF_X33_Y15_N17   ; 4       ; Clock         ; yes    ; Global Clock         ; GCLK5            ; --                        ;
-; morsegenerator:G8|LessThan0~5        ; LCCOMB_X36_Y15_N2  ; 24      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
-; morsegenerator:G8|finished~2         ; LCCOMB_X34_Y15_N0  ; 25      ; Async. clear  ; no     ; --                   ; --               ; --                        ;
-; morsegenerator:G8|index[3]~clear_lut ; LCCOMB_X34_Y15_N10 ; 3       ; Async. clear  ; no     ; --                   ; --               ; --                        ;
-; morsegenerator:G8|index[4]~10        ; LCCOMB_X36_Y15_N20 ; 5       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; morsegenerator:G8|index[4]~6         ; LCCOMB_X34_Y15_N30 ; 3       ; Latch enable  ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; morsegenerator:G8|index[4]~clear_lut ; LCCOMB_X34_Y15_N24 ; 1       ; Async. clear  ; no     ; --                   ; --               ; --                        ;
-; morsegenerator:G9|LessThan0~7        ; LCCOMB_X32_Y16_N2  ; 23      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
-; morsegenerator:G9|finished~0         ; LCCOMB_X33_Y15_N4  ; 24      ; Async. clear  ; no     ; --                   ; --               ; --                        ;
-; morsegenerator:G9|index[2]~clear_lut ; LCCOMB_X33_Y18_N16 ; 3       ; Async. clear  ; no     ; --                   ; --               ; --                        ;
-; morsegenerator:G9|index[4]~10        ; LCCOMB_X34_Y18_N4  ; 5       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; morsegenerator:G9|index[4]~8         ; LCCOMB_X33_Y18_N2  ; 3       ; Latch enable  ; yes    ; Global Clock         ; GCLK7            ; --                        ;
-; morsegenerator:G9|index[4]~clear_lut ; LCCOMB_X33_Y18_N26 ; 1       ; Async. clear  ; no     ; --                   ; --               ; --                        ;
-; puls:G1|output                       ; LCFF_X34_Y15_N17   ; 5       ; Clock         ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; toongenerator:G7|index[5]            ; LCFF_X35_Y18_N11   ; 31      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
-; toongenerator:G7|index[5]~13         ; LCCOMB_X35_Y18_N28 ; 5       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; audio_interface:G6|Bcount[0]~0       ; LCCOMB_X24_Y20_N16 ; 4       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; audio_interface:G6|DACData_reg~0     ; LCCOMB_X24_Y20_N28 ; 14      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; audio_interface:G6|I2C_SCLK          ; LCCOMB_X23_Y20_N2  ; 4       ; Clock         ; yes    ; Global Clock         ; GCLK8            ; --                        ;
+; audio_interface:G6|WideOr32~0        ; LCCOMB_X25_Y20_N24 ; 1       ; Output enable ; no     ; --                   ; --               ; --                        ;
+; audio_interface:G6|next_state_i2c~0  ; LCCOMB_X24_Y20_N8  ; 28      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; audio_interface:G6|state.d_ack       ; LCFF_X22_Y20_N15   ; 6       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; audio_interface:G6|word_counter~0    ; LCCOMB_X23_Y20_N6  ; 4       ; Async. clear  ; no     ; --                   ; --               ; --                        ;
+; clk                                  ; PIN_L1             ; 4       ; Clock         ; no     ; --                   ; --               ; --                        ;
+; clk                                  ; PIN_L1             ; 140     ; Clock         ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; comb~5                               ; LCCOMB_X34_Y19_N12 ; 10      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; knopcontroller:G1|outp               ; LCFF_X23_Y14_N5    ; 5       ; Clock         ; yes    ; Global Clock         ; GCLK5            ; --                        ;
+; modcounter:G2|over                   ; LCFF_X21_Y14_N5    ; 4       ; Clock         ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; morsegenerator:G8|LessThan0~6        ; LCCOMB_X23_Y14_N18 ; 24      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
+; morsegenerator:G8|finish~0           ; LCCOMB_X23_Y14_N0  ; 26      ; Async. clear  ; no     ; --                   ; --               ; --                        ;
+; morsegenerator:G8|index[3]~8         ; LCCOMB_X23_Y14_N30 ; 3       ; Latch enable  ; yes    ; Global Clock         ; GCLK7            ; --                        ;
+; morsegenerator:G8|index[3]~clear_lut ; LCCOMB_X23_Y14_N14 ; 3       ; Async. clear  ; no     ; --                   ; --               ; --                        ;
+; morsegenerator:G8|index[4]~7         ; LCCOMB_X23_Y14_N2  ; 5       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; morsegenerator:G9|LessThan0~8        ; LCCOMB_X37_Y20_N6  ; 23      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
+; morsegenerator:G9|finish~0           ; LCCOMB_X37_Y19_N24 ; 25      ; Async. clear  ; no     ; --                   ; --               ; --                        ;
+; morsegenerator:G9|index[3]~9         ; LCCOMB_X35_Y19_N16 ; 3       ; Latch enable  ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; morsegenerator:G9|index[3]~clear_lut ; LCCOMB_X35_Y19_N18 ; 3       ; Async. clear  ; no     ; --                   ; --               ; --                        ;
+; morsegenerator:G9|index[4]~8         ; LCCOMB_X36_Y19_N14 ; 5       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; rst                                  ; PIN_R22            ; 110     ; Async. clear  ; no     ; --                   ; --               ; --                        ;
+; toongenerator:G7|LessThan0~1         ; LCCOMB_X33_Y19_N22 ; 11      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
+; toongenerator:G7|index[5]            ; LCFF_X34_Y19_N9    ; 31      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
+; toongenerator:G7|index[5]~18         ; LCCOMB_X34_Y19_N14 ; 5       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
 +--------------------------------------+--------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1113,12 +1117,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
 ; Name                         ; Location           ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
-; audio_interface:G6|I2C_SCLK  ; LCCOMB_X39_Y25_N10 ; 4       ; Global Clock         ; GCLK10           ; --                        ;
-; clock                        ; PIN_L1             ; 140     ; Global Clock         ; GCLK2            ; --                        ;
-; modcounter:G2|over           ; LCFF_X33_Y15_N17   ; 4       ; Global Clock         ; GCLK5            ; --                        ;
-; morsegenerator:G8|index[4]~6 ; LCCOMB_X34_Y15_N30 ; 3       ; Global Clock         ; GCLK4            ; --                        ;
-; morsegenerator:G9|index[4]~8 ; LCCOMB_X33_Y18_N2  ; 3       ; Global Clock         ; GCLK7            ; --                        ;
-; puls:G1|output               ; LCFF_X34_Y15_N17   ; 5       ; Global Clock         ; GCLK6            ; --                        ;
+; audio_interface:G6|I2C_SCLK  ; LCCOMB_X23_Y20_N2  ; 4       ; Global Clock         ; GCLK8            ; --                        ;
+; clk                          ; PIN_L1             ; 140     ; Global Clock         ; GCLK2            ; --                        ;
+; knopcontroller:G1|outp       ; LCFF_X23_Y14_N5    ; 5       ; Global Clock         ; GCLK5            ; --                        ;
+; modcounter:G2|over           ; LCFF_X21_Y14_N5    ; 4       ; Global Clock         ; GCLK4            ; --                        ;
+; morsegenerator:G8|index[3]~8 ; LCCOMB_X23_Y14_N30 ; 3       ; Global Clock         ; GCLK7            ; --                        ;
+; morsegenerator:G9|index[3]~9 ; LCCOMB_X35_Y19_N16 ; 3       ; Global Clock         ; GCLK6            ; --                        ;
 +------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1127,7 +1131,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+---------+
 ; Name                                    ; Fan-Out ;
 +-----------------------------------------+---------+
-; button_reset                            ; 101     ;
+; rst                                     ; 110     ;
 ; toongenerator:G7|index[2]               ; 40      ;
 ; toongenerator:G7|index[3]               ; 37      ;
 ; toongenerator:G7|index[4]               ; 36      ;
@@ -1135,67 +1139,63 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; toongenerator:G7|index[1]               ; 33      ;
 ; toongenerator:G7|index[5]               ; 31      ;
 ; audio_interface:G6|next_state_i2c~0     ; 28      ;
-; morsegenerator:G8|finished~2            ; 25      ;
-; morsegenerator:G9|finished~0            ; 24      ;
-; morsegenerator:G8|LessThan0~5           ; 24      ;
-; morsegenerator:G9|LessThan0~7           ; 23      ;
+; morsegenerator:G8|finish~0              ; 26      ;
+; morsegenerator:G9|finish~0              ; 25      ;
+; morsegenerator:G8|LessThan0~6           ; 24      ;
+; morsegenerator:G9|LessThan0~8           ; 23      ;
 ; modcounter:G2|output[2]                 ; 21      ;
-; modcounter:G2|output[1]                 ; 21      ;
 ; modcounter:G2|output[0]                 ; 21      ;
 ; modcounter:G3|output[2]                 ; 21      ;
-; modcounter:G3|output[1]                 ; 21      ;
-; modcounter:G3|output[0]                 ; 21      ;
 ; modcounter:G2|output[3]                 ; 20      ;
-; modcounter:G3|output[3]                 ; 20      ;
+; modcounter:G2|output[1]                 ; 20      ;
+; modcounter:G3|output[0]                 ; 20      ;
+; modcounter:G3|output[3]                 ; 19      ;
+; modcounter:G3|output[1]                 ; 19      ;
 ; audio_interface:G6|word_count[1]        ; 14      ;
 ; audio_interface:G6|word_count[0]        ; 14      ;
 ; audio_interface:G6|DACData_reg~0        ; 14      ;
-; comb~7                                  ; 10      ;
-; morsegenerator:G9|index[0]              ; 8       ;
-; morsegenerator:G8|index[0]              ; 8       ;
-; morsegenerator:G9|index[4]~8            ; 7       ;
-; morsegenerator:G9|index[2]~head_lut     ; 7       ;
-; morsegenerator:G8|index[2]~head_lut     ; 7       ;
-; morsegenerator:G8|index[4]~6            ; 7       ;
-; morsegenerator:G8|index[3]~head_lut     ; 7       ;
+; toongenerator:G7|LessThan0~1            ; 11      ;
+; comb~5                                  ; 10      ;
+; morsegenerator:G9|index[2]~head_lut     ; 9       ;
+; morsegenerator:G8|index[2]~head_lut     ; 9       ;
+; morsegenerator:G9|index[3]~head_lut     ; 8       ;
+; morsegenerator:G8|index[3]~head_lut     ; 8       ;
 ; audio_interface:G6|dack0                ; 7       ;
 ; audio_interface:G6|Bcount[0]            ; 7       ;
 ; audio_interface:G6|Bcount[1]            ; 7       ;
-; toongenerator:G7|Equal0~2               ; 6       ;
-; morsegenerator:G8|index[4]~head_lut     ; 6       ;
 ; audio_interface:G6|I2C_SCLK             ; 6       ;
 ; audio_interface:G6|state.d_ack          ; 6       ;
 ; audio_interface:G6|word_count[2]        ; 6       ;
 ; audio_interface:G6|dack1                ; 6       ;
-; morsegenerator:G8|index[4]~10           ; 5       ;
-; morsegenerator:G9|index[4]~10           ; 5       ;
-; morsegenerator:G9|index[3]~head_lut     ; 5       ;
-; toongenerator:G7|index[5]~13            ; 5       ;
-; morsegenerator:G9|index[4]~head_lut     ; 4       ;
-; morsegenerator:G9|index[1]~head_lut     ; 4       ;
-; morsegenerator:G8|index[1]~head_lut     ; 4       ;
+; toongenerator:G7|index[5]~18            ; 5       ;
+; morsegenerator:G9|index[4]~8            ; 5       ;
+; morsegenerator:G9|index[1]~head_lut     ; 5       ;
+; morsegenerator:G8|index[4]~7            ; 5       ;
+; morsegenerator:G8|index[1]~head_lut     ; 5       ;
+; morsegenerator:G9|index[3]~9            ; 4       ;
+; morsegenerator:G8|index[3]~8            ; 4       ;
 ; audio_interface:G6|word_counter~0       ; 4       ;
-; audio_interface:G6|Bcount[2]~0          ; 4       ;
-; overflowed~0                            ; 4       ;
+; morsegenerator:G9|index[4]              ; 4       ;
+; morsegenerator:G8|index[4]              ; 4       ;
+; morsegenerator:G9|index[0]              ; 4       ;
+; morsegenerator:G8|index[0]              ; 4       ;
+; audio_interface:G6|Bcount[0]~0          ; 4       ;
 ; audio_interface:G6|state.b_end          ; 4       ;
-; morsegenerator:G8|finished              ; 4       ;
-; clock                                   ; 3       ;
-; morsegenerator:G9|index[4]~latch        ; 3       ;
-; morsegenerator:G9|index[3]~latch        ; 3       ;
-; morsegenerator:G9|index[2]~latch        ; 3       ;
+; clk                                     ; 3       ;
 ; morsegenerator:G9|index[1]~latch        ; 3       ;
-; morsegenerator:G8|index[2]~latch        ; 3       ;
+; morsegenerator:G9|index[2]~latch        ; 3       ;
+; morsegenerator:G9|index[3]~latch        ; 3       ;
 ; morsegenerator:G8|index[1]~latch        ; 3       ;
+; morsegenerator:G8|index[2]~latch        ; 3       ;
 ; morsegenerator:G8|index[3]~latch        ; 3       ;
-; morsegenerator:G8|index[4]~latch        ; 3       ;
-; morsegenerator:G9|index[2]~clear_lut    ; 3       ;
-; morsegenerator:G9|Mux7~0                ; 3       ;
-; morsegenerator:G8|Mux0~0                ; 3       ;
+; morsegenerator:G8|finish                ; 3       ;
+; morsegenerator:G9|index[3]~clear_lut    ; 3       ;
 ; morsegenerator:G8|index[3]~clear_lut    ; 3       ;
+; morsegenerator:G9|Mux7~0                ; 3       ;
+; morsegenerator:G8|Mux7~0                ; 3       ;
 ; audio_interface:G6|sck0                 ; 3       ;
-; comb~6                                  ; 3       ;
-; comb~5                                  ; 3       ;
-; modcounter:G2|Equal0~0                  ; 3       ;
+; comb~4                                  ; 3       ;
+; comb~0                                  ; 3       ;
 ; audio_interface:G6|word_count[3]        ; 3       ;
 ; audio_interface:G6|state.initialize     ; 3       ;
 ; audio_interface:G6|state.d3             ; 3       ;
@@ -1209,39 +1209,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; morsegenerator:G9|cnt[21]               ; 3       ;
 ; morsegenerator:G9|cnt[20]               ; 3       ;
 ; morsegenerator:G9|cnt[22]               ; 3       ;
-; morsegenerator:G8|cnt[22]               ; 3       ;
 ; morsegenerator:G8|cnt[21]               ; 3       ;
 ; morsegenerator:G8|cnt[20]               ; 3       ;
-; button_count                            ; 2       ;
+; morsegenerator:G8|cnt[22]               ; 3       ;
+; toongenerator:G7|cnt[9]                 ; 3       ;
+; btn                                     ; 2       ;
 ; audio_interface:G6|state.start          ; 2       ;
-; morsegenerator:G9|Mux1~0                ; 2       ;
 ; morsegenerator:G9|Mux2~0                ; 2       ;
-; morsegenerator:G8|Mux1~0                ; 2       ;
+; morsegenerator:G9|Mux1~0                ; 2       ;
 ; morsegenerator:G8|Mux2~0                ; 2       ;
+; morsegenerator:G8|Mux1~0                ; 2       ;
 ; morsegenerator:G9|LessThan0~6           ; 2       ;
-; puls:G22|output                         ; 2       ;
+; knopcontroller:G22|outp                 ; 2       ;
+; morsegenerator:G8|finish~1              ; 2       ;
+; morsegenerator:G8|LessThan0~4           ; 2       ;
 ; audio_interface:G6|Equal0~0             ; 2       ;
 ; audio_interface:G6|Selector0~0          ; 2       ;
 ; audio_interface:G6|sck1                 ; 2       ;
-; modcounter:G3|Equal0~0                  ; 2       ;
-; comb~2                                  ; 2       ;
-; comb~1                                  ; 2       ;
-; toongenerator:G7|wait_counter[9]        ; 2       ;
-; toongenerator:G7|wait_counter[8]        ; 2       ;
-; toongenerator:G7|wait_counter[7]        ; 2       ;
-; toongenerator:G7|wait_counter[6]        ; 2       ;
-; toongenerator:G7|wait_counter[4]        ; 2       ;
-; toongenerator:G7|wait_counter[5]        ; 2       ;
-; toongenerator:G7|wait_counter[3]        ; 2       ;
-; toongenerator:G7|wait_counter[2]        ; 2       ;
-; toongenerator:G7|wait_counter[1]        ; 2       ;
-; toongenerator:G7|wait_counter[0]        ; 2       ;
+; toongenerator:G7|LessThan0~0            ; 2       ;
 ; audio_interface:G6|state.b_stop0        ; 2       ;
+; modcounter:G2|Equal0~0                  ; 2       ;
 ; audio_interface:G6|state.a_ack          ; 2       ;
 ; audio_interface:G6|state.b_ack          ; 2       ;
+; audio_interface:G6|state.d7             ; 2       ;
 ; audio_interface:G6|Mux1~0               ; 2       ;
 ; audio_interface:G6|state.a4             ; 2       ;
-; audio_interface:G6|state.d7             ; 2       ;
 ; audio_interface:G6|state.d1             ; 2       ;
 ; audio_interface:G6|state.b5             ; 2       ;
 ; audio_interface:G6|state.b3             ; 2       ;
@@ -1256,8 +1248,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; audio_interface:G6|i2c_counter[0]       ; 2       ;
 ; audio_interface:G6|I2C_SCLK~0           ; 2       ;
 ; audio_interface:G6|state.b_stop1        ; 2       ;
-; morsegenerator:G8|LessThan0~4           ; 2       ;
-; puls:G1|output                          ; 2       ;
+; knopcontroller:G1|outp                  ; 2       ;
 ; audio_interface:G6|Bcount[2]            ; 2       ;
 ; morsegenerator:G9|cnt[11]               ; 2       ;
 ; morsegenerator:G9|cnt[10]               ; 2       ;
@@ -1273,7 +1264,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; morsegenerator:G9|cnt[15]               ; 2       ;
 ; morsegenerator:G9|cnt[19]               ; 2       ;
 ; morsegenerator:G9|cnt[18]               ; 2       ;
-; audio_interface:G6|i2c_counter[9]       ; 2       ;
 ; morsegenerator:G8|cnt[19]               ; 2       ;
 ; morsegenerator:G8|cnt[18]               ; 2       ;
 ; morsegenerator:G8|cnt[17]               ; 2       ;
@@ -1288,60 +1278,62 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; morsegenerator:G8|cnt[8]                ; 2       ;
 ; morsegenerator:G8|cnt[7]                ; 2       ;
 ; morsegenerator:G8|cnt[6]                ; 2       ;
+; toongenerator:G7|cnt[8]                 ; 2       ;
+; toongenerator:G7|cnt[7]                 ; 2       ;
+; toongenerator:G7|cnt[6]                 ; 2       ;
+; toongenerator:G7|cnt[5]                 ; 2       ;
+; audio_interface:G6|i2c_counter[9]       ; 2       ;
 ; audio_interface:G6|i2c_counter[2]       ; 2       ;
 ; AUD_BCLK                                ; 1       ;
 ; AUD_DACLRCK                             ; 1       ;
-; morsegenerator:G9|index[0]~11           ; 1       ;
-; morsegenerator:G8|index[0]~11           ; 1       ;
-; puls:G1|activated~0                     ; 1       ;
+; morsegenerator:G9|index[0]~10           ; 1       ;
+; morsegenerator:G8|index[0]~9            ; 1       ;
+; knopcontroller:G1|onness~0              ; 1       ;
 ; audio_interface:G6|word_count[0]~2      ; 1       ;
 ; audio_interface:G6|i2c_counter[0]~27    ; 1       ;
 ; modcounter:G2|output[0]~3               ; 1       ;
 ; modcounter:G3|output[0]~3               ; 1       ;
-; morsegenerator:G8|index[4]~9            ; 1       ;
-; morsegenerator:G9|index[4]~9            ; 1       ;
-; toongenerator:G7|index[0]~21            ; 1       ;
 ; audio_interface:G6|Add0~17              ; 1       ;
 ; audio_interface:G6|Add0~16              ; 1       ;
 ; audio_interface:G6|Add0~15              ; 1       ;
-; morsegenerator:G8|finished~3            ; 1       ;
 ; audio_interface:G6|Selector1~0          ; 1       ;
+; morsegenerator:G8|finish~2              ; 1       ;
 ; audio_interface:G6|state.a0             ; 1       ;
-; morsegenerator:G9|index[4]~clear_lut    ; 1       ;
-; morsegenerator:G9|index[4]~data_lut     ; 1       ;
-; morsegenerator:G9|index[3]~data_lut     ; 1       ;
-; morsegenerator:G9|index[2]~data_lut     ; 1       ;
-; puls:G22|output~0                       ; 1       ;
-; puls:G22|activated                      ; 1       ;
+; knopcontroller:G22|outp~0               ; 1       ;
+; knopcontroller:G22|onness               ; 1       ;
 ; morsegenerator:G9|index[1]~data_lut     ; 1       ;
-; morsegenerator:G8|index[2]~data_lut     ; 1       ;
+; morsegenerator:G9|index[2]~data_lut     ; 1       ;
+; morsegenerator:G9|index[3]~data_lut     ; 1       ;
 ; morsegenerator:G8|index[1]~data_lut     ; 1       ;
+; morsegenerator:G8|index[2]~data_lut     ; 1       ;
+; morsegenerator:G8|index[3]~data_lut     ; 1       ;
 ; audio_interface:G6|state.b6             ; 1       ;
 ; audio_interface:G6|state.b0             ; 1       ;
 ; audio_interface:G6|state.a1             ; 1       ;
-; morsegenerator:G9|index[4]~_emulated    ; 1       ;
-; morsegenerator:G9|index[3]~tail_lut     ; 1       ;
-; morsegenerator:G9|index[3]~_emulated    ; 1       ;
-; morsegenerator:G9|index[2]~tail_lut     ; 1       ;
-; morsegenerator:G9|index[2]~_emulated    ; 1       ;
+; morsegenerator:G9|LessThan0~7           ; 1       ;
 ; morsegenerator:G9|LessThan0~5           ; 1       ;
 ; morsegenerator:G9|LessThan0~4           ; 1       ;
 ; morsegenerator:G9|LessThan0~3           ; 1       ;
 ; morsegenerator:G9|LessThan0~2           ; 1       ;
+; morsegenerator:G9|index[4]~7            ; 1       ;
 ; morsegenerator:G9|index[1]~tail_lut     ; 1       ;
 ; morsegenerator:G9|index[1]~_emulated    ; 1       ;
-; morsegenerator:G8|index[2]~tail_lut     ; 1       ;
-; morsegenerator:G8|index[2]~_emulated    ; 1       ;
+; morsegenerator:G9|index[2]~tail_lut     ; 1       ;
+; morsegenerator:G9|index[2]~_emulated    ; 1       ;
+; morsegenerator:G9|index[3]~tail_lut     ; 1       ;
+; morsegenerator:G9|index[3]~_emulated    ; 1       ;
+; morsegenerator:G8|LessThan0~5           ; 1       ;
+; morsegenerator:G8|LessThan0~3           ; 1       ;
+; morsegenerator:G8|LessThan0~2           ; 1       ;
+; morsegenerator:G8|LessThan0~1           ; 1       ;
+; morsegenerator:G8|LessThan0~0           ; 1       ;
 ; morsegenerator:G8|index[1]~tail_lut     ; 1       ;
 ; morsegenerator:G8|index[1]~_emulated    ; 1       ;
-; toongenerator:G7|wait_counter~3         ; 1       ;
-; toongenerator:G7|wait_counter~2         ; 1       ;
-; toongenerator:G7|wait_counter~1         ; 1       ;
-; toongenerator:G7|wait_counter~0         ; 1       ;
+; morsegenerator:G8|index[2]~tail_lut     ; 1       ;
+; morsegenerator:G8|index[2]~_emulated    ; 1       ;
+; morsegenerator:G8|index[3]~tail_lut     ; 1       ;
+; morsegenerator:G8|index[3]~_emulated    ; 1       ;
 ; audio_interface:G6|Selector29~0         ; 1       ;
-; morsegenerator:G8|index[3]~data_lut     ; 1       ;
-; morsegenerator:G8|index[4]~clear_lut    ; 1       ;
-; morsegenerator:G8|index[4]~data_lut     ; 1       ;
 ; audio_interface:G6|state.b7             ; 1       ;
 ; audio_interface:G6|word_count[3]~1      ; 1       ;
 ; audio_interface:G6|word_count[3]~0      ; 1       ;
@@ -1350,51 +1342,48 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; audio_interface:G6|state.b1             ; 1       ;
 ; audio_interface:G6|state.a2             ; 1       ;
 ; audio_interface:G6|Mux10~0              ; 1       ;
-; toongenerator:G7|index[0]~20            ; 1       ;
+; toongenerator:G7|index[0]~17            ; 1       ;
+; comb~3                                  ; 1       ;
+; morsegenerator:G9|Mux13~0               ; 1       ;
+; comb~2                                  ; 1       ;
+; comb~1                                  ; 1       ;
+; morsegenerator:G8|Mux13~0               ; 1       ;
+; morsegenerator:G9|Mux14~11              ; 1       ;
+; morsegenerator:G9|Mux14~10              ; 1       ;
 ; morsegenerator:G9|Mux14~9               ; 1       ;
 ; morsegenerator:G9|Mux14~8               ; 1       ;
 ; morsegenerator:G9|Mux14~7               ; 1       ;
 ; morsegenerator:G9|Mux14~6               ; 1       ;
 ; morsegenerator:G9|Mux14~5               ; 1       ;
 ; morsegenerator:G9|Mux14~4               ; 1       ;
-; morsegenerator:G9|Mux4~0                ; 1       ;
 ; morsegenerator:G9|Mux14~3               ; 1       ;
 ; morsegenerator:G9|Mux14~2               ; 1       ;
 ; morsegenerator:G9|Mux14~1               ; 1       ;
 ; morsegenerator:G9|Mux14~0               ; 1       ;
-; morsegenerator:G9|Mux10~0               ; 1       ;
+; morsegenerator:G9|Mux4~0                ; 1       ;
+; morsegenerator:G8|Mux14~10              ; 1       ;
 ; morsegenerator:G8|Mux14~9               ; 1       ;
+; morsegenerator:G8|Mux10~0               ; 1       ;
 ; morsegenerator:G8|Mux14~8               ; 1       ;
 ; morsegenerator:G8|Mux14~7               ; 1       ;
 ; morsegenerator:G8|Mux14~6               ; 1       ;
 ; morsegenerator:G8|Mux14~5               ; 1       ;
 ; morsegenerator:G8|Mux14~4               ; 1       ;
-; morsegenerator:G8|Mux4~0                ; 1       ;
 ; morsegenerator:G8|Mux14~3               ; 1       ;
 ; morsegenerator:G8|Mux14~2               ; 1       ;
 ; morsegenerator:G8|Mux14~1               ; 1       ;
 ; morsegenerator:G8|Mux14~0               ; 1       ;
-; morsegenerator:G8|Mux10~0               ; 1       ;
-; comb~4                                  ; 1       ;
-; comb~3                                  ; 1       ;
-; morsegenerator:G9|Mux13~0               ; 1       ;
-; comb~0                                  ; 1       ;
-; morsegenerator:G8|Mux13~0               ; 1       ;
-; toongenerator:G7|Equal0~1               ; 1       ;
-; toongenerator:G7|Equal0~0               ; 1       ;
+; morsegenerator:G8|Mux4~0                ; 1       ;
 ; audio_interface:G6|next_state.b_stop1~0 ; 1       ;
-; morsegenerator:G8|index[3]~tail_lut     ; 1       ;
-; morsegenerator:G8|index[3]~_emulated    ; 1       ;
-; morsegenerator:G8|index[4]~_emulated    ; 1       ;
-; puls:G1|output~0                        ; 1       ;
-; puls:G1|activated                       ; 1       ;
+; knopcontroller:G1|outp~0                ; 1       ;
+; knopcontroller:G1|onness                ; 1       ;
 ; audio_interface:G6|WideOr32~0           ; 1       ;
-; audio_interface:G6|Selector30~15        ; 1       ;
 ; audio_interface:G6|Selector30~14        ; 1       ;
 ; audio_interface:G6|Selector30~13        ; 1       ;
 ; audio_interface:G6|Mux12~0              ; 1       ;
 ; audio_interface:G6|Selector30~12        ; 1       ;
 ; audio_interface:G6|Selector30~11        ; 1       ;
+; audio_interface:G6|Mux6~0               ; 1       ;
 ; audio_interface:G6|Selector30~10        ; 1       ;
 ; audio_interface:G6|Selector30~9         ; 1       ;
 ; audio_interface:G6|Selector30~8         ; 1       ;
@@ -1470,17 +1459,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; toongenerator:G7|Mux5~2                 ; 1       ;
 ; toongenerator:G7|Mux5~1                 ; 1       ;
 ; toongenerator:G7|Mux5~0                 ; 1       ;
-; morsegenerator:G8|LessThan0~3           ; 1       ;
-; morsegenerator:G8|LessThan0~2           ; 1       ;
-; morsegenerator:G8|LessThan0~1           ; 1       ;
-; morsegenerator:G8|LessThan0~0           ; 1       ;
 ; modcounter:G2|output~2                  ; 1       ;
 ; modcounter:G2|output[2]~1               ; 1       ;
 ; modcounter:G2|output~0                  ; 1       ;
 ; modcounter:G3|output~2                  ; 1       ;
 ; modcounter:G3|output[2]~1               ; 1       ;
 ; modcounter:G3|output~0                  ; 1       ;
-; modcounter:G2|over                      ; 1       ;
 ; audio_interface:G6|Mux13~8              ; 1       ;
 ; audio_interface:G6|Mux13~7              ; 1       ;
 ; audio_interface:G6|LRDATA[28]           ; 1       ;
@@ -1517,11 +1501,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; display:G5|Mux4~0                       ; 1       ;
 ; display:G5|Mux5~0                       ; 1       ;
 ; display:G5|Mux6~0                       ; 1       ;
-; morsegenerator:G9|Add1~6                ; 1       ;
-; morsegenerator:G9|Add1~5                ; 1       ;
-; morsegenerator:G9|Add1~4                ; 1       ;
-; morsegenerator:G9|Add1~3                ; 1       ;
-; morsegenerator:G9|Add1~2                ; 1       ;
 ; morsegenerator:G9|cnt[22]~67            ; 1       ;
 ; morsegenerator:G9|cnt[21]~66            ; 1       ;
 ; morsegenerator:G9|cnt[21]~65            ; 1       ;
@@ -1573,62 +1552,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; morsegenerator:G9|cnt[3]                ; 1       ;
 ; morsegenerator:G9|cnt[4]                ; 1       ;
 ; morsegenerator:G9|cnt[5]                ; 1       ;
-; morsegenerator:G9|Add1~1                ; 1       ;
-; morsegenerator:G9|Add1~0                ; 1       ;
-; toongenerator:G7|Add1~18                ; 1       ;
-; toongenerator:G7|Add1~17                ; 1       ;
-; toongenerator:G7|Add1~16                ; 1       ;
-; toongenerator:G7|Add1~15                ; 1       ;
-; toongenerator:G7|Add1~14                ; 1       ;
-; toongenerator:G7|Add1~13                ; 1       ;
-; toongenerator:G7|Add1~12                ; 1       ;
-; toongenerator:G7|Add1~11                ; 1       ;
-; toongenerator:G7|Add1~10                ; 1       ;
-; toongenerator:G7|Add1~9                 ; 1       ;
-; toongenerator:G7|Add1~8                 ; 1       ;
-; toongenerator:G7|Add1~7                 ; 1       ;
-; toongenerator:G7|Add1~6                 ; 1       ;
-; toongenerator:G7|Add1~5                 ; 1       ;
-; toongenerator:G7|Add1~4                 ; 1       ;
-; toongenerator:G7|Add1~3                 ; 1       ;
-; toongenerator:G7|Add1~2                 ; 1       ;
-; toongenerator:G7|Add1~1                 ; 1       ;
-; toongenerator:G7|Add1~0                 ; 1       ;
-; morsegenerator:G8|Add1~6                ; 1       ;
-; morsegenerator:G8|Add1~5                ; 1       ;
-; morsegenerator:G8|Add1~4                ; 1       ;
-; morsegenerator:G8|Add1~3                ; 1       ;
-; morsegenerator:G8|Add1~2                ; 1       ;
-; morsegenerator:G8|Add1~1                ; 1       ;
-; morsegenerator:G8|Add1~0                ; 1       ;
-; audio_interface:G6|i2c_counter[9]~25    ; 1       ;
-; audio_interface:G6|i2c_counter[8]~24    ; 1       ;
-; audio_interface:G6|i2c_counter[8]~23    ; 1       ;
-; audio_interface:G6|i2c_counter[7]~22    ; 1       ;
-; audio_interface:G6|i2c_counter[7]~21    ; 1       ;
-; audio_interface:G6|i2c_counter[6]~20    ; 1       ;
-; audio_interface:G6|i2c_counter[6]~19    ; 1       ;
-; audio_interface:G6|i2c_counter[5]~18    ; 1       ;
-; audio_interface:G6|i2c_counter[5]~17    ; 1       ;
-; audio_interface:G6|i2c_counter[4]~16    ; 1       ;
-; audio_interface:G6|i2c_counter[4]~15    ; 1       ;
-; audio_interface:G6|i2c_counter[3]~14    ; 1       ;
-; audio_interface:G6|i2c_counter[3]~13    ; 1       ;
-; audio_interface:G6|i2c_counter[3]       ; 1       ;
-; audio_interface:G6|i2c_counter[4]       ; 1       ;
-; audio_interface:G6|i2c_counter[5]       ; 1       ;
-; audio_interface:G6|i2c_counter[6]       ; 1       ;
-; audio_interface:G6|i2c_counter[7]       ; 1       ;
-; audio_interface:G6|i2c_counter[8]       ; 1       ;
-; toongenerator:G7|index[5]~18            ; 1       ;
-; toongenerator:G7|index[4]~17            ; 1       ;
-; toongenerator:G7|index[4]~16            ; 1       ;
-; toongenerator:G7|index[3]~15            ; 1       ;
-; toongenerator:G7|index[3]~14            ; 1       ;
-; toongenerator:G7|index[2]~12            ; 1       ;
-; toongenerator:G7|index[2]~11            ; 1       ;
-; toongenerator:G7|index[1]~10            ; 1       ;
-; toongenerator:G7|index[1]~9             ; 1       ;
 ; morsegenerator:G8|cnt[22]~67            ; 1       ;
 ; morsegenerator:G8|cnt[21]~66            ; 1       ;
 ; morsegenerator:G8|cnt[21]~65            ; 1       ;
@@ -1680,6 +1603,72 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; morsegenerator:G8|cnt[3]                ; 1       ;
 ; morsegenerator:G8|cnt[4]                ; 1       ;
 ; morsegenerator:G8|cnt[5]                ; 1       ;
+; toongenerator:G7|cnt[9]~28              ; 1       ;
+; toongenerator:G7|cnt[8]~27              ; 1       ;
+; toongenerator:G7|cnt[8]~26              ; 1       ;
+; toongenerator:G7|cnt[7]~25              ; 1       ;
+; toongenerator:G7|cnt[7]~24              ; 1       ;
+; toongenerator:G7|cnt[6]~23              ; 1       ;
+; toongenerator:G7|cnt[6]~22              ; 1       ;
+; toongenerator:G7|cnt[5]~21              ; 1       ;
+; toongenerator:G7|cnt[5]~20              ; 1       ;
+; toongenerator:G7|cnt[4]~19              ; 1       ;
+; toongenerator:G7|cnt[4]~18              ; 1       ;
+; toongenerator:G7|cnt[3]~17              ; 1       ;
+; toongenerator:G7|cnt[3]~16              ; 1       ;
+; toongenerator:G7|cnt[2]~15              ; 1       ;
+; toongenerator:G7|cnt[2]~14              ; 1       ;
+; toongenerator:G7|cnt[1]~13              ; 1       ;
+; toongenerator:G7|cnt[1]~12              ; 1       ;
+; toongenerator:G7|cnt[0]~11              ; 1       ;
+; toongenerator:G7|cnt[0]~10              ; 1       ;
+; toongenerator:G7|cnt[0]                 ; 1       ;
+; toongenerator:G7|cnt[1]                 ; 1       ;
+; toongenerator:G7|cnt[2]                 ; 1       ;
+; toongenerator:G7|cnt[3]                 ; 1       ;
+; toongenerator:G7|cnt[4]                 ; 1       ;
+; morsegenerator:G9|Add1~6                ; 1       ;
+; morsegenerator:G9|Add1~5                ; 1       ;
+; morsegenerator:G9|Add1~4                ; 1       ;
+; morsegenerator:G9|Add1~3                ; 1       ;
+; morsegenerator:G9|Add1~2                ; 1       ;
+; morsegenerator:G9|Add1~1                ; 1       ;
+; morsegenerator:G9|Add1~0                ; 1       ;
+; morsegenerator:G8|Add1~6                ; 1       ;
+; morsegenerator:G8|Add1~5                ; 1       ;
+; morsegenerator:G8|Add1~4                ; 1       ;
+; morsegenerator:G8|Add1~3                ; 1       ;
+; morsegenerator:G8|Add1~2                ; 1       ;
+; morsegenerator:G8|Add1~1                ; 1       ;
+; morsegenerator:G8|Add1~0                ; 1       ;
+; audio_interface:G6|i2c_counter[9]~25    ; 1       ;
+; audio_interface:G6|i2c_counter[8]~24    ; 1       ;
+; audio_interface:G6|i2c_counter[8]~23    ; 1       ;
+; audio_interface:G6|i2c_counter[7]~22    ; 1       ;
+; audio_interface:G6|i2c_counter[7]~21    ; 1       ;
+; audio_interface:G6|i2c_counter[6]~20    ; 1       ;
+; audio_interface:G6|i2c_counter[6]~19    ; 1       ;
+; audio_interface:G6|i2c_counter[5]~18    ; 1       ;
+; audio_interface:G6|i2c_counter[5]~17    ; 1       ;
+; audio_interface:G6|i2c_counter[4]~16    ; 1       ;
+; audio_interface:G6|i2c_counter[4]~15    ; 1       ;
+; audio_interface:G6|i2c_counter[3]~14    ; 1       ;
+; audio_interface:G6|i2c_counter[3]~13    ; 1       ;
+; audio_interface:G6|i2c_counter[3]       ; 1       ;
+; audio_interface:G6|i2c_counter[4]       ; 1       ;
+; audio_interface:G6|i2c_counter[5]       ; 1       ;
+; audio_interface:G6|i2c_counter[6]       ; 1       ;
+; audio_interface:G6|i2c_counter[7]       ; 1       ;
+; audio_interface:G6|i2c_counter[8]       ; 1       ;
+; toongenerator:G7|index[5]~15            ; 1       ;
+; toongenerator:G7|index[4]~14            ; 1       ;
+; toongenerator:G7|index[4]~13            ; 1       ;
+; toongenerator:G7|index[3]~12            ; 1       ;
+; toongenerator:G7|index[3]~11            ; 1       ;
+; toongenerator:G7|index[2]~10            ; 1       ;
+; toongenerator:G7|index[2]~9             ; 1       ;
+; toongenerator:G7|index[1]~8             ; 1       ;
+; toongenerator:G7|index[1]~7             ; 1       ;
 ; audio_interface:G6|Add0~13              ; 1       ;
 ; audio_interface:G6|Add0~12              ; 1       ;
 ; audio_interface:G6|Add0~11              ; 1       ;
@@ -1700,89 +1689,88 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+------------------------+
 ; Interconnect Resource Type ; Usage                  ;
 +----------------------------+------------------------+
-; Block interconnects        ; 367 / 54,004 ( < 1 % ) ;
-; C16 interconnects          ; 9 / 2,100 ( < 1 % )    ;
-; C4 interconnects           ; 153 / 36,000 ( < 1 % ) ;
+; Block interconnects        ; 351 / 54,004 ( < 1 % ) ;
+; C16 interconnects          ; 10 / 2,100 ( < 1 % )   ;
+; C4 interconnects           ; 154 / 36,000 ( < 1 % ) ;
 ; Direct links               ; 95 / 54,004 ( < 1 % )  ;
 ; Global clocks              ; 6 / 16 ( 38 % )        ;
-; Local interconnects        ; 227 / 18,752 ( 1 % )   ;
-; R24 interconnects          ; 31 / 1,900 ( 2 % )     ;
-; R4 interconnects           ; 290 / 46,920 ( < 1 % ) ;
+; Local interconnects        ; 229 / 18,752 ( 1 % )   ;
+; R24 interconnects          ; 41 / 1,900 ( 2 % )     ;
+; R4 interconnects           ; 270 / 46,920 ( < 1 % ) ;
 +----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 12.39) ; Number of LABs  (Total = 28) ;
+; Number of Logic Elements  (Average = 12.85) ; Number of LABs  (Total = 26) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 4                            ;
-; 2                                           ; 1                            ;
-; 3                                           ; 1                            ;
-; 4                                           ; 0                            ;
+; 1                                           ; 3                            ;
+; 2                                           ; 0                            ;
+; 3                                           ; 0                            ;
+; 4                                           ; 1                            ;
 ; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
 ; 7                                           ; 0                            ;
-; 8                                           ; 0                            ;
+; 8                                           ; 1                            ;
 ; 9                                           ; 0                            ;
-; 10                                          ; 0                            ;
+; 10                                          ; 1                            ;
 ; 11                                          ; 0                            ;
 ; 12                                          ; 2                            ;
-; 13                                          ; 2                            ;
-; 14                                          ; 0                            ;
-; 15                                          ; 0                            ;
-; 16                                          ; 18                           ;
+; 13                                          ; 0                            ;
+; 14                                          ; 1                            ;
+; 15                                          ; 1                            ;
+; 16                                          ; 16                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.86) ; Number of LABs  (Total = 28) ;
+; LAB-wide Signals  (Average = 1.96) ; Number of LABs  (Total = 26) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 14                           ;
+; 1 Async. clear                     ; 15                           ;
 ; 1 Clock                            ; 19                           ;
-; 1 Clock enable                     ; 8                            ;
+; 1 Clock enable                     ; 9                            ;
 ; 1 Sync. clear                      ; 3                            ;
-; 2 Async. clears                    ; 3                            ;
-; 2 Clock enables                    ; 1                            ;
-; 2 Clocks                           ; 4                            ;
+; 2 Async. clears                    ; 2                            ;
+; 2 Clocks                           ; 3                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 17.79) ; Number of LABs  (Total = 28) ;
+; Number of Signals Sourced  (Average = 18.62) ; Number of LABs  (Total = 26) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 1                            ;
-; 2                                            ; 4                            ;
+; 2                                            ; 2                            ;
 ; 3                                            ; 0                            ;
 ; 4                                            ; 0                            ;
 ; 5                                            ; 1                            ;
 ; 6                                            ; 0                            ;
 ; 7                                            ; 0                            ;
-; 8                                            ; 0                            ;
+; 8                                            ; 1                            ;
 ; 9                                            ; 0                            ;
 ; 10                                           ; 0                            ;
 ; 11                                           ; 0                            ;
-; 12                                           ; 0                            ;
+; 12                                           ; 1                            ;
 ; 13                                           ; 1                            ;
 ; 14                                           ; 0                            ;
 ; 15                                           ; 0                            ;
-; 16                                           ; 2                            ;
-; 17                                           ; 0                            ;
-; 18                                           ; 2                            ;
-; 19                                           ; 1                            ;
-; 20                                           ; 3                            ;
-; 21                                           ; 2                            ;
+; 16                                           ; 1                            ;
+; 17                                           ; 1                            ;
+; 18                                           ; 0                            ;
+; 19                                           ; 0                            ;
+; 20                                           ; 4                            ;
+; 21                                           ; 4                            ;
 ; 22                                           ; 1                            ;
-; 23                                           ; 3                            ;
-; 24                                           ; 1                            ;
-; 25                                           ; 1                            ;
-; 26                                           ; 0                            ;
-; 27                                           ; 1                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 0                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 1                            ;
+; 27                                           ; 3                            ;
 ; 28                                           ; 3                            ;
 ; 29                                           ; 0                            ;
 ; 30                                           ; 0                            ;
@@ -1793,60 +1781,64 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 6.68) ; Number of LABs  (Total = 28) ;
+; Number of Signals Sourced Out  (Average = 6.65) ; Number of LABs  (Total = 26) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
 ; 1                                               ; 5                            ;
-; 2                                               ; 4                            ;
+; 2                                               ; 1                            ;
 ; 3                                               ; 2                            ;
-; 4                                               ; 4                            ;
-; 5                                               ; 0                            ;
-; 6                                               ; 0                            ;
-; 7                                               ; 1                            ;
+; 4                                               ; 3                            ;
+; 5                                               ; 1                            ;
+; 6                                               ; 2                            ;
+; 7                                               ; 3                            ;
 ; 8                                               ; 1                            ;
 ; 9                                               ; 1                            ;
-; 10                                              ; 3                            ;
-; 11                                              ; 1                            ;
-; 12                                              ; 0                            ;
+; 10                                              ; 1                            ;
+; 11                                              ; 0                            ;
+; 12                                              ; 1                            ;
 ; 13                                              ; 2                            ;
 ; 14                                              ; 1                            ;
-; 15                                              ; 2                            ;
-; 16                                              ; 0                            ;
-; 17                                              ; 1                            ;
+; 15                                              ; 1                            ;
+; 16                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
-+----------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                        ;
-+---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 9.96) ; Number of LABs  (Total = 28) ;
-+---------------------------------------------+------------------------------+
-; 0                                           ; 0                            ;
-; 1                                           ; 0                            ;
-; 2                                           ; 2                            ;
-; 3                                           ; 2                            ;
-; 4                                           ; 3                            ;
-; 5                                           ; 1                            ;
-; 6                                           ; 5                            ;
-; 7                                           ; 2                            ;
-; 8                                           ; 0                            ;
-; 9                                           ; 2                            ;
-; 10                                          ; 1                            ;
-; 11                                          ; 0                            ;
-; 12                                          ; 1                            ;
-; 13                                          ; 1                            ;
-; 14                                          ; 1                            ;
-; 15                                          ; 0                            ;
-; 16                                          ; 0                            ;
-; 17                                          ; 1                            ;
-; 18                                          ; 2                            ;
-; 19                                          ; 0                            ;
-; 20                                          ; 1                            ;
-; 21                                          ; 1                            ;
-; 22                                          ; 0                            ;
-; 23                                          ; 1                            ;
-; 24                                          ; 1                            ;
-+---------------------------------------------+------------------------------+
++-----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                         ;
++----------------------------------------------+------------------------------+
+; Number of Distinct Inputs  (Average = 10.54) ; Number of LABs  (Total = 26) ;
++----------------------------------------------+------------------------------+
+; 0                                            ; 0                            ;
+; 1                                            ; 0                            ;
+; 2                                            ; 1                            ;
+; 3                                            ; 1                            ;
+; 4                                            ; 1                            ;
+; 5                                            ; 1                            ;
+; 6                                            ; 3                            ;
+; 7                                            ; 5                            ;
+; 8                                            ; 1                            ;
+; 9                                            ; 3                            ;
+; 10                                           ; 1                            ;
+; 11                                           ; 0                            ;
+; 12                                           ; 0                            ;
+; 13                                           ; 3                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 0                            ;
+; 16                                           ; 0                            ;
+; 17                                           ; 0                            ;
+; 18                                           ; 3                            ;
+; 19                                           ; 0                            ;
+; 20                                           ; 2                            ;
+; 21                                           ; 0                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 0                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 1                            ;
++----------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -1878,52 +1870,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
-+------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary              ;
-+-----------------+----------------------+-------------------+
-; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
-+-----------------+----------------------+-------------------+
-Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
-This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
-
-
-+----------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                ;
-+--------------------------------------+-----------------------------------+-------------------+
-; Source Register                      ; Destination Register              ; Delay Added in ns ;
-+--------------------------------------+-----------------------------------+-------------------+
-; button_reset                         ; morsegenerator:G9|index[1]~latch  ; 2.484             ;
-; button_reset                         ; morsegenerator:G9|index[2]~latch  ; 2.484             ;
-; button_reset                         ; morsegenerator:G9|index[3]~latch  ; 2.484             ;
-; button_reset                         ; audio_interface:G6|i2c_counter[9] ; 0.955             ;
-; morsegenerator:G8|index[3]~latch     ; morsegenerator:G8|finished        ; 0.419             ;
-; puls:G1|output                       ; morsegenerator:G8|finished        ; 0.419             ;
-; button_reset                         ; morsegenerator:G8|finished        ; 0.419             ;
-; morsegenerator:G8|index[3]~_emulated ; morsegenerator:G8|finished        ; 0.419             ;
-; modcounter:G2|output[0]              ; morsegenerator:G8|finished        ; 0.419             ;
-; modcounter:G2|output[1]              ; morsegenerator:G8|finished        ; 0.419             ;
-; modcounter:G2|output[2]              ; morsegenerator:G8|finished        ; 0.419             ;
-; modcounter:G2|output[3]              ; morsegenerator:G8|finished        ; 0.419             ;
-; button_reset                         ; audio_interface:G6|Bcount[2]      ; 0.328             ;
-; button_reset                         ; audio_interface:G6|LRDATA[28]     ; 0.296             ;
-; button_reset                         ; morsegenerator:G8|index[3]~latch  ; 0.217             ;
-; button_reset                         ; morsegenerator:G8|index[1]~latch  ; 0.217             ;
-; button_reset                         ; morsegenerator:G8|index[2]~latch  ; 0.217             ;
-; button_reset                         ; modcounter:G3|output[3]           ; 0.204             ;
-; morsegenerator:G8|index[4]~latch     ; morsegenerator:G8|finished        ; 0.197             ;
-; morsegenerator:G8|index[4]~_emulated ; morsegenerator:G8|finished        ; 0.197             ;
-; button_reset                         ; audio_interface:G6|word_count[3]  ; 0.052             ;
-; audio_interface:G6|state.b_end       ; audio_interface:G6|word_count[3]  ; 0.052             ;
-+--------------------------------------+-----------------------------------+-------------------+
-
-
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Dec 15 22:00:04 2014
+    Info: Processing started: Thu Dec 11 17:50:50 2014
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off epicknoptime -c epicknoptime
 Warning: Parallel compilation is not licensed and has been disabled
 Info: Selected device EP2C20F484C7 for design "epicknoptime"
@@ -1941,29 +1894,26 @@ Info: Fitter converted 3 user pins into dedicated programming pins
     Info: Pin ~LVDS91p/nCEO~ is reserved at location W20
 Info: Timing-driven compilation is using the TimeQuest Timing Analyzer
 Warning: Timing Analysis is analyzing one or more combinational loops as latches
-    Warning: Node "G8|index[4]~latch|combout" is a latch
-    Warning: Node "G9|index[4]~latch|combout" is a latch
-    Warning: Node "G8|index[3]~latch|combout" is a latch
-    Warning: Node "G9|index[3]~latch|combout" is a latch
-    Warning: Node "overflowed~0|combout" is a latch
-    Warning: Node "G8|index[1]~latch|combout" is a latch
-    Warning: Node "G8|index[2]~latch|combout" is a latch
-    Warning: Node "G9|index[1]~latch|combout" is a latch
     Warning: Node "G9|index[2]~latch|combout" is a latch
+    Warning: Node "G9|index[3]~latch|combout" is a latch
+    Warning: Node "G8|index[1]~latch|combout" is a latch
+    Warning: Node "G9|index[1]~latch|combout" is a latch
+    Warning: Node "G8|index[2]~latch|combout" is a latch
+    Warning: Node "G8|index[3]~latch|combout" is a latch
 Info: Reading SDC File: 'epicknoptime.sdc'
 Info: No user constrained base clocks found in the design
 Info: Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info: Automatically promoted node clock (placed in PIN L1 (CLK0, LVDSCLK0p, Input))
+Info: Automatically promoted node clk (placed in PIN L1 (CLK0, LVDSCLK0p, Input))
     Info: Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
     Info: Following destination nodes may be non-global or may not use global or regional clocks
-        Info: Destination node audio_interface:G6|state.b_end
         Info: Destination node audio_interface:G6|state.b_stop1
-        Info: Destination node puls:G22|output
-Info: Automatically promoted node puls:G1|output 
+        Info: Destination node audio_interface:G6|state.b_end
+        Info: Destination node knopcontroller:G22|outp
+Info: Automatically promoted node knopcontroller:G1|outp 
     Info: Automatically promoted destinations to use location or clock signal Global Clock
     Info: Following destination nodes may be non-global or may not use global or regional clocks
-        Info: Destination node morsegenerator:G8|finished~2
-        Info: Destination node morsegenerator:G8|index[4]~6
+        Info: Destination node morsegenerator:G8|finish~0
+        Info: Destination node morsegenerator:G8|index[3]~8
 Info: Automatically promoted node audio_interface:G6|I2C_SCLK 
     Info: Automatically promoted destinations to use location or clock signal Global Clock
     Info: Following destination nodes may be non-global or may not use global or regional clocks
@@ -1975,28 +1925,20 @@ Info: Automatically promoted node audio_interface:G6|I2C_SCLK
         Info: Destination node I2C_SCLK
 Info: Automatically promoted node modcounter:G2|over 
     Info: Automatically promoted destinations to use location or clock signal Global Clock
-    Info: Following destination nodes may be non-global or may not use global or regional clocks
-        Info: Destination node overflowed~0
-Info: Automatically promoted node morsegenerator:G8|index[4]~6 
+Info: Automatically promoted node morsegenerator:G8|index[3]~8 
     Info: Automatically promoted destinations to use location or clock signal Global Clock
     Info: Following destination nodes may be non-global or may not use global or regional clocks
-        Info: Destination node morsegenerator:G8|index[4]~clear_lut
-        Info: Destination node morsegenerator:G8|index[4]~head_lut
-        Info: Destination node morsegenerator:G8|index[3]~head_lut
         Info: Destination node morsegenerator:G8|index[3]~clear_lut
-        Info: Destination node morsegenerator:G8|index[1]~head_lut
+        Info: Destination node morsegenerator:G8|index[3]~head_lut
         Info: Destination node morsegenerator:G8|index[2]~head_lut
-        Info: Destination node morsegenerator:G8|index[4]~latch
-Info: Automatically promoted node morsegenerator:G9|index[4]~8 
+        Info: Destination node morsegenerator:G8|index[1]~head_lut
+Info: Automatically promoted node morsegenerator:G9|index[3]~9 
     Info: Automatically promoted destinations to use location or clock signal Global Clock
     Info: Following destination nodes may be non-global or may not use global or regional clocks
-        Info: Destination node morsegenerator:G9|index[2]~clear_lut
-        Info: Destination node morsegenerator:G9|index[2]~head_lut
+        Info: Destination node morsegenerator:G9|index[3]~clear_lut
         Info: Destination node morsegenerator:G9|index[3]~head_lut
+        Info: Destination node morsegenerator:G9|index[2]~head_lut
         Info: Destination node morsegenerator:G9|index[1]~head_lut
-        Info: Destination node morsegenerator:G9|index[4]~head_lut
-        Info: Destination node morsegenerator:G9|index[4]~clear_lut
-        Info: Destination node morsegenerator:G9|index[4]~latch
 Info: Starting register packing
 Extra Info: Performing register packing on registers with non-logic cell location assignments
 Extra Info: Completed register packing on registers with non-logic cell location assignments
@@ -2006,7 +1948,7 @@ Extra Info: Moving registers into I/O cells, Multiplier Blocks, and RAM blocks t
 Extra Info: Finished moving registers into I/O cells, Multiplier Blocks, and RAM blocks
 Info: Finished register packing
     Extra Info: No registers were packed into other blocks
-Info: Fitter preparation operations ending: elapsed time is 00:00:01
+Info: Fitter preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
@@ -2014,13 +1956,13 @@ Info: Fitter placement was successful
 Info: Fitter placement operations ending: elapsed time is 00:00:01
 Info: Fitter routing operations beginning
 Info: Router estimated average interconnect usage is 0% of the available device resources
-    Info: Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X25_Y14 to location X37_Y27
+    Info: Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X25_Y14 to location X37_Y27
 Info: Fitter routing operations ending: elapsed time is 00:00:01
 Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info: Optimizations that may affect the design's routability were skipped
     Info: Optimizations that may affect the design's timing were skipped
 Info: Started post-fitting delay annotation
-Warning: Found 21 output pins without output pin load capacitance assignment
+Warning: Found 20 output pins without output pin load capacitance assignment
     Info: Pin "I2C_SDAT" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "cnt_ten[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "cnt_ten[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2036,18 +1978,17 @@ Warning: Found 21 output pins without output pin load capacitance assignment
     Info: Pin "cnt_unit[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "cnt_unit[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "cnt_unit[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "temp_audio" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "temp_audio2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "init_finish" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "AUD_MCLK" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "AUD_DACDAT" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "I2C_SCLK" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "temp_audio" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
 Info: Delay annotation completed successfully
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info: Quartus II Fitter was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 333 megabytes
-    Info: Processing ended: Mon Dec 15 22:00:09 2014
-    Info: Elapsed time: 00:00:05
+Info: Quartus II Fitter was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 336 megabytes
+    Info: Processing ended: Thu Dec 11 17:50:54 2014
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
 

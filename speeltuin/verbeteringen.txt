@@ -1,5 +1,5 @@
 DEZE NIET MEER - toongenerator heeft een nutteloze reset
-DEZE NIET MEER - morsegenerator kan (moet) een deel van z'n functionaliteit afstaan aan puls
+- morsegenerator kan (moet) een deel van z'n functionaliteit afstaan aan puls
 - de modcounter-morsegenerator-displaycombinatie kan met een generator gemaakt worden (signalen worden vectors zoals in http://vhdlguru.blogspot.nl/2010/09/how-to-use-generate-keyword-for.html)
 - modcounter kan tellen op de flank van de klok en een actieve telpuls
 - generics waar mogelijk

@@ -54,9 +54,9 @@ set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 
 
 #pinconfiguratie
-set_location_assignment PIN_L1 -to clock
-set_location_assignment PIN_R22 -to button_reset
-set_location_assignment PIN_R21 -to button_count
+set_location_assignment PIN_L1 -to clk
+set_location_assignment PIN_R22 -to rst
+set_location_assignment PIN_R21 -to btn
 set_location_assignment PIN_E1 -to cnt_ten[0]
 set_location_assignment PIN_H6 -to cnt_ten[1]
 set_location_assignment PIN_H5 -to cnt_ten[2]
@@ -72,9 +72,7 @@ set_location_assignment PIN_F2 -to cnt_unit[4]
 set_location_assignment PIN_F1 -to cnt_unit[5]
 set_location_assignment PIN_E2 -to cnt_unit[6]
 
-set_location_assignment PIN_V21 -to temp_audio
-
-set_location_assignment PIN_Y21 -to temp_audio2
+set_location_assignment PIN_V22 -to temp_audio
 
 #audio
 set_location_assignment PIN_U22 -to init_finish -comment LEDG[0]
@@ -86,11 +84,11 @@ set_location_assignment PIN_A5 -to AUD_DACLRCK
 set_location_assignment PIN_A6 -to AUD_ADCLRCK
 set_location_assignment PIN_B3 -to I2C_SDAT
 set_location_assignment PIN_A3 -to I2C_SCLK
-set_global_assignment -name VHDL_FILE ../speeltuin/puls.vhd
 set_global_assignment -name VHDL_FILE ../speeltuin/morsegenerator.vhd
 set_global_assignment -name VHDL_FILE ../speeltuin/audio_interface.vhd
 set_global_assignment -name VHDL_FILE ../speeltuin/toongenerator.vhd
 set_global_assignment -name VHDL_FILE ../speeltuin/modcounter.vhd
+set_global_assignment -name VHDL_FILE ../speeltuin/knopcontroller.vhd
 set_global_assignment -name VHDL_FILE ../speeltuin/epicknoptime.vhd
 set_global_assignment -name VHDL_FILE ../speeltuin/display.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

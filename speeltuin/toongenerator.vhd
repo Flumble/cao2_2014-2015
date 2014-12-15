@@ -91,10 +91,10 @@ BEGIN
 	BEGIN  
 		IF rising_edge(clock) AND activate = '1' THEN
 			IF wait_counter = wait_cycles THEN
-				wait_counter := 0;        
+				wait_counter <= 0;        
 				index <= index + 1;
 			ELSE
-				wait_counter := wait_counter + 1;
+				wait_counter <= wait_counter + 1;
 			END IF;
 		END IF;
 	END PROCESS;
