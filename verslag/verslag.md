@@ -12,17 +12,16 @@ wordt duidelijk gemaakt hoe deze componenten samenkomen tot een geheel.
 
 ### Puls
 
-`Puls` is een van de meest simpele componenten van het programma. Wat dit component doet is een
-signaal wat niet gesynchroniseerd is tegelijk hoog maken als een opgaande flank van de klok. Tevens
-zal de uitgang van puls nooit langer dan 1 klokcyclus hoog blijven. Puls kan dus gebruikt worden om
-de uitvoer van een knop die lang ingedrukt wordt te vertalen naar een eenmalige korte puls.
+`Puls` is een van de simpelste componenten van het programma. Wat dit component doet is een
+(ongesynchroniseerd) signaal één klokcyclus hoog zetten. Puls kan dus gebruikt worden om de uitvoer
+van een knop die lang ingedrukt wordt te vertalen naar een eenmalige korte puls.
 
 ### Modcounter
 
-`Modcounter` is een simpel component wat telt hoe vaak er een opgaande flank op de invoer heeft
+`Modcounter` is een simpel component dat telt hoe vaak er een opgaande flank op de invoer heeft
 gestaan. Het mod-gedeelte in de naam komt van het feit dat aangegeven kan worden tot hoe hoog het 
-component telt, voor deze weer terug springt naar 0. De counter kan gereset worden d.m.v. de 
-reset-invoer. De overflow-uitvoer wordt hoog op het moment dat de counter met hoger dan zijn
+component telt en dat deze weer terug springt naar 0. De counter kan gereset worden d.m.v. de 
+reset-invoer. De overflow-uitvoer wordt hoog op het moment dat de counter hoger dan zijn
 maximale waarde telt.
 
 ### Display
@@ -40,14 +39,13 @@ van een 1khz sinus.
 
 De `toongenerator` is ook bijna direct overgenomen van de voorbeeldcode voor het afspelen van een 1khz
 sinus, hieraan is een ingang toegevoegd die aangeeft of deze wel of niet moet afspelen (activate).
-Zolang deze invoer hoog is zal er dus een toon klinken.
+Zolang deze invoer hoog is zal er een toon klinken.
 
 ### Morsegenerator
 
-De `orsegenerator` begint aan de hand van een invoer (`start`) een sequentie van morse-tonen laten
-klinken aan de hand van een numerieke invoer, welke vertaalt wordt naar de bijhorende
-morse-sequentie. Als deze klaar is met spelen geeft deze een signaal door aan een volgende
-morsegenerator, die vervolgens het tweede getal in morse omzet.
+De `morsegenerator` begint aan de hand van een invoer (`start`) een sequentie van morse-tonen te spelen 
+afhankelijk van het huidige ingangsgetal. Als deze klaar is met spelen wordt er een uitgangssignaal
+hoog gemaakt.
 
 ## Aansluiting
 
